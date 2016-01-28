@@ -361,3 +361,8 @@ footer:after {
   content: "";
   display: block;
 }
+
+.social > a {
+  color: #333333 !important;
+  margin: 0 15px;
+}
