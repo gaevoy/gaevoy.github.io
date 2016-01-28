@@ -1,6 +1,6 @@
 ---
 published: true
-title: Hello word!
+title: Hello world!
 layout: post
 ---
-*Hello word!*
+*Hello world!*
