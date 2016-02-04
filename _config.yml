@@ -1,10 +1,12 @@
+gems: [jekyll-paginate]
 excerpt_separator: ""
-pygments: true
+highlighter: pygments
 markdown: kramdown
 url: http://gaevoy.github.io
-title: webdev
+title: Vladimir Gaevoy's blog
 email: 
 author: Vladimir Gaevoy
 description: My awesome new site
-paginate: 3
+paginate: 5
+paginate_path: "page:num"
 google_analytics: UA-73040051-1
