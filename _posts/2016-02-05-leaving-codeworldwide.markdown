@@ -26,6 +26,7 @@ QAs were the ones who prevented us from (*чик-чик и в продакшн*)
 CodeWorldwide gaves me a huge amount of challenges, without them I wouldn't be who I am. [More then 10 speeches](http://slides.com/vgman/). Innumerous complex UI screens and animations. Brain blowing while event driven and microservices approach was applied. Unexpected drop live database. Restore after failed deploy. 
 
 In non-working time. I managed to build [brand new house](http://gaevoy.github.io/my-timeline/building.html?bg). Two lovely children were born. 
+
 So 5 years -  is it a short or a long period… It is a lot (*дохуя*).
 
 Now I’m going to continue battle test technologies as a freelancer.
