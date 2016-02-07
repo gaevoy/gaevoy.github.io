@@ -366,3 +366,12 @@ footer:after {
   color: #333333 !important;
   margin: 0 15px;
 }
+
+.image-center {
+	text-align: center;
+}
+
+.image-center > img {
+	width: auto;
+	max-width: 100%;
+}

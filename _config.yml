@@ -1,9 +1,9 @@
 gems: [jekyll-paginate]
 excerpt_separator: ""
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 url: http://gaevoy.github.io
-title: Vladimir Gaevoy's blog
+title: Vladimir Gaevoy
 email: 
 author: Vladimir Gaevoy
 description: My awesome new site
