@@ -7,7 +7,7 @@ tags: [freelance, ]
 5 years at CodeWorldwide. 
 Is it a short or a long period...?
 
-It was not that easy journey for me. After a small company where I became a programer, CodeWorldwide and Ciklum were really a shock. Huge amount of technologies, projects, people and bearded Valentin. Craziness.
+It was not that easy journey for me. After a small company where I became a programer, CodeWorldwide and Ciklum were really a shock. Huge amount of technologies, projects, people and bearded [Valentin](https://www.facebook.com/profile.php?id=100007618276016). Craziness.
 
 But with the lapse of time the сraziness was transformed into passion, passion to build good apps.
 
