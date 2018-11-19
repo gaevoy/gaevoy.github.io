@@ -6,4 +6,4 @@ tags: [gpg, key]
 ---
 Hey there,
 
-My GPG key ID is F3E48AE115E03E71. You can see it mostly on GitHub. See more details on https://keybase.io/gaevoy
+My GPG key ID is F3E48AE115E03E71. You can see it mostly on GitHub. See more details on [keybase.io/gaevoy](https://keybase.io/gaevoy)
