@@ -3,6 +3,7 @@ published: true
 title: My GPG key
 layout: post
 tags: [gpg, key]
+comments: true
 ---
 My [GPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard) key ID is **F3E48AE115E03E71**. You can see it mostly on GitHub. See more details on [keybase.io/gaevoy](https://keybase.io/gaevoy)
 

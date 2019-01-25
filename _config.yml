@@ -2,11 +2,11 @@ gems: [jekyll-paginate]
 excerpt_separator: ""
 highlighter: rouge
 markdown: kramdown
-url: http://gaevoy.github.io
-title: Vladimir Gaevoy
+url: https://gaevoy.github.io
+title: Vladimir Gaevoy blog
 email: 
 author: Vladimir Gaevoy
-description: My awesome new site
+description: My awesome blog
 paginate: 5
 paginate_path: "page:num"
 google_analytics: UA-73040051-1

@@ -3,6 +3,7 @@ published: true
 title: Leaving CodeWorldwide
 layout: post
 tags: [freelance, ]
+comments: true
 ---
 5 years at CodeWorldwide. 
 Is it a short or a long period...?

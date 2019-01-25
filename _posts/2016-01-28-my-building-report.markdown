@@ -3,6 +3,7 @@ published: true
 title: My building report
 layout: post
 tags: [building, event-sourcing, ]
+comments: true
 ---
 EventSourcing approach in life. Following events: 
 
