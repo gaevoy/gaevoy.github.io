@@ -376,7 +376,8 @@ footer:after {
 	max-width: 100%;
 }
 
-code {
+pre.highlight {
+  overflow-x: auto;
   font-size: 14px;
   line-height: 14px;
 }

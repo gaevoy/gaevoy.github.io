@@ -1,8 +1,10 @@
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 excerpt_separator: ""
 highlighter: rouge
-markdown: redcarpet
-extensions: [fenced_code_blocks]
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 url: https://gaevoy.github.io
 title: Vladimir Gaevoy blog
 email: 
