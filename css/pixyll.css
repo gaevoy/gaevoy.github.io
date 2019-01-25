@@ -375,3 +375,8 @@ footer:after {
 	width: auto;
 	max-width: 100%;
 }
+
+code {
+  font-size: 14px;
+  line-height: 14px;
+}
