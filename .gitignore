@@ -3,3 +3,4 @@ _site/
 **.user
 **/obj/**
 **/bin/**
+**/packages/**
