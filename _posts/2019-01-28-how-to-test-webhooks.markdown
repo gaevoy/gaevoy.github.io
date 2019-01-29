@@ -127,4 +127,4 @@ After ~15 sec it becomes green!
              '.'                         ) ;) ;
                                         (_/(_/
 ```
-Since I'm using external systems (`SendGrid`, `ngrok`) the test can be unstable. Full version of the test is [here](https://github.com/gaevoy/gaevoy.github.io/blob/master/.examples/Gaev.Blog.Examples.NetFramework/SendGridWebhookTests.cs).
+Since I'm using external systems (`SendGrid`, `ngrok`) the test can be unstable. Full version of the test is [here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.0.0/Gaev.Blog.Examples.WebhookTests).

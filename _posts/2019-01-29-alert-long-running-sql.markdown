@@ -109,13 +109,13 @@ Also, [I wrote tests for EntityFramework](https://github.com/gaevoy/Gaev.Blog.Ex
 
 ## Entity Framework profiler pitfalls
 
-Once `EF6` profiler is enabled you must treat `LongRunningQueryProfiler` instance as a singleton. Because of `MiniProfiler.EF6` library accesses the profiler via [MiniProfiler.Current](https://github.com/MiniProfiler/dotnet/blob/v4.0.138/src/MiniProfiler.EF6/EFProfiledDbProviderServices.cs#L64). So initialization logic will look something like this
+Once `EF6` profiler is enabled you must treat `LongRunningQueryProfiler` instance as a singleton. Because of `MiniProfiler.EF6` library accesses the profiler via [MiniProfiler.Current](https://github.com/MiniProfiler/dotnet/blob/v4.0.138/src/MiniProfiler.EF6/EFProfiledDbProviderServices.cs#L64). Also, don't use Entity Framework before initialization. The initialization logic will look something like this
  ```c#
 var profiler = new LongRunningQueryProfiler(_logger, threshold: 2000.Milliseconds());
 MiniProfiler.DefaultOptions.ProfilerProvider = new ProfilerGetter(profiler);
 MiniProfilerEF6.Initialize();
 ```
-After that, you must use MiniProfiler.Current ONLY!
+After that, you must use `MiniProfiler.Current` ONLY!
 
 The full version of given example is [here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/). Party!
 ```text
