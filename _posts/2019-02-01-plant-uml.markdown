@@ -1,0 +1,42 @@
+---
+published: true
+title: Text to UML diagram via PlantUML
+description: Explore how to build a UML diagram from plain text via PlantUML
+layout: post
+tags: [PlantUML, UML]
+comments: true
+---
+
+From time to time, I feel like a dog: understand everything but can't explain. So draw it! Or I need to understand how a feature supposed to work but it does not fit in my brain. So draw it, come on! Or it is a huge challenge how to explain my idea to my teammates. So draw it, hell!
+
+Then, I met with [PlantUML](https://en.wikipedia.org/wiki/PlantUML) and I fell in love at first sight. `PlantUML` is an open-source tool allowing you to create UML diagrams from plain text. Killer features for me:
+* text becomes diagram so you can store a history of changes in git
+ ```text
+User -> GUI : To boundary
+GUI -> Widget : To control
+Widget -> Database : To database
+```
+* `PlantUML` renders to SVG as well as ASCII diagrams <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="185px" preserveAspectRatio="none" style="width:375px;height:185px;" version="1.1" viewBox="0 0 375 185" width="375px" zoomAndPan="magnify"><defs><filter height="300%" id="fgu1891dlkavb" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="33" x2="33" y1="38.2969" y2="145.6953"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="136" x2="136" y1="38.2969" y2="145.6953"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="223" x2="223" y1="38.2969" y2="145.6953"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="326" x2="326" y1="38.2969" y2="145.6953"/><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="8" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="15" y="22.9951">User</text><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="8" y="144.6953"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="15" y="164.6904">User</text><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="38" x="115" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="122" y="22.9951">GUI</text><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="38" x="115" y="144.6953"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="122" y="164.6904">GUI</text><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="190" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="197" y="22.9951">Widget</text><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="190" y="144.6953"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="197" y="164.6904">Widget</text><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="80" x="284" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="291" y="22.9951">Database</text><rect fill="#FEFECE" filter="url(#fgu1891dlkavb)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="80" x="284" y="144.6953"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="291" y="164.6904">Database</text><polygon fill="#A80036" points="124,65.4297,134,69.4297,124,73.4297,128,69.4297" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="33" x2="130" y1="69.4297" y2="69.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="79" x="40" y="64.3638">To boundary</text><polygon fill="#A80036" points="211,94.5625,221,98.5625,211,102.5625,215,98.5625" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="136" x2="217" y1="98.5625" y2="98.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="63" x="143" y="93.4966">To control</text><polygon fill="#A80036" points="314,123.6953,324,127.6953,314,131.6953,318,127.6953" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="223" x2="320" y1="127.6953" y2="127.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="79" x="230" y="122.6294">To database</text></g></svg>
+ ```text
+     ┌────┐          ┌───┐          ┌──────┐          ┌────────┐
+     │User│          │GUI│          │Widget│          │Database│
+     └─┬──┘          └─┬─┘          └──┬───┘          └───┬────┘
+       │  To boundary  │               │                  │     
+       │ ─────────────>│               │                  │     
+       │               │               │                  │     
+       │               │  To control   │                  │     
+       │               │──────────────>│                  │     
+       │               │               │                  │     
+       │               │               │    To database   │     
+       │               │               │ ─────────────────>     
+     ┌─┴──┐          ┌─┴─┐          ┌──┴───┐          ┌───┴────┐
+     │User│          │GUI│          │Widget│          │Database│
+     └────┘          └───┘          └──────┘          └────────┘
+```
+* `PlantUML` has [plugins](https://plugins.jetbrains.com/plugin/7017-plantuml-integration) for `Rider`, `WebStorm`, `IntelliJ IDEA`, [Google Docs](https://www.youtube.com/watch?v=sXshJ4BPJt8), [Confluence](https://marketplace.atlassian.com/apps/41025/plantuml-for-confluence) and many more. You can even write a diagram right in source code, like below
+![alt text](/img/rider-plantuml.png "PlantUML in Rider")
+
+Together with `PlantUML`, I can make sequence, class, state diagrams by typing a text the same like C#-code right in the same IDE. Fewer context switches, more productivity. If I need to share the diagram with someone there is an [online tool](https://www.planttext.com/) which converts the text and gives URL to the diagram, [like this](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuU8ABKujKj2rKt0FzLImKWZ9LqZAByrBIIogv0A902N2CrFIKqiWSidvUIL5-JbSK36Wh4jYIM9IOd4gH3u5okFYSaZDIm6Q3m00). `PlantUML` has really nice [documentation](http://plantuml.com/) with examples.
+
+Highly recommend you guys to learn `PlantUML`. It's worth it! Please suggest what do you use for building UML diagram.
+

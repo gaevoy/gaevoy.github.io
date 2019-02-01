@@ -1,0 +1,53 @@
+---
+published: false
+title: Self-documented system via PlantUML
+layout: post
+tags: [PlantUML, UML]
+comments: true
+---
+
+
+https://github.com/gaevoy/NEventStore.Cqrs/blob/master/src/NEventStore.Cqrs.Tests/FlowGraphs/Builder.cs
+
+Capture tests output and bring them into a chart.
+```text
+Frontend -> Queue: DocumentCreated
+note left: DocumentRepository.Create()
+Frontend -> Queue: DocumentStatusChanged
+note left: DocumentStatusRepository.Create()
+Queue -> App: DocumentCreated
+note left: documents-queue
+App -> Queue: CreateDocumentHistory
+note left: HistoryDocumentsEventHandler.On()
+Queue -> App: DocumentStatusChanged
+note left: deliveries-queue
+Queue -> App: CreateDocumentHistory
+note left: documents-queue
+```
+it turns to
+```text
+                                   ┌────────┐              ┌─────┐                 ┌───┐
+                                   │Frontend│              │Queue│                 │App│
+                                   └───┬────┘              └──┬──┘                 └─┬─┘
+        ╔═════════════════════════════╗│    DocumentCreated   │                      │  
+        ║DocumentRepository.Create() ░║│ ─────────────────────>                      │  
+        ╚═════════════════════════════╝│                      │                      │  
+  ╔═══════════════════════════════════╗│ DocumentStatusChanged│                      │  
+  ║DocumentStatusRepository.Create() ░║│ ─────────────────────>                      │  
+  ╚═══════════════════════════════════╝│                      │                      │  
+                                       │   ╔═════════════════╗│    DocumentCreated   │  
+                                       │   ║documents-queue ░║│ ─────────────────────>  
+                                       │   ╚═════════════════╝│                      │  
+                         ╔═════════════╧═════════════════════╗│ CreateDocumentHistory│  
+                         ║HistoryDocumentsEventHandler.On() ░║│ <─────────────────────  
+                         ╚═════════════╤═════════════════════╝│                      │  
+                                       │  ╔══════════════════╗│ DocumentStatusChanged│  
+                                       │  ║deliveries-queue ░║│ ─────────────────────>  
+                                       │  ╚══════════════════╝│                      │  
+                                       │   ╔═════════════════╗│ CreateDocumentHistory│  
+                                       │   ║documents-queue ░║│ ─────────────────────>  
+                                   ┌───┴───╚═════════════════╝┴──┐                 ┌─┴─┐
+                                   │Frontend│              │Queue│                 │App│
+                                   └────────┘              └─────┘                 └───┘
+
+```

@@ -1,4 +1,4 @@
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-sitemap]
 excerpt_separator: ""
 highlighter: rouge
 markdown: kramdown

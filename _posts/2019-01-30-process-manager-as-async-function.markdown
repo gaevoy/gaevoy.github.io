@@ -1,6 +1,7 @@
 ---
 published: true
 title: Process manager as async function in C#
+description: Experiment how to express process manager as an async function in C#
 layout: post
 tags: [ProcessManager, saga, async, csharp, dotnet, NEventStore, AkkaNet]
 comments: true

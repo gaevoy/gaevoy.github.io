@@ -1,14 +1,15 @@
 ---
 published: true
 title: Leaving CodeWorldwide
+description: My story about 5 years in CodeWorldwide
 layout: post
-tags: [freelance, ]
+tags: [freelance, CodeWW, CodeWorldwide]
 comments: true
 ---
 5 years at CodeWorldwide. 
 Is it a short or a long period...?
 
-It was not that easy journey for me. After a small company where I became a programer, CodeWorldwide and Ciklum were really a shock. Huge amount of technologies, projects, people and bearded [Valentin](https://www.facebook.com/profile.php?id=100007618276016). Craziness.
+It was not that easy journey for me. After a small company where I became a programmer, CodeWorldwide and Ciklum were really a shock. Huge amount of technologies, projects, people and bearded [Valentin](https://www.facebook.com/profile.php?id=100007618276016). Craziness.
 
 But with the lapse of time the сraziness was transformed into passion, passion to build good apps.
 
@@ -24,7 +25,7 @@ I was a witness of excellent creativity and performance of our team. We are not 
 QAs were the ones who prevented us from (*чик-чик и в продакшн*) fuckups. Managers were the ones who isolated us from full of useless non technical flows (*гавнища*). I liked it so much.
 
 ## Me
-CodeWorldwide gaves me a huge amount of challenges, without them I wouldn't be who I am. [More then 10 speeches](http://slides.com/vgman/). Innumerous complex UI screens and animations. Brain blowing while event driven and microservices approach was applied. Unexpected drop live database. Restore after failed deploy. 
+CodeWorldwide gave me a huge amount of challenges, without them I wouldn't be who I am. [More then 10 speeches](http://slides.com/vgman/). Innumerous complex UI screens and animations. Brain blowing while event driven and microservices approach was applied. Unexpected drop live database. Restore after failed deploy. 
 
 In non-working time. I managed to build [brand new house](http://gaevoy.github.io/my-timeline/building.html?bg). Two lovely children were born. 
 

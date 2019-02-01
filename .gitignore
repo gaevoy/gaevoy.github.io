@@ -4,3 +4,4 @@ _site/
 **/obj/**
 **/bin/**
 **/packages/**
+/.jekyll-metadata

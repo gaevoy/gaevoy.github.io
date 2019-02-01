@@ -1,6 +1,7 @@
 ---
 published: true
 title: Throttling asynchronous tasks AKA rate limiting
+description: The simplest way to throttle async function by SemaphoreSlim in .NET
 layout: post
 tags: [csharp, dotnet, async, throttling]
 comments: true
