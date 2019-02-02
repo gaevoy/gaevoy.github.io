@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://gaevoy.github.io/sitemap.xml
+Sitemap: https://gaevoy.com/sitemap.xml
