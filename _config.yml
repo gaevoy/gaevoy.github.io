@@ -5,7 +5,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-url: https://gaevoy.github.io
+url: https://gaevoy.com
 title: Vladimir Gaevoy blog
 email: 
 author: Vladimir Gaevoy
