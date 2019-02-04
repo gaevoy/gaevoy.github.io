@@ -3,7 +3,7 @@ published: true
 title: Text to UML diagram via PlantUML
 description: Explore how to build a UML diagram from plain text via PlantUML
 layout: post
-tags: [PlantUML, UML]
+tags: [PlantUML, UML, ASCII]
 comments: true
 ---
 

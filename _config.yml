@@ -6,6 +6,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 url: https://gaevoy.com
+url_for_disqus: https://gaevoy.com
 title: Vladimir Gaevoy blog
 email: 
 author: Vladimir Gaevoy
