@@ -11,6 +11,6 @@ title: Vladimir Gaevoy blog
 email: 
 author: Vladimir Gaevoy
 description: My awesome blog
-paginate: 5
+paginate: 10
 paginate_path: "page:num"
 google_analytics: UA-73040051-1
