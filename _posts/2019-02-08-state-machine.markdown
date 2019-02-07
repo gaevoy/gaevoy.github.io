@@ -37,7 +37,7 @@ class LightSwitchBehaviourActor : ReceiveActor
 }
 ```
 
-However, the state machine can be expressed even easier via [an async function](/2019/01/30/process-manager-as-async-function.html). Akka inspired me to write a simple C# implementation for using `Become()` independently of `Akka.NET`. But what's wrong with `Akka` itself?
+However, the state machine can be expressed even easier via [an async function](/2019/01/30/process-manager-as-async-function.html). `Akka` inspired me to write a simple C# implementation for using `Become()` independently of `Akka.NET`. But what's wrong with `Akka` itself?
 
 ## Problem
 
