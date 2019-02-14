@@ -397,3 +397,8 @@ pre.highlight {
   line-height: 1.5rem;
   font-size: 1.25rem;
 }
+
+.block-center {
+  display: block;
+  margin: 0 auto;
+}
