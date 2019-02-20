@@ -45,16 +45,16 @@ public static class OtoDomCrawler
         while (url != null)
         {
             var html = (await new HtmlWeb().LoadFromWebAsync(url)).DocumentNode;
-            offers.AddRange(GetOffers(html).Where(e => e.Link != null));
+            offers.AddRange(GetOffers(html));
             url = html.SelectSingleNode("//a[@data-dir='next']")?.GetAttributeValue("href", null);
         }
         return offers;
     }
     private static IEnumerable<Page> GetOffers(HtmlNode html)
     {
-        foreach (var offer in html.SelectNodes("//*[starts-with(@class, 'offer-item-details')]"))
+        foreach (var offer in html.SelectNodes("//*[@class='offer-item-details']"))
         {
-            var title = offer.SelectSingleNode(".//*[starts-with(@class, 'offer-item-title')]");
+            var title = offer.SelectSingleNode(".//*[@class='offer-item-title']");
             var link = title?.AncestorsAndSelf("a").FirstOrDefault();
             yield return new Page
             {
@@ -102,6 +102,8 @@ async Task EntityFramework_and_Sqlite_example()
 ```shell
 dotnet publish --runtime ubuntu.16.04-x64 --configuration Release
 scp -r bin/Release/netcoreapp2.2/ubuntu.16.04-x64/publish/ root@__.___.___.___:/apps/MyAlerts/
+ssh root@__.___.___.___
+chmod 777 /apps/MyAlerts/Gaev.Blog.Examples.GoogleAlert
 ```
 
 Because `Linux` is used why not to schedule the app via `cron`, and for `Windows`, you can use built-in `Task Scheduler`. I will use [\*/30 6-23 \* \* \*](https://crontab.guru/#*/30_6-23_*_*_*) cron schedule expression which means `At every 30th minute past every hour from 6 through 23`.
@@ -155,7 +157,7 @@ If you are searching for a flat, car, ticket, job, look how easy to be the first
 
 Do you want this but not a technical guy? No problem contact me ([LinkedIn](https://ua.linkedin.com/in/vladimirgayevoy), [Twitter](https://twitter.com/vgman)) and I will help.
 
-Here you can find complete example [Gaev.Blog.Examples.GoogleAlert](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.5.0/Gaev.Blog.Examples.GoogleAlert).
+Here you can find complete example [Gaev.Blog.Examples.GoogleAlert](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.5.1/Gaev.Blog.Examples.GoogleAlert).
 
 ## Pitfalls
 
