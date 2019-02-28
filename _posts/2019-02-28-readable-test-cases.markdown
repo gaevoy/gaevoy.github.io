@@ -1,7 +1,7 @@
 ---
 published: true
 title: Readable NUnit test cases
-description: Making NUnit TestCase-es more readable and funny
+description: Making NUnit test cases more readable and funny
 layout: post
 tags: [NUnit, dotnet]
 comments: true
