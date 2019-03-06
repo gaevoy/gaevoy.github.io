@@ -28,6 +28,7 @@ Then I came up to the idea to build a utility — [partial-password.github.io](h
 <iframe width="560" height="315" style="margin: 0 auto; display: block;" src="https://www.youtube.com/embed/hTZBDptYBdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### How to use [partial-password.github.io](https://partial-password.github.io/)
+* If you don't trust [partial-password.github.io](https://partial-password.github.io/) consider to save the page locally and run it from there, for instance `file:///c:/Partial%20password%20calculator%20online.html`
 * Open [partial-password.github.io](https://partial-password.github.io/) & copy-paste your password there.
 * Click on the requested position of password symbol (or use `Tab` key). Once the symbol is focused it is already in the clipboard. 
 * Paste the symbol from clipboard to the site you are about to log in.
@@ -38,3 +39,5 @@ Then I came up to the idea to build a utility — [partial-password.github.io](h
 **Hint:** In order to find the utility just google *[partial password calculator](https://www.google.com/search?q=partial+password+calculator)*.
 
 The utility is open-sourced here [github.com/partial-password/partial-password.github.io](https://github.com/partial-password/partial-password.github.io). I tested in Chrome 72 (Windows, Android), Firefox 65 (Windows, Android), Internet Explorer 11, Edge 44. You are welcome to contribute, review, fix bugs. Report me bugs [here](https://github.com/partial-password/partial-password.github.io/issues).
+
+Come and join [interesting discussions on Hacker News](https://news.ycombinator.com/item?id=19321619) about the topic.
