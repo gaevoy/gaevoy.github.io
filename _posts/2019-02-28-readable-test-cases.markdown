@@ -159,7 +159,7 @@ public void User_should_be_valid(
 )
 ```
 
-I'm sure such a funny test make you smile every time you find it - less boring work - more funny development. And it is still green :)
+I'm sure such a funny test makes you smile every time you find it - less boring work - more funny development. And it is still green :)
 
 A drawback that it is more complicated to navigate to the failed use case. No free cheese.
 
