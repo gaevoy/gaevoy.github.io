@@ -152,7 +152,7 @@ Underspending the root of the problem gives a clear explanation — don't suppre
 
 ### 1. Don't retry on transaction deadlock error, let it fail
 
-Either fix the source of the deadlock or remove retry logic on transaction deadlock error. Let is fail, it is better than data inconsistency.
+Either fix the source of the deadlock or remove retry logic on transaction deadlock error. Let it fail, it is better than data inconsistency.
 
 ### 2. Retry entire transaction block
 
