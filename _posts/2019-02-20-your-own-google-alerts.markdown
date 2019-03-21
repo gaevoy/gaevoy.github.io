@@ -3,7 +3,7 @@ published: true
 title: 100 LoC console app vs Google Alerts
 description: Investigating how and why simple console application that's written in .Net Core can work even better than Google Alerts.
 layout: post
-tags: [dotnet-core, Serilog, Telegram, cron, Linux, web-crawler]
+tags: [dotnet-core, Serilog, Telegram, cron, linux, web-crawler]
 comments: true
 ---
 
