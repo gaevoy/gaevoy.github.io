@@ -1,7 +1,7 @@
 ---
 published: true
 title: Searching for heavy T-SQL queries
-description: Describing steps you may take to find a SQL query which burns your SQL Server CPU
+description: Quick instruction I usually follow in order to find a SQL query which burns CPU of production SQL Server
 layout: post
 tags: [sql, mssql]
 comments: true
