@@ -3,7 +3,7 @@ published: true
 title: Partially committed transaction trap via .NET and MS SQL 
 description: Discovering when .NET TransactionScope can be out of sync with MS SQL transaction. What consequences it can lead to. How to fix.
 layout: post
-tags: [TransactionScope, MSSQL, deadlock, dotnet, MiniProfiler]
+tags: [TransactionScope, mssql, deadlock, dotnet, MiniProfiler]
 comments: true
 ---
 

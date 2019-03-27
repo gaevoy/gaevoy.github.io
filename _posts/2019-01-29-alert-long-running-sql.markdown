@@ -7,13 +7,13 @@ tags: [csharp, dotnet, MiniProfiler, AdoNet, EntityFramework]
 comments: true
 ---
 
-In any application, it is natural that developers change its source code quite frequently to release new a feature or to fix a bug. Along with source code changes the developers introduce new bugs :) It is also okay, we are not robots yet. 
+In any application, it is natural that developers change its source code quite frequently to release a new feature or to fix a bug. Along with source code changes the developers introduce new bugs :) It is also okay, we are not robots yet. 
 
 In order to ensure the application works even after changes, automated tests are written.
 
 ## Problem
 
-There are such bugs that live on production only, for instance, because of database differs then the developers have. One of such is long-running SQL queries. So even the application which is 100% covered by tests may still have bugs on production.
+There are such bugs that live on production only, for instance, because of database differs than the developers have. One of such is long-running SQL queries. So even the application which is 100% covered by tests may still have bugs on production.
 
 (╯°□°）╯︵ ┻━┻
 
