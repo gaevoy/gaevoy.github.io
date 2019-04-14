@@ -7,8 +7,6 @@ tags: [e2e-encryption, javascript, pgp, security, keybase]
 comments: true
 ---
 
-*Disclaimer: I'm a newbie in security topic, however using high-level libraries, end-to-end encryption looks like an easy task.*
-
 As a starting point for adding end-to-end encryption, I'm going to choose [minimalist chat](/2019/04/07/minimalist-chat.html) written on bare .NET Core and JavaScript without any third party dependency. Let's move from theory to implementation, but before that, I would like to give a bit of introduction in end-to-end encryption. What is it? What for? How?
 
 > Encryption is the process of encoding a message or information in such a way that only authorized parties can access it and those who are not authorized cannot — [Wikipedia](https://en.wikipedia.org/wiki/Encryption)
