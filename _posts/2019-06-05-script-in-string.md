@@ -3,7 +3,7 @@ published: true
 title: "@Html.Raw(json) cross-site scripting trap"
 description: Fixing cross-site scripting (XSS)vulnerability in @Html.Raw(json) due to unexpected browser's behavior during parsing JavaScript string.
 layout: post
-tags: [razor, javascript, XSS, security, dotnet]
+tags: [razor, javascript, xss, security, dotnet]
 comments: true
 ---
 
@@ -11,7 +11,7 @@ Often, in `ASP.NET` & `JavaScript` apps it is required to pass the server-side m
 
 What the following `ASP.NET MVC Razor` view will show?
 
-```aspx-cs
+```html
 @using Newtonsoft.Json
 @{
     var serverModel = new[]
@@ -76,7 +76,7 @@ var json = JsonConvert.SerializeObject(serverModel, new JsonSerializerSettings
 
 `.NET` has a built-in feature `HttpUtility.JavaScriptStringEncode` to encode `JSON` but it returns a string so `JSON.parse` is required. [Stack Overflow answer](https://stackoverflow.com/a/22768565).
 
-```aspx-cs
+```javascript
 var clientModel = JSON.parse("@Html.Raw(HttpUtility.JavaScriptStringEncode(json))");
 ```
 
