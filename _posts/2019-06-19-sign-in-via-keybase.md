@@ -25,9 +25,13 @@ Any `Keybase` user has its `PGP` private and public key. Only the user has acces
 
 I will generate a challenge right in a browser using JavaScript like [this](https://stackoverflow.com/a/2117523).
 
+```javascript
+let challenge = uuidv4();
+```
+
 #### 2. Challenge signature
 
-`Keybase` console is perfect candidate to sign. 
+`Keybase` console is perfect candidate to sign the challenge. 
 
 ```bash
 keybase pgp sign -d -m e108e97bafa94cd8b9937f15611e8bea
@@ -66,4 +70,58 @@ OAMomrNcZ8T9rv9v0Dxv5tMxoqWBG5mCi6wB1lS/YlQpeDk67a9N/8XXzy1qjUw=
 -----END PGP SIGNATURE-----
 ```
 
-In order to verify the signature, corresponding public key is required. The signature contains reference to the key that has been used, see previous article to figure out [what is inside PGP signature](/2019/05/10/pgp-signature.html). `.NET` library [BouncyCastle](https://www.nuget.org/packages/BouncyCastle) is really good at crypto operations.
+In order to verify the signature, corresponding public key is required. The signature contains reference to the key that has been used, see previous article to figure out [what is inside PGP signature](/2019/05/10/pgp-signature.html). `.NET` library [BouncyCastle](https://www.nuget.org/packages/BouncyCastle) is really good at crypto operations. 
+
+First step is parsing received signature:
+
+```c#
+static PgpSignature ParsePgpSignature(string pgpSignature)
+{
+    var input = PgpUtilities.GetDecoderStream(new MemoryStream(Encoding.UTF8.GetBytes(pgpSignature)));
+    var objectFactory = new PgpObjectFactory(input);
+    var signatureList = (PgpSignatureList) objectFactory.NextPgpObject();
+    return signatureList[0];
+}
+```
+
+Getting key ID:
+
+```c#
+PgpSignature signature = ParsePgpSignature(body);
+long keyId = signature.KeyId;
+```
+
+Downloading PGP public key from `Keybase` via [key/fetch](https://keybase.io/docs/api/1.0/call/key/fetch) API call. It also gives user name which is super useful for authorization procedure. Moreover, using [user/lookup](https://keybase.io/docs/api/1.0/call/user/lookup) more user data can be downloaded, such as full name, profile image, social network links:
+
+```c#
+using (var cli = new HttpClient())
+{
+    var url = $"https://keybase.io/_/api/1.0/key/fetch.json?pgp_key_ids={keyId:x8}";
+    var json = await cli.GetStringAsync(url);
+    var response = JsonConvert.DeserializeObject<dynamic>(json);
+    string publicKey = response.keys[0].bundle;
+    ...
+}
+```
+
+Parsing PGP public key
+
+```c#
+static PgpPublicKey ParsePgpPublicKey(string publicKey, long keyId)
+{
+    var input = PgpUtilities.GetDecoderStream(new MemoryStream(Encoding.UTF8.GetBytes(publicKey)));
+    var pgpRings = new PgpPublicKeyRingBundle(input);
+    return pgpRings.GetPublicKey(keyId);
+}
+```
+
+Verifying that signature has signed by right PGP private key
+
+```c#
+private static bool VerifySignature(PgpPublicKey publicKey, string challenge, PgpSignature signature)
+{
+    signature.InitVerify(publicKey);
+    signature.Update(Encoding.UTF8.GetBytes(challenge));
+    return signature.Verify();
+}
+```
