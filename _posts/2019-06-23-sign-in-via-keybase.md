@@ -133,7 +133,6 @@ var identity = new GenericIdentity(userName, CookieAuthenticationDefaults.Authen
 await HttpContext.SignInAsync(new ClaimsPrincipal(identity));
 ```
 
-![Sign-in via Keybase demo](/img/keybase-sign-in/demo.png "Sign-in via Keybase demo" ){:style="max-width:914px; width:100%;" class="block-center"}
-
 I deployed this experiment to [app.gaevoy.com/keybase-sign-in](https://app.gaevoy.com/keybase-sign-in/) in order, you can play with. Source code is available in here [Gaev.Blog.Examples.KeybaseSignIn](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.0.0/Gaev.Blog.Examples.KeybaseSignIn).
 
+![Sign-in via Keybase demo](/img/keybase-sign-in/demo.png "Sign-in via Keybase demo" ){:style="max-width:914px; width:100%;" class="block-center"}
