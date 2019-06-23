@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Sign-in via Keybase PGP key
 description: Exploring how easy it is to sign-in with the help of PGP key hosted by Keybase.
 layout: post
