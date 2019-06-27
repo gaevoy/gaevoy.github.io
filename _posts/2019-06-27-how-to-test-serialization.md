@@ -32,7 +32,8 @@ Properties of the messages don't have setters so deserialization logic will use 
 Let's imagine I'm renaming `Email` property to `Login` like this:
 
 ```c#
-public class UserRegistered{
+public class UserRegistered
+{
     public UserRegistered(Guid id, string email, string name)
     {
         Id = id;
