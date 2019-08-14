@@ -81,8 +81,7 @@ await member.FlushAsync();
 ```c#
 if (!RoomMembers.TryGetValue(room, out var members))
     return;
-lock (members)
-    members = members.ToList(); // copy to be thread-safe
+members = SafeCopy(members);
 async Task Send(StreamWriter member)
 {
     await member.WriteAsync("data: " + message + "\n\n");
@@ -91,7 +90,19 @@ async Task Send(StreamWriter member)
 await Task.WhenAll(members.Select(Send));
 ```
 
-The server-side is done, see the source code of [RoomsController](https://github.com/gaevoy/Gaev.Chat/blob/1.0.0/Gaev.Chat/Controllers/RoomsController.cs).
+Where `SafeCopy` method copies the list of members to get rid of `Collection was modified; enumeration operation may not execute` error, [see more](https://stackoverflow.com/a/604843/1400547). 
+
+```c#
+List<StreamWriter> SafeCopy(List<StreamWriter> members)
+{
+    lock (members)
+        return members.ToList();
+}
+```
+
+Members of the same room share the same instance of `members` variable. Hence, the variable is read and changed by multiple threads. Because of `List<T>` is not thread-safe we can use `lock`.
+
+The server-side is done, see the source code of [RoomsController](https://github.com/gaevoy/Gaev.Chat/blob/1.1.0/Gaev.Chat/Controllers/RoomsController.cs).
 
 ## Server-sent events on JavaScript
 
@@ -126,4 +137,4 @@ That's really impressive that I can build such apps without any dependency. As a
 
 ![Chat demo](/img/chat-demo.png "Chat demo" ){:style="max-width:762px; width:100%;" class="block-center"}
 
-You can play with the chat online at [app.gaevoy.com/chat](https://app.gaevoy.com/chat/). The source code is in [Gaev.Chat](https://github.com/gaevoy/Gaev.Chat/tree/1.0.0/Gaev.Chat).
+You can play with the chat online at [app.gaevoy.com/chat](https://app.gaevoy.com/chat/). The source code is in [Gaev.Chat](https://github.com/gaevoy/Gaev.Chat/tree/1.1.0/Gaev.Chat).
