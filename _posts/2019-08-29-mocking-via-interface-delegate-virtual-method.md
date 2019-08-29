@@ -9,7 +9,7 @@ comments: true
 
 Quite often, I face a dilemma on how to mock a single method. It looks like overengineering for nothing, when the method is being moved outside of the class, just to mock it afterward. But what alternatives do we have? 
 
-Before answering the question let's consider a specific specific code example. We have a model `Customer` and business logic implemented in `ICustomerService` and `CustomerService`.
+Before answering the question let's consider a specific code example. We have a model `Customer` and business logic implemented in `ICustomerService` and `CustomerService`.
 
 ```c#
 public class Customer
