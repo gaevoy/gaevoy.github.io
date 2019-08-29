@@ -1,6 +1,6 @@
 ---
 published: true
-title: Mocking via interface vs delegate vs virtual method in C#
+title: "Mocking via interface vs delegate vs virtual method in C#"
 description: Let's consider 3 options on how to mock a single method: interface, delegate, virtual method
 layout: post
 tags: [csharp, NUnit, NSubstitute, mocking, dotnet]
