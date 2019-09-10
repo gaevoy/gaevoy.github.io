@@ -211,3 +211,5 @@ If `public virtual` somehow violates encapsulation for you, it can be replaced w
 As an experiment lately, I started to mock via `delegate` and `virtual` method and I love it since source code changes are as small as it can be. Of course, I keep mocking via `interface` when it makes sense. Feel free to let me know how do you mock?
 
 See complete source code in [Gaev.Blog.Examples.Mocking](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.5.1/Gaev.Blog.Examples.Mocking).
+
+[Reddit comments](https://www.reddit.com/r/programming/comments/cx5qyh/mocking_via_interface_vs_delegate_vs_virtual/)
