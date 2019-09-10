@@ -62,6 +62,6 @@ Some of our apps use [MiniProfiler 3](https://www.nuget.org/packages/MiniProfile
 
 Finally, the murderer is found so I can sleep peacefully :)
 
-I managed to reproduce the behavior difference in [MiniProfilerReproductionTests](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.6.0/Gaev.Blog.Examples.MiniProfiler3Bug/MiniProfilerReproductionTests.cs).
+I managed to reproduce the behavior difference in [MiniProfilerReproductionTests](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.6.0/Gaev.Blog.Examples.MiniProfiler3Bug/MiniProfilerReproductionTests.cs). MiniProfiler GitHub issue is [here](https://github.com/MiniProfiler/dotnet/issues/419).
 
 <div style="width:60%;height:0;padding-bottom:53%;position:relative;margin:0 auto;"><iframe src="https://giphy.com/embed/ylyUQm2pCWo5yLfFEQ" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/bad-ass-detective-columbo-ylyUQm2pCWo5yLfFEQ">via GIPHY</a></p>
