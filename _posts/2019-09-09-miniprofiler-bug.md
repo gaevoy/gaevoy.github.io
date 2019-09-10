@@ -19,7 +19,7 @@ using (var tran = new TransactionScope())
     AsyncPump.Run(async () =>
     {
         await MakeDatabaseCall().ConfigureAwait(false);
-        // Transaction.Current be null here
+        // Transaction.Current should be null here
     });
     tran.Complete();
 }
