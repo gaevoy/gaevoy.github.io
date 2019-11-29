@@ -3,7 +3,7 @@ published: true
 title: Leaving CodeWorldwide
 description: My story about 5 years in CodeWorldwide
 layout: post
-tags: [freelance, CodeWW, CodeWorldwide]
+tags: [CodeWorldwide]
 comments: true
 ---
 5 years at CodeWorldwide. 

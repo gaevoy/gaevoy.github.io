@@ -3,7 +3,7 @@ published: true
 title: ASP.NET MVC app warm-up
 description: How to warm-up ASP.NET MVC app if it is impossible to call controller action via headless browser due to sophisticated authentication procedure?
 layout: post
-tags: [csharp, aspnet-mvc]
+tags: [csharp, aspnet]
 comments: true
 ---
 
