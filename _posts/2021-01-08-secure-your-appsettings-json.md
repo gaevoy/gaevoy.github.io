@@ -92,7 +92,7 @@ public static IConfigurationRoot Decrypt(this IConfigurationRoot root, string ke
 
 `Aes256Cipher` is a tiny wrapper around the built-in `AES-256` algorithm. You can check it out in [Gaev.Blog.SecuredAppSettingsJson](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/Aes256Cipher.cs). `Aes256Cipher` prefixes [initialization vector](https://en.wikipedia.org/wiki/Initialization_vector) on top of each ciphertext to hide patterns in encrypted data.
 
-There is [UtilityTests.cs](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs) for better maintenance  where you can:
+All necessary source code is [here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.9.0/Gaev.Blog.SecuredAppSettingsJson). There is [UtilityTests.cs](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs) for better maintenance  where you can:
 * [Generate a new unique AES-256 key](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L27)
 * [Encrypt individual value](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L13)
 * [Decrypt individual ciphertext](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L20)
