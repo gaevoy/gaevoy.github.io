@@ -13,11 +13,11 @@ Nowadays, it is almost impossible to implement a self-containing application. Ev
 
 The obvious solution - no secrets in a repository, nothing to worry about. Instead, save them in CI/CD system. For instance, [AppVeyor provides secure variables](https://www.appveyor.com/docs/build-configuration/#secure-variables); or [TeamCity typed parameters](https://www.jetbrains.com/help/teamcity/typed-parameters.html).
 
-That's okay, however now the secrets out of your control. So let's hope they won't be breached. 🤞 &#128540;
+That's okay, however now the secrets out of your control. So let's hope they won't be breached. 🤞
 
 ### Vault
 
-The perfect solution is storing the secrets in a vault, such as `Microsoft Azure Key Vault`, `Google Cloud KMS`, `AWS KMS`, etc. Even better, since there is a [hardware security module](https://en.wikipedia.org/wiki/Hardware_security_module) in action underneath, which theoretically is data breach resilient. 😎 💪
+The perfect solution is storing the secrets in a vault, such as `Microsoft Azure Key Vault`, `Google Cloud KMS`, `AWS KMS`, etc. Even better, since there is a [hardware security module](https://en.wikipedia.org/wiki/Hardware_security_module) in action underneath, which theoretically is data breach resilient. 😎
 
 ### Built-in AES-256 via `System.Security.Cryptography.Aes`
 
