@@ -3,7 +3,7 @@ published: true
 title: Audit log via transactional outbox
 description: Audit log implementation for a data-centric applications via transactional outbox, NEventStore, EntityFramework with code examples and demo todo app
 layout: post
-tags: [csharp, dotnet, event-sourcing, NEventStore]
+tags: [csharp, dotnet, event-sourcing, NEventStore, EntityFramework]
 comments: true
 ---
 
