@@ -115,7 +115,7 @@ As a result `UploadFile` method turns to:
 ```c#
 public async Task UploadFile(string path)
 {
-    using (_throttler.Throttle())
+    using (await _throttler.Throttle())
     using (var content = File.OpenRead(path))
         await _googleApi.UploadFile(path, content);
 }
