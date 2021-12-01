@@ -3,7 +3,7 @@ published: true
 title: Respect the order of .NET Enum values or how to rename them correctly
 description: Exploring interesting use case when the order of .NET Enum values really makes sense
 layout: post
-tags: [csharp]
+tags: [csharp, dotnet, enum]
 comments: true
 ---
 
