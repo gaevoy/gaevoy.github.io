@@ -198,4 +198,4 @@ We could also consider enabling special logic for the `PiiString` fields in test
 
 I like how the `PiiString` type makes things explicit and takes control over PII. Much better than the `String`. My implementation is not perfect, for instance, it seems weird to use `PiiString` for date of birth or gender.
 
-Anyway, check out [Gaev.Blog.Examples.PiiTypes](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/) for the complete overview. Let me know how do you work with PII?
+Anyway, check out [Gaev.Blog.Examples.PiiTypes](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/) for the complete overview. Let me know how do you work with PII.
