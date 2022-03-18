@@ -1,7 +1,7 @@
 ---
 published: true
 title: .NET type for personally identifiable information (PII)
-description: Working with personally identifiable information (PII) with the help of .NET string is painful. In this article, I will show the benefits of introducing explicit .NET type via PiiString instead of a string.
+description: Working with personally identifiable information (PII) with the help of .NET String is painful. In this article, I will show the benefits of introducing explicit .NET type via PiiString instead of .NET String.
 layout: post
 tags: [security, pii, gdpr, dotnet]
 comments: true
