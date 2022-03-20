@@ -49,7 +49,7 @@ However, this is not obvious how to encrypt/pseudonymize those values on a case-
 
 ## Solution
 
-What if we introduce an explicit type for PII, like `PiiString`.
+What if we introduce an explicit type for PII, like `PiiString`. The idea is to have `PiiString` type as much interchangeable with `String` as possible to simplify refactoring existing code which uses the `String`. Then, within the application boundary it should behave like usual `String`, however crossing application boundaries it should be encoded/encrypted/hashed.
 
 ```c#
 public class User
@@ -198,4 +198,10 @@ We could also consider enabling special logic for the `PiiString` fields in test
 
 I like how the `PiiString` type makes things explicit and takes control over PII. Much better than the `String`. My implementation is not perfect, for instance, it seems weird to use `PiiString` for date of birth or gender.
 
-Anyway, check out [Gaev.Blog.Examples.PiiTypes](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/) for the complete overview. Let me know how do you work with PII.
+An alternative way is using an attribute like `PiiAttribute`, keep in mind, using the attributes implies the reflection or source generators, which may end up in over-complicated implementation.
+
+`SecureString` is not the option because of this: [SecureString shouldn't be used](https://github.com/dotnet/platform-compat/blob/master/docs/DE0001.md).
+
+Anyway, check out [Gaev.Blog.Examples.PiiTypes](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/) for the complete overview. 
+
+Let me know how do you work with PII. Join the discussion in [Reddit](https://www.reddit.com/r/dotnet/comments/thfci2/piistring_net_type_for_personally_identifiable/) and [Twitter](https://twitter.com/vgman/status/1504928521474519041).
