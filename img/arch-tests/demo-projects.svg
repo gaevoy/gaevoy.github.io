@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="271px" preserveAspectRatio="none" style="width:584px;height:271px;background:#FFFFFF;" version="1.1" viewBox="0 0 584 271" width="584px" zoomAndPan="magnify"><defs/><g><!--MD5=[7014114973ea854170663b765b8e33b9]
+entity Gaev.Shell--><g id="elem_Gaev.Shell"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="116" x="315" y="219"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="411" y="224"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="409" y="226"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="409" y="230"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="330" y="251.9951">Gaev.Shell</text></g><!--MD5=[d8d840084200690712a081eb30508448]
+entity Gaev.Alfa--><g id="elem_Gaev.Alfa"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="469.5" y="113"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="558.5" y="118"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="556.5" y="120"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="556.5" y="124"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="484.5" y="145.9951">Gaev.Alfa</text></g><!--MD5=[2dcda490a4aaa6517910742c90ea5faf]
+entity Gaev.Alfa.Api--><g id="elem_Gaev.Alfa.Api"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="389" y="7"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="507" y="12"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="505" y="14"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="505" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="404" y="39.9951">Gaev.Alfa.Api</text></g><!--MD5=[9090f755e8268c85a2ef47e090a567bf]
+entity Gaev.Bravo--><g id="elem_Gaev.Bravo"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="312" y="113"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="414" y="118"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="412" y="120"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="412" y="124"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="327" y="145.9951">Gaev.Bravo</text></g><!--MD5=[746f59793fc72e2a659c4d0fdea2d01f]
+entity Gaev.Bravo.Api--><g id="elem_Gaev.Bravo.Api"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="151" x="202.5" y="7"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="333.5" y="12"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="331.5" y="14"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="331.5" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="217.5" y="39.9951">Gaev.Bravo.Api</text></g><!--MD5=[d24d6bd12714527c20070457d60a14d9]
+entity Gaev.Charlie--><g id="elem_Gaev.Charlie"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="131" x="145.5" y="113"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="256.5" y="118"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="254.5" y="120"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="254.5" y="124"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="160.5" y="145.9951">Gaev.Charlie</text></g><!--MD5=[ae1783e4ae21075d1f705538d44cd2ae]
+entity Gaev.Charlie.Api--><g id="elem_Gaev.Charlie.Api"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="160" x="7" y="7"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="147" y="12"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="145" y="14"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="145" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="22" y="39.9951">Gaev.Charlie.Api</text></g><!--MD5=[39d2fdf4f2e9f57e88c9c18d42281313]
+reverse link Gaev.Alfa to Gaev.Shell--><g id="link_Gaev.Alfa_Gaev.Shell"><path d="M487.685,162.012 C462.471,179.3779 429.189,202.3 404.977,218.9761 " fill="none" id="Gaev.Alfa-backto-Gaev.Shell" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="491.977,159.056,482.2965,160.8691,487.8599,161.8931,486.8359,167.4565,491.977,159.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d96d3d380f1d4b3de8abea7078343d61]
+reverse link Gaev.Alfa.Api to Gaev.Alfa--><g id="link_Gaev.Alfa.Api_Gaev.Alfa"><path d="M474.699,57.313 C485.613,74.511 499.703,96.713 510.023,112.976 " fill="none" id="Gaev.Alfa.Api-backto-Gaev.Alfa" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="471.997,53.056,473.4399,62.7986,474.6752,57.2782,480.1955,58.5135,471.997,53.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5c3ec731289f11fbe553b1dbe89afca7]
+reverse link Gaev.Bravo to Gaev.Shell--><g id="link_Gaev.Bravo_Gaev.Shell"><path d="M373,164.192 C373,181.2616 373,202.9891 373,218.9761 " fill="none" id="Gaev.Bravo-backto-Gaev.Shell" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="373,159.056,369,168.056,373,164.056,377,168.056,373,159.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[de44ca3b23af9e58ad6d7603ccb0f5e0]
+reverse link Gaev.Bravo.Api to Gaev.Bravo--><g id="link_Gaev.Bravo.Api_Gaev.Bravo"><path d="M301.638,56.877 C317.401,74.134 337.901,96.576 352.882,112.976 " fill="none" id="Gaev.Bravo.Api-backto-Gaev.Bravo" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="298.147,53.056,301.2648,62.3983,301.5197,56.7472,307.1708,57.0021,298.147,53.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[04a58c5a5d3b56113ef68954ee4d5232]
+reverse link Gaev.Alfa.Api to Gaev.Bravo--><g id="link_Gaev.Alfa.Api_Gaev.Bravo"><path d="M436.494,57.313 C422.438,74.511 404.292,96.713 391,112.976 " fill="none" id="Gaev.Alfa.Api-backto-Gaev.Bravo" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="439.974,53.056,431.1821,57.4947,436.8105,56.9279,437.3772,62.5563,439.974,53.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6594eee5637f3e7ba90895336585521e]
+reverse link Gaev.Charlie to Gaev.Shell--><g id="link_Gaev.Charlie_Gaev.Shell"><path d="M249.626,161.797 C276.717,179.1884 312.61,202.2311 338.693,218.9761 " fill="none" id="Gaev.Charlie-backto-Gaev.Shell" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="245.356,159.056,250.7692,167.2838,249.5637,161.7569,255.0907,160.5514,245.356,159.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[add21c1de3e4b0be2f032cdb0599baae]
+reverse link Gaev.Charlie.Api to Gaev.Charlie--><g id="link_Gaev.Charlie.Api_Gaev.Charlie"><path d="M117.336,56.443 C137.979,73.756 165.022,96.438 184.741,112.976 " fill="none" id="Gaev.Charlie.Api-backto-Gaev.Charlie" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="113.297,53.056,117.6231,61.9039,117.1283,56.2687,122.7634,55.7739,113.297,53.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ed2e8622f771efa42a89e7cf201af2e2]
+reverse link Gaev.Alfa.Api to Gaev.Charlie--><g id="link_Gaev.Alfa.Api_Gaev.Charlie"><path d="M400.884,55.049 C359.382,72.523 303.649,95.99 263.307,112.976 " fill="none" id="Gaev.Alfa.Api-backto-Gaev.Charlie" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="405.618,53.056,395.771,52.8637,401.0102,54.9971,398.8768,60.2363,405.618,53.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0d0d8782a3e7e2825d723d07ead1dc3d]
+reverse link Gaev.Bravo.Api to Gaev.Charlie--><g id="link_Gaev.Bravo.Api_Gaev.Charlie"><path d="M261.048,57.313 C249.969,74.511 235.665,96.713 225.188,112.976 " fill="none" id="Gaev.Bravo.Api-backto-Gaev.Charlie" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="263.791,53.056,255.5533,58.4542,261.0824,57.2588,262.2779,62.7879,263.791,53.056" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6ef0e65bd078dc089ea3a1634dd2ebdd]
+@startuml
+
+
+[Gaev.Shell]
+[Gaev.Shell] -up-> [Gaev.Alfa]
+[Gaev.Alfa]
+[Gaev.Alfa] -up-> [Gaev.Alfa.Api]
+[Gaev.Alfa.Api]
+[Gaev.Shell] -up-> [Gaev.Bravo]
+[Gaev.Bravo]
+[Gaev.Bravo] -up-> [Gaev.Bravo.Api]
+[Gaev.Bravo.Api]
+[Gaev.Bravo] -up-> [Gaev.Alfa.Api]
+[Gaev.Alfa.Api]
+[Gaev.Shell] -up-> [Gaev.Charlie]
+[Gaev.Charlie]
+[Gaev.Charlie] -up-> [Gaev.Charlie.Api]
+[Gaev.Charlie.Api]
+[Gaev.Charlie] -up-> [Gaev.Alfa.Api]
+[Gaev.Alfa.Api]
+[Gaev.Charlie] -up-> [Gaev.Bravo.Api]
+[Gaev.Bravo.Api]
+@enduml
+
+PlantUML version 1.2022.6beta1(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
