@@ -206,6 +206,6 @@ The outbox using `NEventStore` and `SQLStreamStore` show a good performance. An 
 
 The name `EventSourcingDoor` is for a reason. Once, your entity implements `IHaveChangeLog` meaning it publishes audit log AKA domain events, the door is open to switch to pure event sourcing. So before moving your existing application to event sourcing consider [EventSourcingDoor](https://github.com/gaevoy/EventSourcingDoor/) :)
 
-[See the pull request](https://github.com/gaevoy/EventSourcingDoor/pull/1) how I refactored the [todo app](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.Examples.TodoApp) and introduced an audit log via transactional outbox there. Check out demo [app.gaevoy.com/eventsourced-todo](https://app.gaevoy.com/eventsourced-todo/).
+[See the pull request](https://github.com/gaevoy/EventSourcingDoor/pull/1) how I refactored the [todo app](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.Examples.TodoApp) and introduced an audit log via transactional outbox there.
 
 Let me know down below in the comments what do you think.

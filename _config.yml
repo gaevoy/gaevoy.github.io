@@ -7,9 +7,9 @@ kramdown:
   syntax_highlighter: rouge
 url: https://gaevoy.com
 url_for_disqus: https://gaevoy.com
-title: Vladimir Gaevoy
+title: Volodymyr Gaevoy
 email: 
-author: Vladimir Gaevoy
+author: Volodymyr Gaevoy
 description: My awesome blog
 paginate: 16
 paginate_path: "page:num"
