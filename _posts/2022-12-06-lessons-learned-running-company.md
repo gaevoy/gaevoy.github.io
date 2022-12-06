@@ -116,3 +116,8 @@ We are partnering with well-known global companies, such as [DispatchHealth](htt
 [DBB Software](https://dbbsoftware.com/) stands for Driven By Business Software. Every day our developers prove that they are inspired and love their job regardless war, missiles and blackout. I'm proud to be helping them and  100% sure we are ready for new challenges.
 
 ![Ready for challenges](/img/lessons-learned-running-company/ready-for-challenges.jpg "Ready for challenges" ){:style="max-width:400px; width:100%;" class="block-center"}
+
+Let me know what do you think, please share your comments, suggestions, remarks:
+* in [LinkedIn](https://www.linkedin.com/posts/vladimirgayevoy_business-learning-software-activity-7005865285572280320-I16o/)
+* in [Twitter](https://twitter.com/vgman/status/1600101907581652994)
+* or in comments down below.
