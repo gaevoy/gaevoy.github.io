@@ -118,6 +118,6 @@ We are partnering with well-known global companies, such as [DispatchHealth](htt
 ![Ready for challenges](/img/lessons-learned-running-company/ready-for-challenges.jpg "Ready for challenges" ){:style="max-width:400px; width:100%;" class="block-center"}
 
 Let me know what do you think, please share your comments, suggestions, remarks:
-* in [LinkedIn](https://www.linkedin.com/posts/vladimirgayevoy_business-learning-software-activity-7005865285572280320-I16o/)
-* in [Twitter](https://twitter.com/vgman/status/1600101907581652994)
-* or in comments down below.
+* in [LinkedIn post](https://www.linkedin.com/posts/vladimirgayevoy_business-learning-software-activity-7005865285572280320-I16o/)
+* in [Twitter tweet](https://twitter.com/vgman/status/1600101907581652994)
+* or in comments section down below.
