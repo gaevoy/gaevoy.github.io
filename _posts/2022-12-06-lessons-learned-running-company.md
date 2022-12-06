@@ -1,6 +1,6 @@
 ---
 published: true
-title: Lessons learned running a company for a year
+title: Lessons learned from running the company for a year
 description: This is a story about software programmer without any experience in business managed to open a company and survived for 1 year in Poland. There are highlights in the article which I hope should help you.
 layout: post
 tags: [business, GoogleSheets]
@@ -11,7 +11,7 @@ This is a story about a software programmer without any experience in business, 
 
 ## Background
 
-Almost 5 years ago I decided to move from Ukraine to Poland. As C# developer it was not hard to relocate. There were always offers for relocation. Since then, I'm missing my friends and parents, so I regularly visit my hometown. I had an interesting talk with my friend on one of beer-party. He is part of software development team and wanted to expand to EU. It was summer 2021. Autumn 2021, we opened a company in Poland, it took us 3 month for preparation. `DBB Software` has born.
+Almost 5 years ago I decided to move from Ukraine to Poland. As C# developer it was not hard to relocate. There were always offers for relocation. Since then, I'm missing my friends and parents, so I regularly visit my hometown. I had an interesting talk with my friend on one of beer-party. He is part of software development team and wanted to expand to EU. It was summer 2021. Autumn 2021, we opened a company in Poland, it took us 3 month for preparation. [DBB Software](https://dbbsoftware.com/) has born.
 
 ![2 beers](/img/lessons-learned-running-company/2-beers.jpg "2 beers" ){:style="max-width:400px; width:100%;" class="block-center"}
 
@@ -109,10 +109,10 @@ You may say we should use ERP instead, and I would agree, but I could not find a
 
 ![Team](/img/lessons-learned-running-company/team.jpg "Team" ){:style="max-width:400px; width:100%;" class="block-center"}
 
-`DBB Software` now is a professional services company headquartered in Krakow, Poland. We provide in-house development, DevOps, testing, design, and software architecture. Our team has 70+ IT specialists with the primary tech stack includes `JavaScript`/`TypeScript`, `node.js`, `React Native`, `React.js`, `Vue.js`, `AWS`, and `Go`.
+[DBB Software](https://dbbsoftware.com/) now is a professional services company headquartered in Krakow, Poland. We provide in-house development, DevOps, testing, design, and software architecture. Our team has 70+ IT specialists with the primary tech stack includes `JavaScript`/`TypeScript`, `node.js`, `React Native`, `React.js`, `Vue.js`, `AWS`, and `Go`.
 
 We are partnering with well-known global companies, such as [DispatchHealth](https://www.dispatchhealth.com), [Doctify](https://www.doctify.com), [Bookis](https://bookis.com), [Renovai](https://www.renovai.com), [Uniform](https://uniform.dev), [Plaace](https://plaace.co), and many others. They are happy with our collaboration and share their positive experience in recommendations on our [Clutch](https://clutch.co/profile/dbb-software#reviews) company profile.
 
-`DBB Software` stands for Driven By Business Software. Every day our developers prove that they are inspired and love their job regardless war, missiles and blackout. I'm proud to be helping them and  100% sure we are ready for new challenges.
+[DBB Software](https://dbbsoftware.com/) stands for Driven By Business Software. Every day our developers prove that they are inspired and love their job regardless war, missiles and blackout. I'm proud to be helping them and  100% sure we are ready for new challenges.
 
 ![Ready for challenges](/img/lessons-learned-running-company/ready-for-challenges.jpg "Ready for challenges" ){:style="max-width:400px; width:100%;" class="block-center"}
