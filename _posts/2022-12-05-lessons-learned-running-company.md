@@ -1,17 +1,17 @@
 ---
 published: false
 title: Lessons learned running a company for 1 year
-description: This is a story about software programmer without any experience in business managed to open a company and survived for 1 year.
+description: This is a story about software programmer without any experience in business managed to open a company and survived for 1 year in Poland. There are highlights in the article which I hope should help you.
 layout: post
 tags: [business, GoogleSheets]
 comments: true
 ---
 
-This is a story about software programmer without any experience in business who managed to open a company and survived for 1 year. Before diving into details let's revile how this idea has popped up.
+This is a story about software programmer without any experience in business, who managed to open a company and survived for 1 year in Poland. There are highlights below I have encountered. But before diving into details let's revile how this idea has popped up.
 
 ## Background
 
-Almost 5 years ago I decided to move from Ukraine to Poland. As C# developer it was not hard to relocate, there are always offers for relocation. Since then, I'm missing my friends and parents, so I regularly visit my hometown. I had interesting talk with my friend on one of beer-party. He is part of software development team and want to try to extend to EU. It was summer 2021. Autumn 2021, we opened a company in Poland, it took us 3 month for preparation.
+Almost 5 years ago I decided to move from Ukraine to Poland. As C# developer it was not hard to relocate, there were always offers for relocation. Since then, I'm missing my friends and parents, so I regularly visit my hometown. I had interesting talk with my friend on one of beer-party. He is part of software development team and wanted to extend to EU. It was summer 2021. Autumn 2021, we opened a company in Poland, it took us 3 month for preparation.
 
 Since then 1 year has pasted, and I would like to share with you my observations, just not to forget later :) Keep in mind, I'm still new on running business, don't judge too harshly, rather help with suggestions, connections.
 
@@ -27,7 +27,7 @@ During whole process I asked many questions and was learning slowly. New questio
 
 Before moving to Poland I was under impression that it would be enough to know English to solve cases. It is not. I realised that my english vocabulary is good only in software field :) So to talk to everyone and about any topic it is easy to use Polish language. Of course, you can find someone who knows English but usually you have to stay in line to wait such. Also, some terminology and abbreviation is hard to translate to English or rather confusing, so better to use original, example:  `ryczałt`, `wyciągi`, `ZUS`, `CIT`, `PIT`, etc.
 
-In most cases, I'm using email to communicate instead of direct communication, meaning I have time to prepare. `Google Translate` and `DeepL Translator` helps a lot. As a result of slow but steady learning, I can talk on the phone with bank staff on Polish.
+In most cases, I'm using email to communicate instead of direct communication, meaning I have time to prepare. `Google Translate` and `DeepL Translator` helps a lot. As a result of slow but steady learning, I can talk on the phone with bank staff on Polish, and they understand me now :)
 
 ## Know right people
 
@@ -82,14 +82,19 @@ As of 2022:
 
 ## `Google Sheets` is must-have
 
-I never would have thought before, how useful and valuable `Google Sheets` can be. Any processes possible to represent via spreadsheets and automate via `Google Apps Script`. Currently, we use `Google Sheets` for:
+I never would have thought before, how useful and valuable `Google Sheets` can be. `Google Sheets` is perfect prototyping tool where you can represent almost any processes via spreadsheets and automate via `Google Apps Script`. Currently, we use `Google Sheets` for:
 * invoice generation
 * accounting of counterparties
 * export SWIFT transfers to banks
 * CIT tax calculation
 * salary taxes calculation
 
-You may say we should use ERP instead, and I would agree, but I could not find a good one which fits our needs for now. Partially, it is because of writting a few lines of `JavaScript` for `Google Sheets` automation is not a problem for me, so it turned out as super flexible option.
+You may say we should use ERP instead, and I would agree, but I could not find a good one which fits our needs for now. Partially, it is because of writting a few lines of `JavaScript` for `Google Sheets` automation is not a problem for me, so it turned out as super flexible option. Anyway, I'm still keep looking for a good ERP.
 
-## DBB Software now
+## `DBB Software` now
 
+`DBB Software` now is a professional services company headquartered in Krakow, Poland. We provide in-house development, DevOps, testing, design, and software architecture. Our team has 70+ IT specialists with the primary tech stack includes JavaScript/TypeScript, node.js, React Native, React.js, Vue.js, AWS, and Go.
+
+We are partnering with well-known global companies, such as [DispatchHealth](https://www.dispatchhealth.com), [Doctify](https://www.doctify.com), [Bookis](https://bookis.com), [Renovai](https://www.renovai.com), [Uniform](https://uniform.dev), [Plaace](https://plaace.co), and many others. They are happy with our collaboration and share their positive experience in recommendations on our [Clutch](https://clutch.co/profile/dbb-software#reviews) company profile.
+
+`DBB Software` stands for driven by business software. Our developers prove every day that they are inspired and love their job regardless war, missiles and blackout. I'm proud to be helping them.
