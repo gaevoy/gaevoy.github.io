@@ -11,7 +11,7 @@ This is a story about a software programmer without any experience in business, 
 
 ## Background
 
-Almost 5 years ago I decided to move from Ukraine to Poland. As C# developer it was not hard to relocate. There were always offers for relocation. Since then, I'm missing my friends and parents, so I regularly visit my hometown. I had an interesting talk with my friend on one of beer-party. He is part of software development team and wanted to expand to EU. It was summer 2021. Autumn 2021, we opened a company in Poland, it took us 3 month for preparation. [DBB Software](https://dbbsoftware.com/) has born.
+Almost 5 years ago I decided to move from Ukraine to Poland. As C# developer it was not hard to relocate. There were always offers for relocation. Since then, I'm missing my friends and parents, so I regularly visit my hometown. I had an interesting talk with my friend on one of beer-party. He is part of software development team and wanted to expand to EU. It was summer 2021. Autumn 2021, we opened a company in Poland, it took us 3 month for preparation.
 
 ![2 beers](/img/lessons-learned-running-company/2-beers.jpg "2 beers" ){:style="max-width:400px; width:100%;" class="block-center"}
 
@@ -21,7 +21,7 @@ Since then, 1 year has pasted, and I would like to share with you my observation
 
 In the very beginning it was super frightening how to do, where to start, what to learn, who to ask.
 
-However, it turned out to be easier than expected. There are people whose job to open firms. So you simply need to read and sign documents. Once `DBB Software` is opened, I found accounting office who provided a bookkeeper for us. In entrepreneur group on `Facebook` I found lawyer.
+However, it turned out to be easier than expected. There are people whose job to open firms. So you simply need to read and sign documents. Once the company is opened, I found accounting office who provided a bookkeeper for us. In entrepreneur group on `Facebook` I found lawyer.
 
 ![Learning spiral](/img/lessons-learned-running-company/learning-spiral.jpg "Learning spiral" ){:style="max-width:400px; width:100%;" class="block-center"}
 
@@ -39,7 +39,7 @@ When I write a code for software, I usually don't need to ask people too much. T
 
 ![Right people](/img/lessons-learned-running-company/right-people.jpg "Right people" ){:style="max-width:400px; width:100%;" class="block-center"}
 
-In a business this is completely different. You must know many people and talk to them, like bookkeeper, lawyer, tax officer, bank staff, `DBB Software` CEO and engineers. To participate in `Facebook` entrepreneur groups and watch `YouTube` channels. It gets more complicated when more than one person needs to be involved to solve a problem. Step by step, I managed to build connections with right people.
+In a business this is completely different. You must know many people and talk to them, like bookkeeper, lawyer, tax officer, bank staff, CEO and engineers. To participate in `Facebook` entrepreneur groups and watch `YouTube` channels. It gets more complicated when more than one person needs to be involved to solve a problem. Step by step, I managed to build connections with right people.
 
 ## Ask correctly, be as specific as possible
 
@@ -72,15 +72,15 @@ Because of not following redundancy principle from the beginning we have had pro
 Well, taxes are hard, but you have to understand them at least on basic level. Usually, tax related calculation are done by accounting office, so you don't have to know how to do that exactly. However, to forecast/plan upcoming expenses, it would be nice to know.
 
 There are over-simplified cases and related taxes, to show tax landscape I have discovered:
-* `DBB Software` receives transfer from `USA` firm for providing software development service.
+* The firm receives transfer from `USA` firm for providing software development service.
   * Affected by taxes: reverse charge VAT.
-* `DBB Software` pays for testing software provided by `Ukrainian` firm.
+* The firm pays for testing software provided by `Ukrainian` firm.
   * Affected by taxes: reverse charge VAT.
-* `DBB Software` pays the invoice for the accounting service.
+* The firm pays the invoice for the accounting service.
   * Affected by taxes: VAT
-* `DBB Software` pays salary to software engineer located in `Poland`.
+* The firm pays salary to software engineer located in `Poland`.
   * Affected by taxes: PIT, ZUS.
-* `DBB Software` reports profit.
+* The firm reports profit.
   * Affected by taxes: CIT.
 
 As of 2022:
