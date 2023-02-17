@@ -1,6 +1,6 @@
 ﻿---
 published: true
-title: Beware of decimal in Microsoft SQL Server
+title: Beware of decimals in Microsoft SQL Server
 description: This article shows how decimal type in Microsoft SQL Server can lead to unexpected results and how to fix that.
 layout: post
 tags: [mssql, postgresql, sql]
@@ -20,7 +20,8 @@ For me, as C# developer `decimal` type is always associated with financial calcu
 So it was obvious to choose `decimal` for the price change task. Let's see the SQL function we have implemented to adjust and round. It increases the prices to 10% and then round depending on the currency.
 
 ```sql
-create function dbo.AdjustAndRound(@currency varchar(max), @price decimal) returns decimal as
+create function dbo.AdjustAndRound(@currency varchar(max), @price decimal)
+  returns decimal as
 begin
   if @currency = 'EUR'
     return round(@price * 1.10, 2);
@@ -61,7 +62,8 @@ However, that arguments are optional and have default values: `precision = 18`, 
 Knowing this, there is an easy fix is to explicitly provide the required `scale` so the `AdjustAndRound` function will look like this:
 
 ```sql
-create function dbo.AdjustAndRound(@currency varchar(max), @price decimal(10,4)) returns decimal(10,4) as
+create function dbo.AdjustAndRound(@currency varchar(max), @price decimal(10,4))
+  returns decimal(10,4) as
 begin
   if @currency = 'EUR'
     return round(@price * 1.10, 2);
