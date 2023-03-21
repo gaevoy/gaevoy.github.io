@@ -438,3 +438,34 @@ pre.highlight {
     font-size: 1rem;
   }
 }
+
+a.job-title {
+  display: block;
+  font-size: 12px;
+  margin-left: 67px;
+  font-style: italic;
+  color: #999;
+}
+
+.dbbs {
+  display: block;
+  font-size: 14px;
+  max-width: 400px;
+  font-style: italic;
+  margin-left: 66px;
+  margin-bottom: -48px;
+}
+
+@media screen and (max-width: 48em) {
+  .dbbs {
+    text-align: center;
+    position: relative;
+    top: -20px;
+    margin-left: 0;
+    max-width: initial;
+  }
+}
+
+.dbbs a {
+  color: #477dca;
+}

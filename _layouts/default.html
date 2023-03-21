@@ -12,7 +12,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/basscss.css" | prepend: site.baseurl }}" type="text/css">
-    <link rel="stylesheet" href="{{ "/css/pixyll.css?v=4" | prepend: site.baseurl }}" type="text/css">
+    <link rel="stylesheet" href="{{ "/css/pixyll.css?v=5" | prepend: site.baseurl }}" type="text/css">
     <link rel="stylesheet" href="{{ "/css/solarized-light.css" | prepend: site.baseurl }}" type="text/css">
 
     <!-- Fonts -->
@@ -26,11 +26,17 @@
     <header class="site-header px2 px-responsive">
       <div class="mt2 wrap">
         <div class="measure">
-          <a href="{{ site.url }}" class="left"><div class="logo"></div> {{ site.title }}</a>
+          <div class="left">
+              <a href="{{ site.url }}"><div class="logo"></div> {{ site.title }}</a>
+              <a class="job-title" href="https://dbbsoftware.com/?utm_source=gaevoy" target="_blank">co-founder at DBB Software</a>
+          </div>
           <nav class="site-nav right">
             {% include navigation.html %}
           </nav>
           <div class="clearfix"></div>
+          <div class="dbbs">
+              <a href="https://dbbsoftware.com/?utm_source=gaevoy" target="_blank">DBB Software</a> helps Healthcare founders to increase revenue by 3x with custom software solutions
+          </div>
         </div>
       </div>
     </header>
