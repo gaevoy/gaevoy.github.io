@@ -96,7 +96,7 @@ Finally, it is done. I have created [the pull request](https://github.com/gaevoy
 
 `Gaev.BlazorOnAspNet.sln` has been created using `.NET Framework 4.5` which is too old in 2023. So, `Gaev.BlazorOnAspNet_4_8.sln` using `.NET Framework 4.8` is [here](https://github.com/gaevoy/Gaev.BlazorOnAspNet/blob/master/Gaev.BlazorOnAspNet_4_8.sln).
 
-`Blazor 7` is latest version as of May 2023. I have created the pull request to show on how to use `Blazor 7 WebAssembly` in `ASP.NET Framework 4.8` app, check it out [PR](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/7/files) and [branch](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/blazor-app-7).
+`Blazor 7` is the latest version as of May 2023. I have created pull request to show on how to use `Blazor 7 WebAssembly` in `ASP.NET Framework 4.8` app, check it out [PR](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/7/files) and [branch](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/blazor-app-7).
 
 As of 2023, **Pitfalls** section is no longer relevant, but I will keep it, just in case.
 
