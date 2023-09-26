@@ -3,7 +3,7 @@ published: true
 title: Chat on bare .NET Core and JS via server-sent events
 description: Minimalist implementation of a chat using server-sent events on bare .NET Core and VanillaJS
 layout: post
-tags: [server-sent-events, dotnet-core, javascript]
+tags: [server-sent-events, dotnet-core, javascript, api]
 comments: true
 ---
 
