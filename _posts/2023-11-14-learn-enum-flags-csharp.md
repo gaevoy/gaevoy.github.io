@@ -177,6 +177,12 @@ public static class EnumFlagExtensions
 Now, feel free to copy-paste!
 
 And for the nerds among us (I proudly count myself as one), here's the performance report via `BenchmarkDotNet`:
+<style type="text/css">
+table {
+    font-size: 12px;
+    width: 100%;
+}
+</style>
 
 | Method              | Runtime            | Mean        | Error     | StdDev    | Gen0   | Allocated |
 |-------------------- |------------------- |------------:|----------:|----------:|-------:|----------:|
