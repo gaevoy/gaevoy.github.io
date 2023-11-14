@@ -9,6 +9,8 @@ comments: true
 
 Ever tried naming your favorite things using enums in C#/.NET, like choosing between `Dog`, `Cat`, or `Bird` for your favorite pet, or picking your top language from `English`, `German`, `Ukrainian`? Enums are fantastic for this - like a personal pick-n-mix of named values. But here's the twist: what if you're a multi-pet enthusiast or a polyglot? Do you resort to an array of enums? Nope, there's a cooler way - [enum flags](https://learn.microsoft.com/en-us/dotnet/api/system.flagsattribute).
 
+![animals with flags](/img/learn-enum-flags-csharp/animals_with_flags.jpg "animals with flags" ){:style="max-width:500px; width:100%;" class="block-center"}
+
 Picture this enum:
 
 ```csharp
@@ -35,8 +37,6 @@ var isDogLover = myPreferences.HasFlag(Pet.Dog);
 ```
 
 Spoiler alert: I'm not (at least for now).
-
-![animals with flags](/img/learn-enum-flags-csharp/animals_with_flags.jpg "animals with flags" ){:style="max-width:500px; width:100%;" class="block-center"}
 
 But wait, there's more! Imagine one day I'm all about Team Dog, and suddenly, rabbits just aren't my thing anymore (sorry, bunnies!). This is where things get really exciting! If you can play around with those bitwise operations and flip flags like a pro, then you're basically a code wizard! As for me, I'm just a bit forgetful. Sometimes I can't even remember if I chose cats or dogs (or was it birds?). So, writing this post is my way of keeping it all straight - and hopefully helping you too!
 
