@@ -60,7 +60,7 @@ But then, one sunny day, I decide to join the fluffy rabbit fan club. Time for s
 myPreferences = myPreferences | Pet.Rabbit;
 ```
 
-Time for a bit of math (don't worry, it's not scary):
+A bit of math (don't worry, it's not scary):
 
 ```
    0010 - Cat
@@ -94,7 +94,7 @@ It's so easy to forget that little `~`, or mix up `&` with `|`, or even `&&` and
 
 ## Solution
 
-Drumroll, please! Introducing the hero we've all been waiting for the `SetFlag` method!
+Drumroll, please! Introducing the hero we've all been waiting for: the `SetFlag` method!
 
 ```csharp
 using System.Linq.Expressions;
