@@ -199,7 +199,7 @@ table {
 | LowerFlag_NonBoxing | .NET Framework 4.8 |   3.8718 ns | 0.0203 ns | 0.0170 ns |      - |         - |
 | LowerFlag_Boxing    | .NET Framework 4.8 | 103.2550 ns | 2.0824 ns | 2.3981 ns | 0.0229 |     144 B |
 
-As you can see, our new `SetFlag` method is not just easy to use, but nearly as fast as the native bitwise operations! Quick, simple, and efficient.
+As you can see, our new `SetFlag` method is not just easy to use, but close to the native bitwise operations! Quick, simple, and efficient.
 
 ## Frequently Asked Questions
 
@@ -221,7 +221,16 @@ The custom `SetFlag` method is nearly as fast as native bitwise operations. Perf
 
 ### Why is there no built-in `SetFlag` method in C#?
 
-That's good question. The decision to exclude a `SetFlag` method from the standard library might be due to the simplicity of implementing it using existing bitwise operations. However, creating a custom `SetFlag` method can make the code more readable and maintainable.
+That's good question. The decision to exclude a `SetFlag` method from the standard library due to the [simplicity of implementing it using existing bitwise operations](https://github.com/dotnet/runtime/issues/14084#issuecomment-1222840068). However, creating a custom `SetFlag` method can make the code more readable and maintainable.
+
+## Links
+
+* Microsoft's take on: [Add Enum.SetFlag and Enum.RemoveFlag to make bitwise flagging easier](https://github.com/dotnet/runtime/issues/14084).
+* StackOverflow discussion: [Enum.HasFlag, why no Enum.SetFlag?](https://stackoverflow.com/questions/5850873/enum-hasflag-why-no-enum-setflag).
+* [Reddit comments for this article](https://www.reddit.com/r/dotnet/comments/17vak5r/mastering_c_enum_flags_or_where_is_setflag_method/).
+* [Twitter post](https://twitter.com/vgman/status/1724512394485870852).
+* [LinkedIn post](https://www.linkedin.com/posts/vladimirgayevoy_csharp-dotnet-enumflags-activity-7130276494144135169-ndJ2?utm_source=share).
+* [Source code, tests, benchmarks for this article](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.6.0/Gaev.Blog.EnumFlags).
 
 ## Conclusion
 
