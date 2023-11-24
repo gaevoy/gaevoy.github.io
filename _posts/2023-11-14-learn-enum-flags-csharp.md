@@ -1,6 +1,6 @@
 ﻿---
 published: true
-title: A Comprehensive Guide to Mastering C# Enum Flags
+title: Learn C# Enum Flags by Doing
 description: Unlock the potential of Enum Flags in C# with our comprehensive guide. Learn how to simplify your code with the SetFlag method and understand bitwise operations.
 layout: post
 tags: [dotnet, dotnet-core, csharp, enum]
