@@ -1,0 +1,72 @@
+<script src="/js/cookieconsent.js?v=3.0.0-rc.17"></script>
+<script>
+    CookieConsent.run({
+        onConsent: (consent) => {
+            let isAnalyticsAllowed = consent.cookie.categories.indexOf("analytics") !== -1;
+            if (isAnalyticsAllowed) {
+                installGoogleTagManager();
+            }
+        },
+        guiOptions: {
+            consentModal: {
+                layout: 'bar inline',
+                position: 'bottom center',
+                equalWeightButtons: false,
+                flipButtons: true
+            },
+            preferencesModal: {
+                layout: 'box',
+                equalWeightButtons: false,
+                flipButtons: true,
+            }
+        },
+        categories: {
+            necessary: {
+                readOnly: true,
+                enabled: true,
+            },
+            analytics: {}
+        },
+        language: {
+            default: "en",
+            translations: {
+                'en': {
+                    consentModal: {
+                        title: "This website uses cookies",
+                        description:
+                            'Our website uses tracking cookies to understand how you interact with it. The tracking will be enabled only if you accept explicitly.',
+                        acceptAllBtn: 'Accept',
+                        acceptNecessaryBtn: 'Reject',
+                        showPreferencesBtn: 'Manage preferences',
+                        footer: ``
+                    },
+                    preferencesModal: {
+                        title: 'Cookie preferences',
+                        acceptAllBtn: 'Accept',
+                        acceptNecessaryBtn: 'Reject',
+                        savePreferencesBtn: 'Save preferences',
+                        closeIconLabel: 'Close',
+                        sections: [
+                            {
+                                title: 'Cookie Usage',
+                                description:
+                                    'We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. We also use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your prior consent. You can choose to enable or disable some or all of these cookies but disabling some of them may affect your browsing experience.',
+                            },
+                            {
+                                title: 'Necessary',
+                                description: 'Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.',
+                                linkedCategory: 'necessary',
+                            },
+                            {
+                                title: 'Analytics',
+                                linkedCategory: 'analytics',
+                                description:
+                                    'Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.',
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    });
+</script>
