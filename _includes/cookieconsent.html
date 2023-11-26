@@ -3,8 +3,8 @@
     CookieConsent.run({
         onConsent: (consent) => {
             let isAnalyticsAllowed = consent.cookie.categories.indexOf("analytics") !== -1;
-            if (isAnalyticsAllowed) {
-                installGoogleTagManager();
+            if (!isAnalyticsAllowed) {
+                CookieConsent.eraseCookies(/_ga.*/);
             }
         },
         guiOptions: {
