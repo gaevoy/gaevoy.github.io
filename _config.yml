@@ -7,9 +7,9 @@ kramdown:
   syntax_highlighter: rouge
 url: https://gaevoy.com
 url_for_disqus: https://gaevoy.com
-title: Volodymyr Gaevoy
+title: Volodymyr Gaevoy's blog | Expert Web Development and Consulting Services
 email: 
 author: Volodymyr Gaevoy
-description: My awesome blog
+description: Get simple and helpful tips on .NET, c#, web programming and professional software development on Volodymyr Gaevoy's blog
 paginate: 16
 paginate_path: "page:num"

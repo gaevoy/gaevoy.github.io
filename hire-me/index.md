@@ -1,6 +1,8 @@
 ---
+title: Hire Me | Expert Web Development and Consulting Services
+description: Hire Volodymyr Gaevoy for expert web development and consulting services. With 15+ years in tech, I deliver solutions that drive success. Learn more.
+tags: [web development, consulting services, professional developer, technology solutions, hire tech expert, dotnet, csharp, javascript, cybersecurity, security, business, architecture, design]
 layout: default
-title: Hire Me
 ---
 
 <style>
@@ -102,7 +104,7 @@ title: Hire Me
 
 <h1 class="hire-me-header">About Me</h1>
 
-<div class="hire-me-logo"></div>
+<div class="hire-me-logo" alt="Volodymyr Gaevoy Logo"></div>
 
 > “People seem to hire me for my genuine passion and quality work. My love for what I do typically inspires people to work with me.”
 
@@ -117,5 +119,5 @@ My professional mantra revolves around making the implicit explicit, dividing an
 Away from the keyboard, I am a proud father, an avid traveler, a bicyclist, and a progressive metal enthusiast.
 
 <div class="hire-me-button-container">
-<a href="https://ua.linkedin.com/in/vladimirgayevoy" target="_blank" class="button-85">Hire me now!</a>
+<a href="https://www.linkedin.com/in/vladimirgayevoy" target="_blank" class="button-85">Hire Me!</a>
 </div>
