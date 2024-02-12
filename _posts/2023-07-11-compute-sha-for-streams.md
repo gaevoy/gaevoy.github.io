@@ -46,7 +46,7 @@ So how come, in some cases, it returns `e3b0c44298fc1c149afbf4c8996fb92427ae41e4
 
 ## Solution
 
-Once I [googled for `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`](https://www.google.com/search?q=%22e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855%22) and found that the hash is for an empty string, it dawned on me that I forgot to rewind the stream 🤦‍♂️
+Once I [googled for `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`](https://www.google.com/search?q=%22e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855%22){:target="_blank"} and found that the hash is for an empty string, it dawned on me that I forgot to rewind the stream 🤦‍♂️
 
 I have rewound to the beginning, and it fixed the issue.
 
@@ -83,4 +83,4 @@ public void It_should_compute_SHA256_for_stream(string payload, string expected)
 
 Don't forget to `Seek(0, SeekOrigin.Begin)` a stream before reading it.
 
-Source code is [here to play](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.3.0/Gaev.Blog.Sha256ForStream/CryptoUtilsTests.cs).
+Source code is [on Gaev.Blog.Sha256ForStream to play](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.3.0/Gaev.Blog.Sha256ForStream/CryptoUtilsTests.cs){:target="_blank"}.

@@ -11,13 +11,13 @@ I'm working on a project with a data-centric approach mostly. Well, as it happen
 
 ### Event sourcing
 
-> Event sourcing persists the state of a business entity such an Order or a Customer as a sequence of state-changing events. Whenever the state of a business entity changes, a new event is appended to the list of events. Since saving an event is a single operation, it is inherently atomic. The application reconstructs an entity’s current state by replaying the events — [Microservice Architecture](https://microservices.io/patterns/data/event-sourcing.html)
+> Event sourcing persists the state of a business entity such an Order or a Customer as a sequence of state-changing events. Whenever the state of a business entity changes, a new event is appended to the list of events. Since saving an event is a single operation, it is inherently atomic. The application reconstructs an entity’s current state by replaying the events — [Microservice Architecture](https://microservices.io/patterns/data/event-sourcing.html){:target="_blank"}
 
 Event sourcing & CQRS is a super great tool. I love the fact that all history is recorded, and it is naturally complete. However, for me, there are huge pain points such as eventual consistency, projection management, saga/process manager. Sure, you could live with them but at what price? If I need to introduce an audit log only, event sourcing may be overkill.
 
 ### Transactional outbox
 
-> A service that uses a relational database inserts messages/events into an outbox table as part of the local transaction. A separate Message Relay process publishes the events inserted into database to a message broker — [Microservice Architecture](https://microservices.io/patterns/data/transactional-outbox.html).
+> A service that uses a relational database inserts messages/events into an outbox table as part of the local transaction. A separate Message Relay process publishes the events inserted into database to a message broker — [Microservice Architecture](https://microservices.io/patterns/data/transactional-outbox.html){:target="_blank"}.
 
 `Transactional outbox` is a good trade-off. It means, when you change the entity state, you will insert audit log records together within the same transaction. See below, the `Order` table is where you save the entity, the `Outbox` table is your audit log.
 
@@ -33,12 +33,12 @@ Well, the `transactional outbox` approach has a few side effects:
 ### Implementation
 
 I found these candidates that may fit for `transactional outbox`:
-* [NEventStore](https://github.com/NEventStore/NEventStore)
-* [SQLStreamStore](https://github.com/SQLStreamStore/SQLStreamStore)
-* [DotNetCore.CAP](https://github.com/dotnetcore/CAP)
-* [Eventuate Tram](https://github.com/eventuate-tram/eventuate-tram-core-dotnet/)
+* [NEventStore](https://github.com/NEventStore/NEventStore){:target="_blank"}
+* [SQLStreamStore](https://github.com/SQLStreamStore/SQLStreamStore){:target="_blank"}
+* [DotNetCore.CAP](https://github.com/dotnetcore/CAP){:target="_blank"}
+* [Eventuate Tram](https://github.com/eventuate-tram/eventuate-tram-core-dotnet/){:target="_blank"}
 
-After testing a lot and playing, `NEventStore`, `SQLStreamStore` works well in the role of outbox. Let's see how my `EntityFramework` context looks like below (also here [EventSourcingDoor.EntityFrameworkCore](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.EntityFrameworkCore)):
+After testing a lot and playing, `NEventStore`, `SQLStreamStore` works well in the role of outbox. Let's see how my `EntityFramework` context looks like below (also here [EventSourcingDoor.EntityFrameworkCore](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.EntityFrameworkCore){:target="_blank"}):
 
 ```c#
 public class UserDbContext : DbContext
@@ -73,7 +73,7 @@ public class UserDbContext : DbContext
 }
 ```
 
-Below, transactional outbox with `NEventStore` implementation. Important to note, during sending changes you should enrich them with useful information, such as, `when` and `who` made that, maybe even to add user IP address, page URL, etc. See the full version in [EventSourcingDoor.NEventStore](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.NEventStore).
+Below, transactional outbox with `NEventStore` implementation. Important to note, during sending changes you should enrich them with useful information, such as, `when` and `who` made that, maybe even to add user IP address, page URL, etc. See the full version in [EventSourcingDoor.NEventStore](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.NEventStore){:target="_blank"}.
 
 ```c#
 public partial class NEventStoreOutbox : IOutbox
@@ -99,7 +99,7 @@ public partial class NEventStoreOutbox : IOutbox
 }
 ```
 
-`User` entity will look like below. `ChangeLog` is basically a list of changes made recently. More precisely the list of domain events that happened, which can be considered as an audit log as well. `ChangeLog` is part of [EventSourcingDoor](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor) library.
+`User` entity will look like below. `ChangeLog` is basically a list of changes made recently. More precisely the list of domain events that happened, which can be considered as an audit log as well. `ChangeLog` is part of [EventSourcingDoor](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor){:target="_blank"} library.
 
 ```c#
 public class User : IHaveChangeLog
@@ -204,8 +204,8 @@ public partial class NEventStoreOutbox : IOutbox
 
 The outbox using `NEventStore` and `SQLStreamStore` show a good performance. An entity with outbox saves in 2ms vs 0.5ms without it (tested on `MsSql` + `NEventStore`). They both work well on `MsSql` and `Postgres` databases, on Windows and Linux. Moreover, concurrency is still great so long transactions won't affect the rest. However, when `EntityFramework` saves multiple entities at once within the same database context, the order in which changes appear in the outbox is unpredictable. Of course, for the audit log, it is not a big deal. Well, to workaround, save the entities one-by-one.
 
-The name `EventSourcingDoor` is for a reason. Once, your entity implements `IHaveChangeLog` meaning it publishes audit log AKA domain events, the door is open to switch to pure event sourcing. So before moving your existing application to event sourcing consider [EventSourcingDoor](https://github.com/gaevoy/EventSourcingDoor/) :)
+The name `EventSourcingDoor` is for a reason. Once, your entity implements `IHaveChangeLog` meaning it publishes audit log AKA domain events, the door is open to switch to pure event sourcing. So before moving your existing application to event sourcing consider [EventSourcingDoor](https://github.com/gaevoy/EventSourcingDoor/){:target="_blank"} :)
 
-[See the pull request](https://github.com/gaevoy/EventSourcingDoor/pull/1) how I refactored the [todo app](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.Examples.TodoApp) and introduced an audit log via transactional outbox there.
+[See the pull request](https://github.com/gaevoy/EventSourcingDoor/pull/1){:target="_blank"} how I refactored the [todo app](https://github.com/gaevoy/EventSourcingDoor/tree/1.0.0/EventSourcingDoor.Examples.TodoApp){:target="_blank"} and introduced an audit log via transactional outbox there.
 
 Let me know down below in the comments what do you think.

@@ -7,7 +7,7 @@ tags: [csharp, NUnit, AutoFixture, FluentAssertions]
 comments: true
 ---
 
-`Newtonsoft.Json` is [the most popular package](https://www.nuget.org/stats/packages) in 2019 yet. Because of a need to send data across different applications: browser client app or mobile app, `.NET` app or `Node.JS` server-side app, etc. They all must communicate with each other so there is only one way to go is serialization/deserialization. Since serialization is a mission-critical part of the app it must be proper unit tested. But why do we need to test a well-tested library such as `Newtonsoft.Json`?
+`Newtonsoft.Json` is [the most popular package](https://www.nuget.org/stats/packages){:target="_blank"} in 2019 yet. Because of a need to send data across different applications: browser client app or mobile app, `.NET` app or `Node.JS` server-side app, etc. They all must communicate with each other so there is only one way to go is serialization/deserialization. Since serialization is a mission-critical part of the app it must be proper unit tested. But why do we need to test a well-tested library such as `Newtonsoft.Json`?
 
 I came across a serialization problem some time ago. Let's see a message which I need to pass across apps:
 
@@ -78,7 +78,7 @@ However, it has potential problems for a growing project which is changed quite 
 2. If a property is removed the test must be fixed.
 3. When a new message type is introduced developer must write one more unit test.
 
-In order to fix the 1st and 2nd problem, I can generate the message containing random data via [AutoFixture](https://www.nuget.org/packages/AutoFixture). For checking that deserialized message contains the same value as the serialized one I can use [FluentAssertions](https://www.nuget.org/packages/FluentAssertions).
+In order to fix the 1st and 2nd problem, I can generate the message containing random data via [AutoFixture](https://www.nuget.org/packages/AutoFixture){:target="_blank"}. For checking that deserialized message contains the same value as the serialized one I can use [FluentAssertions](https://www.nuget.org/packages/FluentAssertions){:target="_blank"}.
 
 ```c#
 [Test]
@@ -119,6 +119,6 @@ private static IEnumerable<Type> AllMessageTypes =>
         .Where(t => t.IsClass && t.Namespace == "Gaev.Blog.Examples.Messages");
 ```
 
-I had to slightly change on how to generate a message with random data from a generic version to [non-generic one](https://github.com/AutoFixture/AutoFixture/issues/97#issuecomment-17064685). As you can see in my example all messages live in `Gaev.Blog.Examples.Messages` namespace. By the way, all demonstrated examples you will find in [Gaev.Blog.Examples.SerializationTests](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.2.0/Gaev.Blog.Examples.SerializationTests).
+I had to slightly change on how to generate a message with random data from a generic version to [non-generic one](https://github.com/AutoFixture/AutoFixture/issues/97#issuecomment-17064685){:target="_blank"}. As you can see in my example all messages live in `Gaev.Blog.Examples.Messages` namespace. By the way, all demonstrated examples you will find in [Gaev.Blog.Examples.SerializationTests](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.2.0/Gaev.Blog.Examples.SerializationTests){:target="_blank"}.
 
 Have a nice unit-testing ;)

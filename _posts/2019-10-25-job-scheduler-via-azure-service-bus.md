@@ -14,7 +14,7 @@ There are many kinds of jobs that applications can run regularly. For instance:
 * sending reminder or close subscriptions for high-debt users
 * jobs related to well-known events like opening/closing stock exchange, closing fiscal year, public holidays, black Friday and so on.
 
-What tools can be used? Usually, [cron](https://en.wikipedia.org/wiki/Cron), [Windows Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler), [Quartz.NET](https://github.com/quartznet/quartznet) are used or [Task.Delay](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.delay) after all.
+What tools can be used? Usually, [cron](https://en.wikipedia.org/wiki/Cron){:target="_blank"}, [Windows Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler){:target="_blank"}, [Quartz.NET](https://github.com/quartznet/quartznet){:target="_blank"} are used or [Task.Delay](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.delay){:target="_blank"} after all.
 
 ## Problem
 
@@ -22,11 +22,11 @@ Mostly, job schedulers are doing their job fine unless you run multiple instance
 
 ## Solution
 
-I would like to show how a cloud solution can help, specifically [Azure Service Bus](https://azure.microsoft.com/en-us/services/service-bus/).
+I would like to show how a cloud solution can help, specifically [Azure Service Bus](https://azure.microsoft.com/en-us/services/service-bus/){:target="_blank"}.
 
-> `Azure Service Bus` is a fully managed enterprise integration message broker. Service Bus is most commonly used to decouple applications and services from each other, and is a reliable and secure platform for asynchronous data and state transfer — [Microsoft](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
+> `Azure Service Bus` is a fully managed enterprise integration message broker. Service Bus is most commonly used to decouple applications and services from each other, and is a reliable and secure platform for asynchronous data and state transfer — [Microsoft](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview){:target="_blank"}
 
-It has a really useful feature - [scheduled messages](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sequencing#scheduled-messages) at a low price. [$0,05](https://azure.microsoft.com/en-us/pricing/details/service-bus/) per million operations should be enough. `Azure Service Bus` should work well - [Stack Overflow proof](https://stackoverflow.com/a/26915249/1400547). So our jobs will be distributed evenly across multiple instances and if some instance dies the others will get their jobs to run.
+It has a really useful feature - [scheduled messages](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sequencing#scheduled-messages){:target="_blank"} at a low price. [$0,05](https://azure.microsoft.com/en-us/pricing/details/service-bus/) per million operations should be enough. `Azure Service Bus` should work well - [Stack Overflow proof](https://stackoverflow.com/a/26915249/1400547){:target="_blank"}. So our jobs will be distributed evenly across multiple instances and if some instance dies the others will get their jobs to run.
 
 To implement the scheduler I will use `C#` and `Microsoft.Azure.ServiceBus` package. However, it is easy to implement in your programming language since `.NET`, `Java`, `Node.js`, `PHP`, `Python`, `Ruby` are supported and `REST API` fills that gap for other languages. 
 
@@ -68,7 +68,7 @@ public class ServiceBusJobScheduler
 }
 ```
 
-A new queue `queueName` must be created per a job. `init` callback is called the first time only to schedule very first run. `job` function is our job itself, it receives a scheduled message and returns the next scheduled message. In the scheduled message you can store a state for the job between runs. `cancellation` is the way to stop the job. `EnsureQueueCreated` creates `queueName` queue if it is not there. `Wait` just waits until cancellation is requested. The complete source code is [here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.8.0/Gaev.Blog.AzureServiceBusTaskScheduler).
+A new queue `queueName` must be created per a job. `init` callback is called the first time only to schedule very first run. `job` function is our job itself, it receives a scheduled message and returns the next scheduled message. In the scheduled message you can store a state for the job between runs. `cancellation` is the way to stop the job. `EnsureQueueCreated` creates `queueName` queue if it is not there. `Wait` just waits until cancellation is requested. The complete source code is [on Gaev.Blog.AzureServiceBusTaskScheduler](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.8.0/Gaev.Blog.AzureServiceBusTaskScheduler){:target="_blank"}.
 
 That's how a job looks like.
 
@@ -97,7 +97,7 @@ await scheduler.Run(
 );
 ```
 
-Let me introduce you `TakeABreak` job. It will remind me to take a break from the computer at [\*/30 8-18 \* \* MON-FRI](https://crontab.guru/#*/30_8-18_*_*_MON-FRI). I'm using cron expression to compute the next date via [Cronos](https://www.nuget.org/packages/Cronos/). That's it and we are done.
+Let me introduce you `TakeABreak` job. It will remind me to take a break from the computer at [\*/30 8-18 \* \* MON-FRI](https://crontab.guru/#*/30_8-18_*_*_MON-FRI){:target="_blank"}. I'm using cron expression to compute the next date via [Cronos](https://www.nuget.org/packages/Cronos/){:target="_blank"}. That's it and we are done.
 
 ![Azure Service Bus queue](/img/service-bus/take-a-break-queue.png "Azure Service Bus queue" ){:style="max-width:1500px; width:100%;" class="block-center"}
 
@@ -105,12 +105,12 @@ Take a look at how tasks are distributed across multiple instances.
 
 ![Running multiple instances of the job](/img/service-bus/take-a-break-job.png "Running multiple instances of the job" ){:style="max-width:910px; width:100%;" class="block-center"}
 
-By the way, you can implement [almost the same](https://mrochon.azurewebsites.net/2013/10/12/using-azure-queues-to-schedule-work-items/) via [Azure Queues](https://docs.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction) but it has a limit for scheduling time. Messages cannot be scheduled more than 7 days ahead.
+By the way, you can implement [almost the same](https://mrochon.azurewebsites.net/2013/10/12/using-azure-queues-to-schedule-work-items/){:target="_blank"} via [Azure Queues](https://docs.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction){:target="_blank"} but it has a limit for scheduling time. Messages cannot be scheduled more than 7 days ahead.
 
 ## Pitfalls
 
-Watch out for exceptions! [By default](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues#exceeding-maxdeliverycount), `Service Bus` retries 10 times then moves the message into the dead-letter queue.
+Watch out for exceptions! [By default](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues#exceeding-maxdeliverycount){:target="_blank"}, `Service Bus` retries 10 times then moves the message into the dead-letter queue.
 
-Watch out for long-running tasks! [By default](https://github.com/Azure/azure-docs-sdk-dotnet/issues/754), `Service Bus` waits 5 minutes then returns the message to the queue so others can process is again.
+Watch out for long-running tasks! [By default](https://github.com/Azure/azure-docs-sdk-dotnet/issues/754){:target="_blank"}, `Service Bus` waits 5 minutes then returns the message to the queue so others can process is again.
 
 What job scheduler works well for you? Let me and readers know in comments :)

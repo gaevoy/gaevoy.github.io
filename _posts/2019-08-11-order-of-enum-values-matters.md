@@ -60,4 +60,4 @@ public enum Colors
 
 Of course, so obvious! And the test above is green. It was interesting to figure out this behavior. Don't forget to respect the order of `Enum` values!
 
-Source code is [here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.4.0/Gaev.Blog.Examples.OrderOfEnumValues/OrderOfEnumValuesMatters.cs).
+Source code is [on Gaev.Blog.Examples.OrderOfEnumValues](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.4.0/Gaev.Blog.Examples.OrderOfEnumValues/OrderOfEnumValuesMatters.cs){:target="_blank"}.

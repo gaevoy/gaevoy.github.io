@@ -15,7 +15,7 @@ Every year, we adjust prices for services according to the inflation rate and so
 
 For me, as C# developer `decimal` type is always associated with financial calculations. This is clearly written here:
 
-> `Decimal` value type is appropriate for financial calculations that require large numbers of significant integral and fractional digits and no round-off errors — [Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.decimal)
+> `Decimal` value type is appropriate for financial calculations that require large numbers of significant integral and fractional digits and no round-off errors — [Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.decimal){:target="_blank"}
 
 So it was obvious to choose `decimal` for the price change task. Let's see the SQL function we have implemented to adjust and round. It increases the prices to 10% and then round depending on the currency.
 
@@ -80,5 +80,5 @@ And now it works as expected.
 ```sql
 select iif(cast(0.1 + 0.2 as decimal) = 0, 'true', 'false')
 ```
-* Play with this issue on `db<>fiddle` without installing `SQL Server`: [here](https://dbfiddle.uk/5eEq0dGI) and [there](https://dbfiddle.uk/CVwn-0ej). 
-* See a similar issue on [StackOverflow](https://stackoverflow.com/a/23016604).
+* Play with this issue [on `db<>fiddle` without installing `SQL Server`](https://dbfiddle.uk/5eEq0dGI){:target="_blank"} and [there](https://dbfiddle.uk/CVwn-0ej){:target="_blank"}. 
+* See a similar issue on [StackOverflow](https://stackoverflow.com/a/23016604){:target="_blank"}.

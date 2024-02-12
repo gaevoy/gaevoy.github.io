@@ -7,7 +7,7 @@ tags: [dotnet, dotnet-core, csharp, enum, api, json, xml]
 comments: true
 ---
 
-Enumerations, or `Enums`, serve as a [comprehensive method for representing named values](https://en.wikipedia.org/wiki/Enumerated_type), such as currencies (e.g., EUR, USD, NOK) and languages (e.g., English, German, Spanish). They are integral to the vast majority of programming languages. Additionally, [OpenAPI (Swagger) accommodates Enums](https://swagger.io/docs/specification/data-models/enums/) through its utilization of JSON, a subset of JavaScript. However, given that JavaScript was [developed in a mere 10 days](https://en.wikipedia.org/wiki/Brendan_Eich), the implementation of enums was not incorporated :) Thus, in JSON and JavaScript, an enum is represented as either a `string` or a `numeric` type.
+Enumerations, or `Enums`, serve as a [comprehensive method for representing named values](https://en.wikipedia.org/wiki/Enumerated_type){:target="_blank"}, such as currencies (e.g., EUR, USD, NOK) and languages (e.g., English, German, Spanish). They are integral to the vast majority of programming languages. Additionally, [OpenAPI (Swagger) accommodates Enums](https://swagger.io/docs/specification/data-models/enums/){:target="_blank"} through its utilization of JSON, a subset of JavaScript. However, given that JavaScript was [developed in a mere 10 days](https://en.wikipedia.org/wiki/Brendan_Eich){:target="_blank"}, the implementation of enums was not incorporated :) Thus, in JSON and JavaScript, an enum is represented as either a `string` or a `numeric` type.
 
 Typically, enums remain constant and undergo minimal changes over time. After all, the introduction of a new currency or language is a rare occurrence. However, when such changes do occur, they can result in substantial issues.
 
@@ -312,7 +312,7 @@ The article provides solutions for `Newtonsoft.Json`, `System.Text.Json`, and `S
 It is essential to handle `Undefined` or default enum values in your business logic to avoid unexpected behavior. You might log them for analysis, request updates to your enum definitions, or implement fallback logic depending on the use case.
 
 ### Where can I find the source code used in this blog post?
-All related source code is available [here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.5.0/Gaev.Blog.EnumAsStringTrap) for further exploration and implementation.
+All related source code is available [on Gaev.Blog.EnumAsStringTrap](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.5.0/Gaev.Blog.EnumAsStringTrap){:target="_blank"} for further exploration and implementation.
 
 ## In Conclusion
 

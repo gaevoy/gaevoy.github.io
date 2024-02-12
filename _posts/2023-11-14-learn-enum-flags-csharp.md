@@ -7,7 +7,7 @@ tags: [dotnet, dotnet-core, csharp, enum]
 comments: true
 ---
 
-Ever tried naming your favorite things using enums in C#/.NET, like choosing between `Dog`, `Cat`, or `Bird` for your favorite pet, or picking your top language from `English`, `German`, `Ukrainian`? Enums are fantastic for this - like a personal pick-n-mix of named values. But here's the twist: what if you're a multi-pet enthusiast or a polyglot? Do you resort to an array of enums? Nope, there's a cooler way - [enum flags](https://learn.microsoft.com/en-us/dotnet/api/system.flagsattribute).
+Ever tried naming your favorite things using enums in C#/.NET, like choosing between `Dog`, `Cat`, or `Bird` for your favorite pet, or picking your top language from `English`, `German`, `Ukrainian`? Enums are fantastic for this - like a personal pick-n-mix of named values. But here's the twist: what if you're a multi-pet enthusiast or a polyglot? Do you resort to an array of enums? Nope, there's a cooler way - [enum flags](https://learn.microsoft.com/en-us/dotnet/api/system.flagsattribute){:target="_blank"}.
 
 ![animals with flags](/img/learn-enum-flags-csharp/animals_with_flags.jpg "animals with flags" ){:style="max-width:500px; width:100%;" class="block-center"}
 
@@ -135,7 +135,7 @@ Goodbye, cat – no more cat hairs on my keyboard!
 
 See? No more losing that sneaky `~`.
 
-The above code is cool, but some brainy folks suggested we could make it even faster by cutting out the boxing [here](https://stackoverflow.com/a/23391746). So, here's the turbo-charged version:
+The above code is cool, but some brainy folks suggested we could make it even faster by cutting out the boxing, [check out StackOverflow topic](https://stackoverflow.com/a/23391746){:target="_blank"}. So, here's the turbo-charged version:
 
 ```csharp
 using System.Linq.Expressions;
@@ -221,21 +221,21 @@ The custom `SetFlag` method is nearly as fast as native bitwise operations. Perf
 
 ### Why is there no built-in `SetFlag` method in C#?
 
-That's good question. The decision to exclude a `SetFlag` method from the standard library due to the [simplicity of implementing it using existing bitwise operations](https://github.com/dotnet/runtime/issues/14084#issuecomment-1222840068). However, creating a custom `SetFlag` method can make the code more readable and maintainable.
+That's good question. The decision to exclude a `SetFlag` method from the standard library due to the [simplicity of implementing it using existing bitwise operations](https://github.com/dotnet/runtime/issues/14084#issuecomment-1222840068){:target="_blank"}. However, creating a custom `SetFlag` method can make the code more readable and maintainable.
 
 ## Links
 
-* Microsoft's take on: [Add Enum.SetFlag and Enum.RemoveFlag to make bitwise flagging easier](https://github.com/dotnet/runtime/issues/14084).
-* StackOverflow discussion: [Enum.HasFlag, why no Enum.SetFlag?](https://stackoverflow.com/questions/5850873/enum-hasflag-why-no-enum-setflag).
-* [Reddit comments for this article](https://www.reddit.com/r/dotnet/comments/17vak5r/mastering_c_enum_flags_or_where_is_setflag_method/).
-* [Twitter post](https://twitter.com/vgman/status/1724512394485870852).
-* [LinkedIn post](https://www.linkedin.com/posts/vladimirgayevoy_csharp-dotnet-enumflags-activity-7130276494144135169-ndJ2?utm_source=share).
-* [Source code, tests, benchmarks for this article](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.6.0/Gaev.Blog.EnumFlags).
+* Microsoft's take on: [Add Enum.SetFlag and Enum.RemoveFlag to make bitwise flagging easier](https://github.com/dotnet/runtime/issues/14084){:target="_blank"}.
+* StackOverflow discussion: [Enum.HasFlag, why no Enum.SetFlag?](https://stackoverflow.com/questions/5850873/enum-hasflag-why-no-enum-setflag){:target="_blank"}.
+* [Reddit comments for this article](https://www.reddit.com/r/dotnet/comments/17vak5r/mastering_c_enum_flags_or_where_is_setflag_method/){:target="_blank"}.
+* [Twitter post](https://twitter.com/vgman/status/1724512394485870852){:target="_blank"}.
+* [LinkedIn post](https://www.linkedin.com/posts/vladimirgayevoy_csharp-dotnet-enumflags-activity-7130276494144135169-ndJ2?utm_source=share){:target="_blank"}.
+* [Source code, tests, benchmarks for this article](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.6.0/Gaev.Blog.EnumFlags){:target="_blank"}.
 
 ## Conclusion
 
 It looks like our autocomplete is finally back from its coffee break. That's a wrap on our fun-filled tour of enum flags in C#! With our nifty `SetFlag` method, you're all set to toggle your choices as easily as flipping a switch. No more bitwise headaches – just smooth, straightforward coding. Happy flag-raising (and lowering) adventures!
 
-For those who love a deep dive, check out the [unit tests, examples, and benchmarks here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.6.0/Gaev.Blog.EnumFlags).
+For those who love a deep dive, check out the [unit tests, examples, and benchmarks here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.6.0/Gaev.Blog.EnumFlags){:target="_blank"}.
 
 If you enjoyed this coding caper, don't forget to share the magic with others! Drop a comment if you've got thoughts or tricks of your own to share, and follow me for more fun-filled coding adventures. Let's keep the flags of creativity and collaboration flying high! 

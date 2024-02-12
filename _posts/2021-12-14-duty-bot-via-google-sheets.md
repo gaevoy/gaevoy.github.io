@@ -17,7 +17,7 @@ We used to have one of the `Slack` duty bots but I had a hard time changing a sc
 
 After a few evenings googling how to glue together the C# app and `Google Sheets` I suddenly discovered `Apps Script`. This is like old-fashioned `Excel` macros but in a cloud via `JavaScript`. Wow, that's it!
 
-> Google Apps Script is a cloud-based JavaScript platform that lets you integrate with and automate tasks across Google products — [Google](https://developers.google.com/apps-script).
+> Google Apps Script is a cloud-based JavaScript platform that lets you integrate with and automate tasks across Google products — [Google](https://developers.google.com/apps-script){:target="_blank"}.
 
 `Apps Script` for `Google Sheets` is able to call `Slack` webhook to deliver a message about who's on duty today:
 * when the schedule changes, 
@@ -88,7 +88,7 @@ UrlFetchApp.fetch(slackWebhook, {
 });
 ```
 
-Where `slackWebhook` is [an incoming webhook](https://api.slack.com/messaging/webhooks) that you should get in `Slack`, see [the instruction](https://api.slack.com/messaging/webhooks#create_a_webhook).
+Where `slackWebhook` is [an incoming webhook](https://api.slack.com/messaging/webhooks){:target="_blank"} that you should get in `Slack`, see [the instruction](https://api.slack.com/messaging/webhooks#create_a_webhook){:target="_blank"}.
 
 ![Slack bot](/img/duty-bot/slack-bot.gif "Slack bot" ){:style="max-width:1070px; width:100%;" class="block-center"}
 

@@ -7,9 +7,9 @@ tags: [csharp, dotnet, enum]
 comments: true
 ---
 
-Nope, `Enum.Parse` [is not broken](https://github.com/dotnet/runtime/issues/20576), it is a feature, not a bug :) However, you have to know its pitfalls. Before deep dive let's warm up a bit. What is enumeration?
+Nope, `Enum.Parse` [is not broken](https://github.com/dotnet/runtime/issues/20576){:target="_blank"}, it is a feature, not a bug :) However, you have to know its pitfalls. Before deep dive let's warm up a bit. What is enumeration?
 
-> Enumerated type is a data type consisting of a set of named values. The enumerator names are usually identifiers that behave as constants in the language. — [Wikipedia](https://en.wikipedia.org/wiki/Enumerated_type)
+> Enumerated type is a data type consisting of a set of named values. The enumerator names are usually identifiers that behave as constants in the language. — [Wikipedia](https://en.wikipedia.org/wiki/Enumerated_type){:target="_blank"}
 > 
 
 Here is, my super-duper simplest enumeration example.
@@ -41,7 +41,7 @@ public static CountryCode Parse(string twoLetterCode)
 }
 ```
 
-Let's make sure it works as expected. Here `vatNumber[..2]` is [equivalent](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges) to `vatNumber.Substring(0, 2)`.
+Let's make sure it works as expected. Here `vatNumber[..2]` is [equivalent](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges){:target="_blank"} to `vatNumber.Substring(0, 2)`.
 
 ```c#
 [TestCase("DK:1034567", CountryCode.DK)]
@@ -93,7 +93,7 @@ Error Message:
 But was:  18
 ```
 
-Quick googling landed me on the nice article [Beware of Enum.TryParse](https://josef.codes/beware-of-enum-try-parse/) and many `StackOverflow` threads ([one](https://stackoverflow.com/q/6741649), [two](https://stackoverflow.com/questions/25301056/enum-tryparse-strange-behaviour)). So I applied the fix introducing `Enum.IsDefined` extra-check.
+Quick googling landed me on the nice article [Beware of Enum.TryParse](https://josef.codes/beware-of-enum-try-parse/){:target="_blank"} and many `StackOverflow` threads ([one](https://stackoverflow.com/q/6741649){:target="_blank"}, [two](https://stackoverflow.com/questions/25301056/enum-tryparse-strange-behaviour){:target="_blank"}). So I applied the fix introducing `Enum.IsDefined` extra-check.
 
 ```c#
 public static CountryCode Parse(string twoLetterCode)
@@ -126,12 +126,12 @@ The reason for the issue, `Enum.TryParse` tries to match both values AND names. 
 
 Let's recap what you must remember about `Enum`:
 
-1. It parses any numeric values even they are not part of the `Enum`, see [dotnetfiddle](https://dotnetfiddle.net/CFiuTa).
+1. It parses any numeric values even they are not part of the `Enum`, see [dotnetfiddle](https://dotnetfiddle.net/CFiuTa){:target="_blank"}.
 ```c#
 Enum.Parse<CountryCode>("007") // returns 7
 Enum.IsDefined(Enum.Parse<CountryCode>("007")) // returns false
 ```
-2. It parses both values and names of the `Enum`, see [dotnetfiddle](https://dotnetfiddle.net/5lHvUh). There is no way to control this.
+2. It parses both values and names of the `Enum`, see [dotnetfiddle](https://dotnetfiddle.net/5lHvUh){:target="_blank"}. There is no way to control this.
 ```c#
 Enum.Parse<CountryCode>("DK") // returns DK
 Enum.Parse<CountryCode>("10") // returns DK
@@ -191,4 +191,4 @@ Tests are green, we are done. I could not find an easy way how to change the beh
 
 By the way, you could scream: `Hey man, why do you use invalid VAT numbers?`. Shhh. Quiet! Let's keep it a secret :)
 
-As always, you can find the listed code in [Gaev.Blog.Examples.EnumParsePitfall](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.0.1/Gaev.Blog.Examples.EnumParsePitfall/ParsingEnumTests.cs).
+As always, you can find the listed code in [Gaev.Blog.Examples.EnumParsePitfall](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.0.1/Gaev.Blog.Examples.EnumParsePitfall/ParsingEnumTests.cs){:target="_blank"}.

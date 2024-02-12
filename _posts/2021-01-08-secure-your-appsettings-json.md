@@ -11,19 +11,19 @@ Nowadays, it is almost impossible to implement a self-containing application. Ev
 
 ### CI/CD
 
-The obvious solution - no secrets in a repository, nothing to worry about. Instead, save them in CI/CD system. For instance, [AppVeyor provides secure variables](https://www.appveyor.com/docs/build-configuration/#secure-variables); or [TeamCity typed parameters](https://www.jetbrains.com/help/teamcity/typed-parameters.html).
+The obvious solution - no secrets in a repository, nothing to worry about. Instead, save them in CI/CD system. For instance, [AppVeyor provides secure variables](https://www.appveyor.com/docs/build-configuration/#secure-variables){:target="_blank"}; or [TeamCity typed parameters](https://www.jetbrains.com/help/teamcity/typed-parameters.html){:target="_blank"}.
 
 That's okay, however now the secrets out of your control. So let's hope they won't be breached. 🤞
 
 ### Vault
 
-The perfect solution is storing the secrets in a vault, such as `Microsoft Azure Key Vault`, `Google Cloud KMS`, `AWS KMS`, etc. Even better, since there is a [hardware security module](https://en.wikipedia.org/wiki/Hardware_security_module) in action underneath, which theoretically is data breach resilient. 😎
+The perfect solution is storing the secrets in a vault, such as `Microsoft Azure Key Vault`, `Google Cloud KMS`, `AWS KMS`, etc. Even better, since there is a [hardware security module](https://en.wikipedia.org/wiki/Hardware_security_module){:target="_blank"} in action underneath, which theoretically is data breach resilient. 😎
 
 ### Built-in AES-256 via `System.Security.Cryptography.Aes`
 
-Hey, why don't we make use of `System.Security.Cryptography.Aes`. It is a built-in `AES-256` cipher, which is [secure enough](https://security.stackexchange.com/a/85778/207381). This way, there is no dependency, and the approach is a bit easier than the rest.
+Hey, why don't we make use of `System.Security.Cryptography.Aes`. It is a built-in `AES-256` cipher, which is [secure enough](https://security.stackexchange.com/a/85778/207381){:target="_blank"}. This way, there is no dependency, and the approach is a bit easier than the rest.
 
-> The Advanced Encryption Standard (AES) is a symmetric block cipher chosen by the U.S. government to protect classified information. AES is implemented in software and hardware throughout the world to encrypt sensitive data. It is essential for government computer security, cybersecurity and electronic data protection — [Margaret Rouse](https://searchsecurity.techtarget.com/definition/Advanced-Encryption-Standard)
+> The Advanced Encryption Standard (AES) is a symmetric block cipher chosen by the U.S. government to protect classified information. AES is implemented in software and hardware throughout the world to encrypt sensitive data. It is essential for government computer security, cybersecurity and electronic data protection — [Margaret Rouse](https://searchsecurity.techtarget.com/definition/Advanced-Encryption-Standard){:target="_blank"}
 
 Let's imagine an application that uses the following `appsettings.json`. When it starts, it decrypts the ciphertexts in run-time.
 
@@ -90,13 +90,13 @@ public static IConfigurationRoot Decrypt(this IConfigurationRoot root, string ke
 }
 ```
 
-`Aes256Cipher` is a tiny wrapper around the built-in `AES-256` algorithm. You can check it out in [Gaev.Blog.SecuredAppSettingsJson](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/Aes256Cipher.cs). `Aes256Cipher` prefixes [initialization vector](https://en.wikipedia.org/wiki/Initialization_vector) on top of each ciphertext to hide patterns in encrypted data.
+`Aes256Cipher` is a tiny wrapper around the built-in `AES-256` algorithm. You can check it out on [Gaev.Blog.SecuredAppSettingsJson](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/Aes256Cipher.cs){:target="_blank"}. `Aes256Cipher` prefixes [initialization vector](https://en.wikipedia.org/wiki/Initialization_vector){:target="_blank"} on top of each ciphertext to hide patterns in encrypted data.
 
-All necessary source code is [here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.9.0/Gaev.Blog.SecuredAppSettingsJson). There is [UtilityTests.cs](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs) for better maintenance  where you can:
-* [Generate a new unique AES-256 key](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L27)
-* [Encrypt individual value](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L13)
-* [Decrypt individual ciphertext](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L20)
-* [Encrypt whole JSON file at once](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L33)
-* [Decrypt whole JSON file at once](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L59)
+All necessary source code is [on Gaev.Blog.SecuredAppSettingsJson](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.9.0/Gaev.Blog.SecuredAppSettingsJson){:target="_blank"}. There is [UtilityTests.cs](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs){:target="_blank"} for better maintenance  where you can:
+* [Generate a new unique AES-256 key](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L27){:target="_blank"}
+* [Encrypt individual value](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L13){:target="_blank"}
+* [Decrypt individual ciphertext](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L20){:target="_blank"}
+* [Encrypt whole JSON file at once](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L33){:target="_blank"}
+* [Decrypt whole JSON file at once](https://github.com/gaevoy/Gaev.Blog.Examples/blob/2.9.0/Gaev.Blog.SecuredAppSettingsJson/UtilityTests.cs#L59){:target="_blank"}
 
 Those 3 solutions can be used independently or complement each other. Choose what fits best for you. Please share your way of securing sensitive configuration in the comments.

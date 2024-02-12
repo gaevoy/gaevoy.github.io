@@ -9,7 +9,7 @@ comments: true
 
 Nowadays, software developers use laptops with lots of CPU cores. The same on server frames - the number of CPUs grows. As a developer, I expect that the libraries I use are optimized to distribute workload across multiple CPU cores by default. But it is not the case for `NUnit` since, by default, it is terrible at running tests in parallel.
 
-> `NUnit` is a unit-testing framework for all .Net languages. Initially ported from JUnit. It has been completely rewritten with many new features and support for a wide range of .NET platforms. — [nunit.org](https://nunit.org/)
+> `NUnit` is a unit-testing framework for all .Net languages. Initially ported from JUnit. It has been completely rewritten with many new features and support for a wide range of .NET platforms. — [nunit.org](https://nunit.org/){:target="_blank"}
 
 In this article, I would like to share how one-line change can speed up your `NUnit` tests by several times.
 
@@ -76,11 +76,11 @@ It gives 7 seconds, meaning it does not run ANY tests in parallel by default.
 
 To sum up, by default `NUnit` does not run tests in parallel. It may be good, because you don't have to think too much about shared-state concurrency, and terrible, because total time will bite you when there are thousands of unit tests.
 
-> `Shared State Concurrency` is concurrency among two or more processes which have some shared state between them; which both processes can read to and write from — [wiki.c2.com](https://wiki.c2.com/?SharedStateConcurrency)
+> `Shared State Concurrency` is concurrency among two or more processes which have some shared state between them; which both processes can read to and write from — [wiki.c2.com](https://wiki.c2.com/?SharedStateConcurrency){:target="_blank"}
 
 ## Solution
 
-In 2017 `NUnit` team has introduced [Parallelizable](https://docs.nunit.org/articles/nunit/writing-tests/attributes/parallelizable.html) feature that solves the problem. However, they have not changed default behaviour, obviously, to be backward compatible and not to break existing tests. To make use of the parallelizable feature, developers should explicitly enable it in tests.
+In 2017 `NUnit` team has introduced [Parallelizable](https://docs.nunit.org/articles/nunit/writing-tests/attributes/parallelizable.html){:target="_blank"} feature that solves the problem. However, they have not changed default behaviour, obviously, to be backward compatible and not to break existing tests. To make use of the parallelizable feature, developers should explicitly enable it in tests.
 
 I must remind you that tests should not use any shared state like database, singletons, static variables, disk drive. Keep default `NUnit` behaviour for tests using shared state.
 
@@ -171,7 +171,7 @@ Duration: 2 s
 
 Yeah, `Parallelizable(ParallelScope.All)` is what I was looking for! Here, even tests within the same class run in parallel. Also, other tests run in parallel to my tests.
 
-Be carefully when a test uses `Setup`, `TearDown` and relies on state stored in the test class. `NUnit` reuses the same instance of test class between its tests which runs by concurrent threads. To fix this behaviour we have to apply [FixtureLifeCycle(LifeCycle.InstancePerTestCase)](https://docs.nunit.org/articles/nunit/writing-tests/attributes/fixturelifecycle.html) attribute. Let's jump to `Pitfalls` section for a moment to get a good understanding.
+Be carefully when a test uses `Setup`, `TearDown` and relies on state stored in the test class. `NUnit` reuses the same instance of test class between its tests which runs by concurrent threads. To fix this behaviour we have to apply [FixtureLifeCycle(LifeCycle.InstancePerTestCase)](https://docs.nunit.org/articles/nunit/writing-tests/attributes/fixturelifecycle.html){:target="_blank"} attribute. Let's jump to `Pitfalls` section for a moment to get a good understanding.
 
 To sum up, `Parallelizable(ParallelScope.All)` and `FixtureLifeCycle(LifeCycle.InstancePerTestCase)` attributes signals `NUnit` to run tests in parallel. You can apply them to specific unit test classes (fixtures) or to whole test assembly adding the following lines. 
 
@@ -257,7 +257,7 @@ dotnet test --filter:"Category=ParallelizableAllPitfalls"
 11. TearDown    State: 5        Instance: 10560058
 ```
 
-Instead of expected `0->1->1` there is concurrency issue due to reusing the same `_state` by the tests. To fix this we should apply [FixtureLifeCycle(LifeCycle.InstancePerTestCase)](https://docs.nunit.org/articles/nunit/writing-tests/attributes/fixturelifecycle.html) attribute, next to `Parallelizable`.
+Instead of expected `0->1->1` there is concurrency issue due to reusing the same `_state` by the tests. To fix this we should apply [FixtureLifeCycle(LifeCycle.InstancePerTestCase)](https://docs.nunit.org/articles/nunit/writing-tests/attributes/fixturelifecycle.html){:target="_blank"} attribute, next to `Parallelizable`.
 
 ```bash
 dotnet test --filter:"Category=ParallelizableAllPitfalls"
@@ -294,4 +294,4 @@ The concurrency issue is gone now!
 [assembly: Parallelizable(ParallelScope.All)]
 [assembly: FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 ```
-* Source code is [here to play](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.4.0/Gaev.Blog.ParallelizableTests).
+* Source code is [on Gaev.Blog.ParallelizableTests to play](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.4.0/Gaev.Blog.ParallelizableTests){:target="_blank"}.

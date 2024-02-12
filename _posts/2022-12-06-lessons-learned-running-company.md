@@ -35,7 +35,7 @@ In most cases, I'm using email to communicate instead of direct communication, m
 
 ## Know right people
 
-When I write a code for software, I usually don't need to ask people too much. There is the internet, where I can find everything is needed, typically on [StackOverflow](https://stackoverflow.com/). In the extreme, I could go and read source code to figure out why something does not work or how to make it work.
+When I write a code for software, I usually don't need to ask people too much. There is the internet, where I can find everything is needed, typically on [StackOverflow](https://stackoverflow.com/){:target="_blank"}. In the extreme, I could go and read source code to figure out why something does not work or how to make it work.
 
 ![Right people](/img/lessons-learned-running-company/right-people.jpg "Right people" ){:style="max-width:400px; width:100%;" class="block-center"}
 
@@ -45,7 +45,7 @@ In a business this is completely different. You must know many people and talk t
 
 When you learn something new it is okay to have many questions, but you can reduce the number. 
 
-In software development, engineers love to over-generalize things. There are even patterns/anti-patterns, like: [Over Generalization Of Business Logic](https://wiki.c2.com/?OverGeneralizationOfBusinessLogic), [Dont Repeat Yourself](http://wiki.c2.com/?DontRepeatYourself). In the beginning, out of habit, I started asking more general questions. Usually, I ended up with the same general answers, which required clarification. And after a few cycles of clarification, the answer became clear.
+In software development, engineers love to over-generalize things. There are even patterns/anti-patterns, like: [Over Generalization Of Business Logic](https://wiki.c2.com/?OverGeneralizationOfBusinessLogic){:target="_blank"}, [Dont Repeat Yourself](http://wiki.c2.com/?DontRepeatYourself){:target="_blank"}. In the beginning, out of habit, I started asking more general questions. Usually, I ended up with the same general answers, which required clarification. And after a few cycles of clarification, the answer became clear.
 
 To avoid wasting time, it is better to break down abstract questions into several more specific ones with a description of the detailed context. Especially, it is important when you ask in email so few cycles of clarification can cost you few days. So instead of the question `How to calculate CIT right?` I would ask `Here is a sample how I think CIT should be calculated can you please correct mistakes?`.
 
@@ -57,7 +57,7 @@ Abstract questions are still useful as a starting point to scratch the surface w
 
 ![One basket](/img/lessons-learned-running-company/one-basket.jpg "One basket" ){:style="max-width:400px; width:100%;" class="block-center"}
 
-Human fails a lot more than computers. There is [redundancy](https://en.wikipedia.org/wiki/Redundancy_(engineering)) principle that makes software system reliable. Applying the redundancy to human world meaning you should have at least 2 experts in their field. For instance, 2 lawyers, 2 bookkeepers, etc.
+Human fails a lot more than computers. There is [redundancy](https://en.wikipedia.org/wiki/Redundancy_(engineering)){:target="_blank"} principle that makes software system reliable. Applying the redundancy to human world meaning you should have at least 2 experts in their field. For instance, 2 lawyers, 2 bookkeepers, etc.
 
 Of course, it won't protect you from human mistakes, however it will increase general reliability and may uncover incompetence. Example: I want to figure out how to calculate CIT, so I would ask 2 independent bookkeepers. It could be that one is sick, so you can count on another one. It could be that both responded, but you found out multiple ways of calculating or even incorrect one.
 
@@ -84,11 +84,11 @@ There are over-simplified cases and related taxes, to show tax landscape I have 
   * Affected by taxes: CIT.
 
 As of 2022:
-* Reverse charge VAT [0%](https://poradnikprzedsiebiorcy.pl/-reverse-charge-na-fakturach-od-zagranicznego-kontrahenta)
-* VAT [5% - 23%](https://www.podatki.gov.pl/vat/abc-vat/matryca-stawek-vat/)
-* PIT [12% - 32%](https://www.e-pity.pl/skala-podatkowa/)
-* CIT [9% - 19%](https://www.biznes.gov.pl/pl/portal/00251)
-* ZUS - there are many flavors of this tax which applies depending on case. I use [online calculator](https://zarobki.pracuj.pl/kalkulator-wynagrodzen) to have a clue.
+* Reverse charge VAT [0%](https://poradnikprzedsiebiorcy.pl/-reverse-charge-na-fakturach-od-zagranicznego-kontrahenta){:target="_blank"}
+* VAT [5% - 23%](https://www.podatki.gov.pl/vat/abc-vat/matryca-stawek-vat/){:target="_blank"}
+* PIT [12% - 32%](https://www.e-pity.pl/skala-podatkowa/){:target="_blank"}
+* CIT [9% - 19%](https://www.biznes.gov.pl/pl/portal/00251){:target="_blank"}
+* ZUS - there are many flavors of this tax which applies depending on case. I use [online calculator](https://zarobki.pracuj.pl/kalkulator-wynagrodzen){:target="_blank"} to have a clue.
 
 I'm still not yet there and ask bookkeeper specific questions when needed.
 
@@ -109,15 +109,15 @@ You may say we should use ERP instead, and I would agree, but I could not find a
 
 ![Team](/img/lessons-learned-running-company/team.jpg "Team" ){:style="max-width:400px; width:100%;" class="block-center"}
 
-[DBB Software](https://dbbsoftware.com/) now is a professional services company headquartered in Krakow, Poland. We provide in-house development, DevOps, testing, design, and software architecture. Our team has 70+ IT specialists with the primary tech stack includes `JavaScript`/`TypeScript`, `node.js`, `React Native`, `React.js`, `Vue.js`, `AWS`, and `Go`.
+[DBB Software](https://dbbsoftware.com/){:target="_blank"} now is a professional services company headquartered in Krakow, Poland. We provide in-house development, DevOps, testing, design, and software architecture. Our team has 70+ IT specialists with the primary tech stack includes `JavaScript`/`TypeScript`, `node.js`, `React Native`, `React.js`, `Vue.js`, `AWS`, and `Go`.
 
-We are partnering with well-known global companies, such as [DispatchHealth](https://www.dispatchhealth.com), [Doctify](https://www.doctify.com), [Bookis](https://bookis.com), [Renovai](https://www.renovai.com), [Uniform](https://uniform.dev), [Plaace](https://plaace.co), and many others. They are happy with our collaboration and share their positive experience in recommendations on our [Clutch](https://clutch.co/profile/dbb-software#reviews) company profile.
+We are partnering with well-known global companies, such as [DispatchHealth](https://www.dispatchhealth.com){:target="_blank"}, [Doctify](https://www.doctify.com){:target="_blank"}, [Bookis](https://bookis.com){:target="_blank"}, [Renovai](https://www.renovai.com){:target="_blank"}, [Uniform](https://uniform.dev){:target="_blank"}, [Plaace](https://plaace.co){:target="_blank"}, and many others. They are happy with our collaboration and share their positive experience in recommendations on our [Clutch](https://clutch.co/profile/dbb-software#reviews){:target="_blank"} company profile.
 
-[DBB Software](https://dbbsoftware.com/) stands for Driven By Business Software. Every day our developers prove that they are inspired and love their job regardless war, missiles and blackout. I'm proud to be helping them and  100% sure we are ready for new challenges.
+[DBB Software](https://dbbsoftware.com/){:target="_blank"} stands for Driven By Business Software. Every day our developers prove that they are inspired and love their job regardless war, missiles and blackout. I'm proud to be helping them and  100% sure we are ready for new challenges.
 
 ![Ready for challenges](/img/lessons-learned-running-company/ready-for-challenges.jpg "Ready for challenges" ){:style="max-width:400px; width:100%;" class="block-center"}
 
 Let me know what do you think, please share your comments, suggestions, remarks:
-* in [LinkedIn post](https://www.linkedin.com/posts/vladimirgayevoy_business-learning-software-activity-7005865285572280320-I16o/)
-* in [Twitter tweet](https://twitter.com/vgman/status/1600101907581652994)
+* in [LinkedIn post](https://www.linkedin.com/posts/vladimirgayevoy_business-learning-software-activity-7005865285572280320-I16o/){:target="_blank"}
+* in [Twitter tweet](https://twitter.com/vgman/status/1600101907581652994){:target="_blank"}
 * or in comments section down below.

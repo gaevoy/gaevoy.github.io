@@ -15,9 +15,9 @@ Modern IDE is such a convenient and smart editor that it can add a new dependenc
 
 ## Solution
 
-There is a way to test architecture and coding rules by tests. Such tests run on CI/CD server on every commit and fail the build (and therefore a review) once mistake is found. Check out these awesome libraries: [ArchUnitNET](https://github.com/TNG/ArchUnitNET), [NetArchTest](https://github.com/BenMorris/NetArchTest). It turned out they both do not support checking .NET assemblies and their dependencies. However, they both rely on [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) to analyze .NET DLLs.
+There is a way to test architecture and coding rules by tests. Such tests run on CI/CD server on every commit and fail the build (and therefore a review) once mistake is found. Check out these awesome libraries: [ArchUnitNET](https://github.com/TNG/ArchUnitNET){:target="_blank"}, [NetArchTest](https://github.com/BenMorris/NetArchTest){:target="_blank"}. It turned out they both do not support checking .NET assemblies and their dependencies. However, they both rely on [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/){:target="_blank"} to analyze .NET DLLs.
 
-Thanks to `Mono.Cecil` I managed to write a tiny wrapper to represent dependencies as a tree, so it is possible to drill down (and up). Checkout complete version of [DotNetAssembly](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.2.0/Gaev.Blog.Examples.ArchitectureTests/DotNetAssembly.cs).
+Thanks to `Mono.Cecil` I managed to write a tiny wrapper to represent dependencies as a tree, so it is possible to drill down (and up). Checkout complete version of [DotNetAssembly](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.2.0/Gaev.Blog.Examples.ArchitectureTests/DotNetAssembly.cs){:target="_blank"}.
 
 ```c#
 public class DotNetAssembly
@@ -48,7 +48,7 @@ A component consist of 2 projects:
 * contract (`Gaev.Alfa.Api`, `Gaev.Bravo.Api`, `Gaev.Charlie.Api`)
 * implementation (`Gaev.Alfa`, `Gaev.Bravo`, `Gaev.Charlie`).
 
-Now, let's see how my architecture requirements are covered by tests. I will skip the implementation details, feel free to [see final tests](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.2.0/Gaev.Blog.Examples.ArchitectureTests/ArchitectureTests.cs).
+Now, let's see how my architecture requirements are covered by tests. I will skip the implementation details, feel free to [see final tests](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.2.0/Gaev.Blog.Examples.ArchitectureTests/ArchitectureTests.cs){:target="_blank"}.
 
 #### A project itself should be .NET Standard
 
@@ -138,7 +138,7 @@ I'm happy now, since few lines of code in the tests can define and keep architec
 
 ## Bonus
 
-Thank you for reading to the very end. Wait a minute now, but there is one more thing I want to show you. You can render a package dependency diagram via [PlantUml](https://plantuml.com/) right like this.
+Thank you for reading to the very end. Wait a minute now, but there is one more thing I want to show you. You can render a package dependency diagram via [PlantUml](https://plantuml.com/){:target="_blank"} right like this.
 
 ```c#
 [TestCaseSource(nameof(AppProjects))]
@@ -154,4 +154,4 @@ public void It_should_render_PlantUml_diagram(DotNetAssembly project)
 
 By the way, I rendered the showcase diagram above with the help of this test, [check it out](#showcase). The spirit of self-documented app is flying around :)
 
-Source code: [demo projects](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.2.0/ArchitectureTestProjects), [tests and stuff](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.2.0/Gaev.Blog.Examples.ArchitectureTests).
+Source code: [demo projects](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.2.0/ArchitectureTestProjects){:target="_blank"}, [tests and stuff](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.2.0/Gaev.Blog.Examples.ArchitectureTests){:target="_blank"}.

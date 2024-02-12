@@ -90,7 +90,7 @@ public class CustomerService : ICustomerService
 }
 ```
 
-The unit test via mocking of interfaces is done. I'm using [NSubstitute](https://nsubstitute.github.io/) here to mock.
+The unit test via mocking of interfaces is done. I'm using [NSubstitute](https://nsubstitute.github.io/){:target="_blank"} here to mock.
 
 ```c#
 [Test]
@@ -118,7 +118,7 @@ public void CustomerService_should_register_customer()
 
 ## Mocking via `delegate`
 
-For a single method, why not to pass it as a delegate like it usually done in functional programming languages. Moreover having a default implementation right in this class will simplify things. More theory is [here](https://softwareengineering.stackexchange.com/a/345490) and [here](https://stackoverflow.com/a/28644831/1400547).  
+For a single method, why not to pass it as a delegate like it usually done in functional programming languages. Moreover having a default implementation right in this class will simplify things. More theory is [on this StackExchange topic](https://softwareengineering.stackexchange.com/a/345490){:target="_blank"} and [on that StackOverflow answer](https://stackoverflow.com/a/28644831/1400547){:target="_blank"}.  
 
 ```c#
 public class CustomerService : ICustomerService
@@ -161,7 +161,7 @@ public void CustomerService_should_register_customer()
 }
 ```
 
-As a bonus feature, a `delegate` [is faster](https://stackoverflow.com/a/2082895/1400547) than `interface` but in most cases, it does not matter.
+As a bonus feature, a `delegate` [is faster](https://stackoverflow.com/a/2082895/1400547){:target="_blank"} than `interface` but in most cases, it does not matter.
 
 ## Mocking via `virtual` method
 
@@ -180,7 +180,7 @@ public class CustomerService : ICustomerService
 }
 ```
 
-The unit test via mocking of `virtual` methods is below. [NSubstitute](https://nsubstitute.github.io/) will cope with this as well.
+The unit test via mocking of `virtual` methods is below. [NSubstitute](https://nsubstitute.github.io/){:target="_blank"} will cope with this as well.
 
 ```c#
 [Test]
@@ -206,10 +206,10 @@ public void CustomerService_should_register_customer()
 }
 ```
 
-If `public virtual` somehow violates encapsulation for you, it can be replaced with `internal virtual` (or `protected internal virtual`) in conjunction with [InternalsVisibleToAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute).
+If `public virtual` somehow violates encapsulation for you, it can be replaced with `internal virtual` (or `protected internal virtual`) in conjunction with [InternalsVisibleToAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute){:target="_blank"}.
 
 As an experiment lately, I started to mock via `delegate` and `virtual` method and I love it since source code changes are as small as it can be. Of course, I keep mocking via `interface` when it makes sense. Feel free to let me know how do you mock?
 
-See complete source code in [Gaev.Blog.Examples.Mocking](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.5.1/Gaev.Blog.Examples.Mocking).
+See complete source code in [Gaev.Blog.Examples.Mocking](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.5.1/Gaev.Blog.Examples.Mocking){:target="_blank"}.
 
-[Reddit comments](https://www.reddit.com/r/programming/comments/cx5qyh/mocking_via_interface_vs_delegate_vs_virtual/)
+[Reddit comments](https://www.reddit.com/r/programming/comments/cx5qyh/mocking_via_interface_vs_delegate_vs_virtual/){:target="_blank"}

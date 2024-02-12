@@ -9,13 +9,13 @@ comments: true
 
 At some point, I started to feel discomfort working with personally identifiable information data in our project. Mostly, because it is a relatively new field and not always straightforward. In this article, I'm going to try to tackle the main issues and make the implicit explicit.
 
-> Personally identifiable information (PII) is any information relating to an identified or identifiable natural person; an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person — [EU GDPR](https://www.privacy-regulation.eu/en/article-4-definitions-GDPR.htm).
+> Personally identifiable information (PII) is any information relating to an identified or identifiable natural person; an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person — [EU GDPR](https://www.privacy-regulation.eu/en/article-4-definitions-GDPR.htm){:target="_blank"}.
 
 Long story short, PII is the user personal data, such as name, email, date of birth, social number, etc.
 
 ## Problem
 
-According to [the law in many countries](https://en.wikipedia.org/wiki/Personal_data#Laws_and_standards), you must treat PII data in a special way. For example, there is a number of restrictions on the use of personal data according to [GDPR regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) in the European Union. I'm going to list some requirements based on [the GDPR checklist](https://gdpr.eu/checklist/):
+According to [the law in many countries](https://en.wikipedia.org/wiki/Personal_data#Laws_and_standards){:target="_blank"}, you must treat PII data in a special way. For example, there is a number of restrictions on the use of personal data according to [GDPR regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation){:target="_blank"} in the European Union. I'm going to list some requirements based on [the GDPR checklist](https://gdpr.eu/checklist/){:target="_blank"}:
 
 1. Encrypt, pseudonymize, or anonymize personal data wherever possible.
 2. Sign a data processing agreement between your organization and any third parties that process personal data on your behalf.
@@ -61,7 +61,7 @@ public class User
 }
 ```
 
-Where the `PiiString` is a wrapper around the .NET `String`. Note, below is an oversimplified version, the complete version is [here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/PiiString.cs).
+Where the `PiiString` is a wrapper around the .NET `String`. Note, below is an oversimplified version, the complete version is [on PiiString](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/PiiString.cs){:target="_blank"}.
 
 ```c#
 public class PiiString
@@ -123,7 +123,7 @@ public class PiiAsSha256 : IPiiEncoder
 
 #### Encrypted `PiiString` via `AES 128`
 
-To encrypt/decrypt you should provide a key for `PiiAsAes128`. See more [here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/PiiAsAes128.cs).
+To encrypt/decrypt you should provide a key for `PiiAsAes128`. See more [PiiAsAes128](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/PiiAsAes128.cs){:target="_blank"}.
 
 #### Render `PiiString` via `Newtonsoft.Json`
 
@@ -145,7 +145,7 @@ public class PiiStringConverter : JsonConverter<PiiString>
 }
 ```
 
-See examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/NewtonsoftJson/PiiStringTests.cs) it.
+See examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/NewtonsoftJson/PiiStringTests.cs){:target="_blank"} it.
 
 #### Render `PiiString` via `System.Text.Json`
 
@@ -165,7 +165,7 @@ public class PiiStringConverter : JsonConverter<PiiString>
 }
 ```
 
-See examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/SystemTextJson/PiiStringTests.cs) it.
+See examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/SystemTextJson/PiiStringTests.cs){:target="_blank"} it.
 
 #### Enable `PiiString` for `Entity Framework Core`
 
@@ -180,13 +180,13 @@ public class PiiStringConverter : ValueConverter<PiiString, string>
 }
 ```
 
-See examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/EfCore/PiiStringTests.cs) it.
+See examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/EfCore/PiiStringTests.cs){:target="_blank"} it.
 
 #### Render `PiiString` by logger frameworks
 
-See `NLog` examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/NLog/PiiStringTests.cs).
+See `NLog` examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/NLog/PiiStringTests.cs){:target="_blank"}.
 
-See `Serilog` examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/Serilog/PiiStringTests.cs).
+See `Serilog` examples of [how to use](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/Serilog/PiiStringTests.cs){:target="_blank"}.
 
 ### PII requirement: sign a data processing agreement between your organization and any third parties that process personal data on your behalf.
 
@@ -200,8 +200,8 @@ I like how the `PiiString` type makes things explicit and takes control over PII
 
 An alternative way is using an attribute like `PiiAttribute`, keep in mind, using the attributes implies the reflection or source generators, which may end up in over-complicated implementation.
 
-`SecureString` is not the option because of this: [SecureString shouldn't be used](https://github.com/dotnet/platform-compat/blob/master/docs/DE0001.md).
+`SecureString` is not the option because of this: [SecureString shouldn't be used](https://github.com/dotnet/platform-compat/blob/master/docs/DE0001.md){:target="_blank"}.
 
-Anyway, check out [Gaev.Blog.Examples.PiiTypes](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/) for the complete overview. 
+Anyway, check out [Gaev.Blog.Examples.PiiTypes](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.1.1/Gaev.Blog.Examples.PiiTypes/){:target="_blank"} for the complete overview. 
 
-Let me know how do you work with PII. Join the discussion in [Reddit](https://www.reddit.com/r/dotnet/comments/thfci2/piistring_net_type_for_personally_identifiable/) and [Twitter](https://twitter.com/vgman/status/1504928521474519041).
+Let me know how do you work with PII. Join the discussion in [Reddit](https://www.reddit.com/r/dotnet/comments/thfci2/piistring_net_type_for_personally_identifiable/){:target="_blank"} and [Twitter](https://twitter.com/vgman/status/1504928521474519041){:target="_blank"}.

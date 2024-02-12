@@ -7,15 +7,15 @@ tags: [e2e-encryption, javascript, pgp, security, keybase]
 comments: true
 ---
 
-As a starting point for adding end-to-end encryption, I'm going to choose [minimalist chat](/2019/04/07/minimalist-chat.html) written on bare .NET Core and JavaScript without any third party dependency. Let's move from theory to implementation, but before that, I would like to give a bit of introduction in end-to-end encryption. What is it? What for? How?
+As a starting point for adding end-to-end encryption, I'm going to choose [minimalist chat](/2019/04/07/minimalist-chat.html){:target="_blank"} written on bare .NET Core and JavaScript without any third party dependency. Let's move from theory to implementation, but before that, I would like to give a bit of introduction in end-to-end encryption. What is it? What for? How?
 
-> Encryption is the process of encoding a message or information in such a way that only authorized parties can access it and those who are not authorized cannot — [Wikipedia](https://en.wikipedia.org/wiki/Encryption)
+> Encryption is the process of encoding a message or information in such a way that only authorized parties can access it and those who are not authorized cannot — [Wikipedia](https://en.wikipedia.org/wiki/Encryption){:target="_blank"}
 
-> End-to-end encryption is a system of communication where only the communicating users can read the messages — [Wikipedia](https://en.wikipedia.org/wiki/End-to-end_encryption)
+> End-to-end encryption is a system of communication where only the communicating users can read the messages — [Wikipedia](https://en.wikipedia.org/wiki/End-to-end_encryption){:target="_blank"}
 
 Basically, a member of the chat encrypts a message before sending out, other members decrypts received the message. As a result, the chat server cannot see the content of the message. There are few ways on how to implement end-to-end encryption but I will focus on only one.
 
-In order to achieve that I will make use of [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) algorithm. It is hard to explain how the algorithm works, more important is how to use it.
+In order to achieve that I will make use of [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>){:target="_blank"} algorithm. It is hard to explain how the algorithm works, more important is how to use it.
 
 Each chat member gets 2 keys generated at the very start of room conversation. Let's call them `public key` and `private key`. If a member encrypts a message using its `public key` then cipher can be decrypted only using its `private key` [^1]. This way, `public key` is sent out to other members. Eventually, all room members know other's `public keys`, however, `private key` keeps being a secret.
 
@@ -23,9 +23,9 @@ Imagine, Alice, Bob and Charlie are chatting. Alice is sending a message. She en
 
 ## Refactoring
 
-Due to [the limitation of RSA](https://security.stackexchange.com/a/33445) it cannot encrypt more than ~245 bytes. In order to break the limit, I'm going to use [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) it works practically the same way as `RSA`. 
+Due to [the limitation of RSA](https://security.stackexchange.com/a/33445){:target="_blank"} it cannot encrypt more than ~245 bytes. In order to break the limit, I'm going to use [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy){:target="_blank"} it works practically the same way as `RSA`. 
 
-The beauty of modern browsers that they can perform cryptographic functions in JavaScript moreover this works pretty fast. I chose [kbpgp.js](https://keybase.io/kbpgp) by [Keybase](https://keybase.io/) to enable PGP in JavaScript.
+The beauty of modern browsers that they can perform cryptographic functions in JavaScript moreover this works pretty fast. I chose [kbpgp.js](https://keybase.io/kbpgp){:target="_blank"} by [Keybase](https://keybase.io/){:target="_blank"} to enable PGP in JavaScript.
 
 Server-side remains the same no changes needed. For client-side, first of all, I will wrap up low-level operations of `kbpgp.js` into high-level `PgpKey` class.
 
@@ -108,14 +108,14 @@ At this stage, all public keys of room members are known. Before sending, a new 
 
 ## Result
 
-Finally, [app.gaevoy.com/cryptochat](https://app.gaevoy.com/cryptochat/) is ready to secure your conversation. `Chrome Developer tools` can show what server-side sees.
+Finally, [app.gaevoy.com/cryptochat](https://app.gaevoy.com/cryptochat/){:target="_blank"} is ready to secure your conversation. `Chrome Developer tools` can show what server-side sees.
 
 ![Chat demo](/img/cryptochat/chat-messages.png "Chat demo" ){:style="max-width:1027px; width:100%;" class="block-center"}
 
-Take a look [all changes in PR](https://github.com/gaevoy/Gaev.Chat/pull/5/files) or [source code](https://github.com/gaevoy/Gaev.Chat/tree/2.0.0/Gaev.Chat) I made for [CryptoChat](https://app.gaevoy.com/cryptochat/). Let me know what do you think.
+Take a look [all changes in PR](https://github.com/gaevoy/Gaev.Chat/pull/5/files){:target="_blank"} or [source code](https://github.com/gaevoy/Gaev.Chat/tree/2.0.0/Gaev.Chat){:target="_blank"} I made for [CryptoChat](https://app.gaevoy.com/cryptochat/){:target="_blank"}. Let me know what do you think.
 
 ---
 
 [^1]: And vice versa, if a member encrypts a message using its `private key` then cipher can be decrypted only using its `public key`, however this is used mostly for digital signature where `private key` encrypts hash of the message and then `public key` decrypts the hash in order to verify the signature.
 
-[^2]: I implemented the public key exchange in such a way to be as simple as possible but in real life, it is dangerous to trust a key automatically without ownership check. For instance, in order to check ownership, consider [Keybase](https://keybase.io/).
+[^2]: I implemented the public key exchange in such a way to be as simple as possible but in real life, it is dangerous to trust a key automatically without ownership check. For instance, in order to check ownership, consider [Keybase](https://keybase.io/){:target="_blank"}.
