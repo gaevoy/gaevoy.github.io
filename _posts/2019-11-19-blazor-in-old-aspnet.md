@@ -9,7 +9,7 @@ comments: true
 
 The building of a rich user interface is not always easy for `.NET` developers, especially if you dive deep to use `React`, `Angular`, `webpack` and friends. `Blazor` gives a nice trade-off bringing `Razor`-like templates and `C#` to a browser utilizing [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly).
 
-> `Blazor` is a free and open-source web framework that enables developers to create web apps using `C#` and `HTML`. It is being developed by `Microsoft` — [Wikipedia](https://en.wikipedia.org/wiki/Blazor)
+> `Blazor` is a free and open-source web framework that enables developers to create web apps using `C#` and `HTML`. It is being developed by `Microsoft` — [Wikipedia](https://en.wikipedia.org/wiki/Blazor){:target="_blank"}
 
 ## Problem
 
@@ -17,7 +17,7 @@ Currently, I'm working with legacy projects, which cannot be easily ported to `.
 
 ## Solution
 
-As a starting point, I'm going to create `ASP.NET MVC` project from one of the default templates. [Here is it](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/master/OldAspNetApp), our playground is ready and I call it `OldAspNetApp`. For instance, `About.cshtml` page looks like this:
+As a starting point, I'm going to create `ASP.NET MVC` project from one of the default templates. [Here is it](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/master/OldAspNetApp){:target="_blank"}, our playground is ready and I call it `OldAspNetApp`. For instance, `About.cshtml` page looks like this:
 
 ```html
 @{
@@ -29,7 +29,7 @@ As a starting point, I'm going to create `ASP.NET MVC` project from one of the d
 <p>Use this area to provide additional information.</p>
 ```
 
-Let's add `Blazor WebAssembly` app now. The easiest way is to use `blazorwasm` template for `.NET Core` client, [read more](https://docs.microsoft.com/en-us/aspnet/core/blazor/get-started?view=aspnetcore-3.0&tabs=netcore-cli). Additionally, I added [web.config](https://github.com/gaevoy/Gaev.BlazorOnAspNet/blob/blazor-app/BlazorWasmApp/web.config) that fits our needs. Basically, it is almost the same as what `dotnet publish` produces. Our new `Blazor` projects I called `BlazorWasmApp`. As an example, `About.razor` page is:
+Let's add `Blazor WebAssembly` app now. The easiest way is to use `blazorwasm` template for `.NET Core` client, [read more](https://docs.microsoft.com/en-us/aspnet/core/blazor/get-started?view=aspnetcore-3.0&tabs=netcore-cli){:target="_blank"}. Additionally, I added [web.config](https://github.com/gaevoy/Gaev.BlazorOnAspNet/blob/blazor-app/BlazorWasmApp/web.config){:target="_blank"} that fits our needs. Basically, it is almost the same as what `dotnet publish` produces. Our new `Blazor` projects I called `BlazorWasmApp`. As an example, `About.razor` page is:
 
 ```html
 @page "/Home/About"
@@ -54,7 +54,7 @@ Let's add `Blazor WebAssembly` app now. The easiest way is to use `blazorwasm` t
 }
 ```
 
-In order to reference `BlazorWasmApp` to `OldAspNetApp` I added [Post-Build action](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/1/files#diff-c35ae0503b58019deae8124bcf0f4557R19-R22) for `BlazorWasmApp.csproj`.
+In order to reference `BlazorWasmApp` to `OldAspNetApp` I added [Post-Build action](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/1/files#diff-c35ae0503b58019deae8124bcf0f4557R19-R22){:target="_blank"} for `BlazorWasmApp.csproj`.
 
 ```xml
 <Target Name="CopyToOldAspNetApp" AfterTargets="Build">
@@ -88,15 +88,15 @@ To render `Blazor` page in `OldAspNetApp` I need only this:
 <p>Use this area to provide additional information.</p>
 ```
 
-By default, `Blazor` app intercepts all clicks to prevent a full page reload. In my case, it breaks `OldAspNetApp` so I disabled it [here](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/1/files#diff-8d952ee206db0390c0972cba01ba6936R12) via overriding default implementation of [INavigationInterception](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.routing.inavigationinterception).
+By default, `Blazor` app intercepts all clicks to prevent a full page reload. In my case, it breaks `OldAspNetApp` so I disabled it [here](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/1/files#diff-8d952ee206db0390c0972cba01ba6936R12){:target="_blank"} via overriding default implementation of [INavigationInterception](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.routing.inavigationinterception){:target="_blank"}.
 
-Finally, it is done. I have created [the pull request](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/1/files) for an easier understanding of what has been changed. Complete source code is in [blazor-app](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/blazor-app)  branch of `Gaev.BlazorOnAspNet` project.
+Finally, it is done. I have created [the pull request](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/1/files){:target="_blank"} for an easier understanding of what has been changed. Complete source code is in [blazor-app](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/blazor-app){:target="_blank"}  branch of `Gaev.BlazorOnAspNet` project.
 
 ## Update as of 2023
 
-`Gaev.BlazorOnAspNet.sln` has been created using `.NET Framework 4.5` which is too old in 2023. So, `Gaev.BlazorOnAspNet_4_8.sln` using `.NET Framework 4.8` is [here](https://github.com/gaevoy/Gaev.BlazorOnAspNet/blob/master/Gaev.BlazorOnAspNet_4_8.sln).
+`Gaev.BlazorOnAspNet.sln` has been created using `.NET Framework 4.5` which is too old in 2023. So, `Gaev.BlazorOnAspNet_4_8.sln` using `.NET Framework 4.8` is [here](https://github.com/gaevoy/Gaev.BlazorOnAspNet/blob/master/Gaev.BlazorOnAspNet_4_8.sln){:target="_blank"}.
 
-`Blazor 7` is the latest version as of May 2023. I have created pull request to show on how to use `Blazor 7 WebAssembly` in `ASP.NET Framework 4.8` app, check it out [PR](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/7/files) and [branch](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/blazor-app-7).
+`Blazor 7` is the latest version as of May 2023. I have created pull request to show on how to use `Blazor 7 WebAssembly` in `ASP.NET Framework 4.8` app, check it out [PR](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/7/files){:target="_blank"} and [branch](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/blazor-app-7){:target="_blank"}.
 
 As of 2023, **Pitfalls** section is no longer relevant, but I will keep it, just in case.
 
@@ -112,4 +112,4 @@ Error CS0246: The type or namespace name 'App' could not be found (are you missi
 
 Make sure `.Net Core SDK 3.0+` is installed (via `dotnet --info`).
 
-I managed to find a workaround to open the solution by `Visual Studio 2017` but it requires small changes. See [the pull request](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/2/files). The source code is in [vs2017-adaptation](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/vs2017-adaptation) branch of `Gaev.BlazorOnAspNet` project.
+I managed to find a workaround to open the solution by `Visual Studio 2017` but it requires small changes. See [the pull request](https://github.com/gaevoy/Gaev.BlazorOnAspNet/pull/2/files){:target="_blank"}. The source code is in [vs2017-adaptation](https://github.com/gaevoy/Gaev.BlazorOnAspNet/tree/vs2017-adaptation){:target="_blank"} branch of `Gaev.BlazorOnAspNet` project.

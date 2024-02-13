@@ -7,7 +7,7 @@ tags: [NUnit, dotnet]
 comments: true
 ---
 
-> A test case is a specification of the inputs, execution conditions, testing procedure, and expected results that define a single test to be executed to achieve a particular software testing objective, such as to exercise a particular program path or to verify compliance with a specific requirement. — [Wikipedia](https://en.wikipedia.org/wiki/Test_case)
+> A test case is a specification of the inputs, execution conditions, testing procedure, and expected results that define a single test to be executed to achieve a particular software testing objective, such as to exercise a particular program path or to verify compliance with a specific requirement. — [Wikipedia](https://en.wikipedia.org/wiki/Test_case){:target="_blank"}
 
 Simply speaking, test cases are the way to combine similar tests into one to decrease the number of lines to understand and maintain afterward. So instead of copy-pasting a test you just generalize one via parameters and then express use cases via `TestCase(1, true, "Yep!")` attribute.
 
@@ -98,7 +98,7 @@ public void User_should_be_valid(
 )
 ```
 
-Oh, very cute! Much more readable now. `x` is `true` and `_` is `false` so the chars have the same length and the table is perfectly adjusted. For instance, to adjust numbers you can use [C# 7.0 Digit Separators](https://airbrake.io/blog/csharp/digit-separators-reference-returns-and-binary-literals). Alternatively, you can use spaces and force IDE to ignore reformatting that code via `// @formatter:off|on` [if you use Resharper](https://stackoverflow.com/a/48683309/1400547).
+Oh, very cute! Much more readable now. `x` is `true` and `_` is `false` so the chars have the same length and the table is perfectly adjusted. For instance, to adjust numbers you can use [C# 7.0 Digit Separators](https://airbrake.io/blog/csharp/digit-separators-reference-returns-and-binary-literals){:target="_blank"}. Alternatively, you can use spaces and force IDE to ignore reformatting that code via `// @formatter:off|on` [if you use Resharper](https://stackoverflow.com/a/48683309/1400547){:target="_blank"}.
 
 You can consider to fallback to `TestCase` attribute if you really need to rotate/transpose the table.
 
@@ -163,4 +163,4 @@ I'm sure such a funny test makes you smile every time you find it - less boring 
 
 A drawback that it is more complicated to navigate to the failed use case. No free cheese.
 
-The examples are here [Gaev.Blog.Examples.FunnyTestCases](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.6.0/Gaev.Blog.Examples.FunnyTestCases/TestCasesDemo.cs).
+The examples are here [Gaev.Blog.Examples.FunnyTestCases](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.6.0/Gaev.Blog.Examples.FunnyTestCases/TestCasesDemo.cs){:target="_blank"}.

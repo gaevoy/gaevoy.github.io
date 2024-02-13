@@ -21,9 +21,9 @@ It would be nice to alert on long-running SQL queries via email for instance! Ho
 
 ## Solution
 
-Stack Overflow will help literally because they implemented a really cool library. [MiniProfiler](https://miniprofiler.com/) is .NET profiler with [ADO.NET](https://miniprofiler.com/dotnet/HowTo/ProfileSql), LINQ-to-SQL, [Entity Framework](https://miniprofiler.com/dotnet/HowTo/ProfileEF6) capabilities. Moreover, it is highly extensible so I can measure the duration of the SQL query and alert if it is large. The simplest way to alert can be any logger, for example, NLog with its [Mail  target](https://github.com/nlog/NLog/wiki/Mail-target).
+Stack Overflow will help literally because they implemented a really cool library. [MiniProfiler](https://miniprofiler.com/){:target="_blank"} is .NET profiler with [ADO.NET](https://miniprofiler.com/dotnet/HowTo/ProfileSql){:target="_blank"}, LINQ-to-SQL, [Entity Framework](https://miniprofiler.com/dotnet/HowTo/ProfileEF6){:target="_blank"} capabilities. Moreover, it is highly extensible so I can measure the duration of the SQL query and alert if it is large. The simplest way to alert can be any logger, for example, NLog with its [Mail  target](https://github.com/nlog/NLog/wiki/Mail-target){:target="_blank"}.
 
-The core idea is implemented in `LongRunningQueryProfiler` ([full version](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/LongRunningQueryProfiler.cs))
+The core idea is implemented in `LongRunningQueryProfiler` ([full version](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/LongRunningQueryProfiler.cs){:target="_blank"})
 
 ```c#
 public class LongRunningQueryProfiler : MiniProfiler, IDbProfiler
@@ -61,7 +61,7 @@ public class LongRunningQueryProfiler : MiniProfiler, IDbProfiler
 }
 
 ```
-And that's it. Let's have a try in the test [full version](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/AlertLongRunningAdoNetQueriesTests.cs):
+And that's it. Let's have a try in the test [full version](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/AlertLongRunningAdoNetQueriesTests.cs){:target="_blank"}:
 ```c#
 [Test]
 public async Task It_should_alert_ADO_NET_SQL_queries()
@@ -106,11 +106,11 @@ public class DbConnectionFactory
     }
 }
 ```
-Also, [I wrote tests for EntityFramework](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/AlertLongRunningEfQueriesTests.cs).
+Also, [I wrote tests for EntityFramework](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/AlertLongRunningEfQueriesTests.cs){:target="_blank"}.
 
 ## Entity Framework profiler pitfalls
 
-Once `EF6` profiler is enabled you must treat `LongRunningQueryProfiler` instance as a singleton. Because of `MiniProfiler.EF6` library accesses the profiler via [MiniProfiler.Current](https://github.com/MiniProfiler/dotnet/blob/v4.0.138/src/MiniProfiler.EF6/EFProfiledDbProviderServices.cs#L64). Also, don't use Entity Framework before initialization. The initialization logic will look something like this
+Once `EF6` profiler is enabled you must treat `LongRunningQueryProfiler` instance as a singleton. Because of `MiniProfiler.EF6` library accesses the profiler via [MiniProfiler.Current](https://github.com/MiniProfiler/dotnet/blob/v4.0.138/src/MiniProfiler.EF6/EFProfiledDbProviderServices.cs#L64){:target="_blank"}. Also, don't use Entity Framework before initialization. The initialization logic will look something like this
  ```c#
 var profiler = new LongRunningQueryProfiler(_logger, threshold: 2000.Milliseconds());
 MiniProfiler.DefaultOptions.ProfilerProvider = new ProfilerGetter(profiler);
@@ -118,7 +118,7 @@ MiniProfilerEF6.Initialize();
 ```
 After that, you must use `MiniProfiler.Current` ONLY!
 
-The full version of given example is [here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/). Party!
+The full version of given example is [here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/){:target="_blank"}. Party!
 ```text
    _                             .-.
   / )  .-.    ___          __   (   )

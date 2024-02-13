@@ -15,7 +15,7 @@ It would be nice to see data connected to the moment when the exception occurred
 
 ## Solution
 
-It turns out that the .NET framework has a built-in feature for that from the very beginning. It is [Exception.Data](https://docs.microsoft.com/en-us/dotnet/api/system.exception.data?view=netframework-4.7.2) as `IDictionary`.
+It turns out that the .NET framework has a built-in feature for that from the very beginning. It is [Exception.Data](https://docs.microsoft.com/en-us/dotnet/api/system.exception.data?view=netframework-4.7.2){:target="_blank"} as `IDictionary`.
 
 We can write related data to `Exception.Data` dictionary then read it before logging. The obtained data may be logged along with the exception.
 
@@ -82,7 +82,7 @@ public void Serilog_should_log_exception_data()
 
 ```
 
-Where [GetData](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.2.0/Gaev.Blog.Examples.ExceptionCustomData/ErrorLoggingTests.cs#L66-L77) is boilerplate code to convert `IDictionary` to typed dictionary and it combines `InnerException.Data`. `ConsoleOutput` is console output which I captured [in here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.2.0/Gaev.Blog.Examples.ExceptionCustomData/ErrorLoggingTests.cs#L79-L85).
+Where [GetData](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.2.0/Gaev.Blog.Examples.ExceptionCustomData/ErrorLoggingTests.cs#L66-L77{:target="_blank"} is boilerplate code to convert `IDictionary` to typed dictionary and it combines `InnerException.Data`. `ConsoleOutput` is console output which I captured [in here](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.2.0/Gaev.Blog.Examples.ExceptionCustomData/ErrorLoggingTests.cs#L79-L85){:target="_blank"}.
 
 The same demo for `NLog`.
 
@@ -115,8 +115,8 @@ It works like a charm!
 
 ![alt text](/img/exception-data-serilog.png "Exception data passed to Serilog")
 
-The complete example is in [Gaev.Blog.Examples.ExceptionCustomData](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.2.0/Gaev.Blog.Examples.ExceptionCustomData/).
+The complete example is in [Gaev.Blog.Examples.ExceptionCustomData](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.2.0/Gaev.Blog.Examples.ExceptionCustomData/){:target="_blank"}.
 
 ## Caveat
 
-Be careful what you are putting to `Exception.Data`. It needs to be [serializable](https://stackoverflow.com/a/7683796/1400547).
+Be careful what you are putting to `Exception.Data`. It needs to be [serializable](https://stackoverflow.com/a/7683796/1400547){:target="_blank"}.

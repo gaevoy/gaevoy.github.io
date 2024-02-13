@@ -7,11 +7,11 @@ tags: [dotnet-core, ssh, linux]
 comments: true
 ---
 
-Once in a while, I want to try some idea to implement. Having background by developing mostly in `.NET` stack my choice is obviously `.NET Core`. I always have at hand couple of `Linux` servers: one is in `DigitalOcean`, another one is [MSI Cubi N](https://www.msi.com/Desktop/Cubi-N.html) under my TV set. Hence, my `Linux` horses will run `.NET Core` app.
+Once in a while, I want to try some idea to implement. Having background by developing mostly in `.NET` stack my choice is obviously `.NET Core`. I always have at hand couple of `Linux` servers: one is in `DigitalOcean`, another one is [MSI Cubi N](https://www.msi.com/Desktop/Cubi-N.html){:target="_blank"} under my TV set. Hence, my `Linux` horses will run `.NET Core` app.
 
-My yet another brilliant idea is waiting for implementation. Wait a minute! It will not happen without a [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) server which is triggered by GitHub in order to prepare a release package. And, don't forget about a [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery) server, how can we deploy without it? Probably, it is even better to set up [Kubernetes](https://kubernetes.io/) cluster. Right? No way! That's not for me. I would like to have something as simple as possible. [KISS principle](https://en.wikipedia.org/wiki/KISS_principle) after all!
+My yet another brilliant idea is waiting for implementation. Wait a minute! It will not happen without a [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration){:target="_blank"} server which is triggered by GitHub in order to prepare a release package. And, don't forget about a [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery){:target="_blank"} server, how can we deploy without it? Probably, it is even better to set up [Kubernetes](https://kubernetes.io/){:target="_blank"} cluster. Right? No way! That's not for me. I would like to have something as simple as possible. [KISS principle](https://en.wikipedia.org/wiki/KISS_principle){:target="_blank"} after all!
 
-How minimal deployment script will look like? I'm going to deploy to my `MSI Cubi N` that has `192.168.2.4`. After a couple of evenings googling and debugging the script is ready. It uses [rsync](https://en.wikipedia.org/wiki/Rsync) in order to upload only changed files, [systemd](https://en.wikipedia.org/wiki/Systemd) for running the console app as service and restarting in case of failure.
+How minimal deployment script will look like? I'm going to deploy to my `MSI Cubi N` that has `192.168.2.4`. After a couple of evenings googling and debugging the script is ready. It uses [rsync](https://en.wikipedia.org/wiki/Rsync){:target="_blank"} in order to upload only changed files, [systemd](https://en.wikipedia.org/wiki/Systemd){:target="_blank"} for running the console app as service and restarting in case of failure.
 
 ```bash
 #!/bin/bash
@@ -82,10 +82,10 @@ class Program
 
 ### Prerequisites for deployment over SSH
 
-* `Linux` machine itself: for instance, you can start from $5/mo machine by [DigitalOcean](https://www.digitalocean.com/); 
-* [ssh](https://en.wikipedia.org/wiki/Secure_Shell) & [rsync](https://en.wikipedia.org/wiki/Rsync) on your machine must be installed. For `Windows` users, the easiest way is to install `Ubuntu` for `Windows 10` via [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux);
-* password-less `SSH` login must be configured in target `Linux` machine. [ssh-copy-id](https://www.ssh.com/ssh/copy-id) to the rescue;
-* [root login over SSH](https://stackoverflow.com/a/18395932/1400547) must be enabled in target `Linux` machine.
+* `Linux` machine itself: for instance, you can start from $5/mo machine by [DigitalOcean](https://www.digitalocean.com/){:target="_blank"}; 
+* [ssh](https://en.wikipedia.org/wiki/Secure_Shell){:target="_blank"} & [rsync](https://en.wikipedia.org/wiki/Rsync){:target="_blank"} on your machine must be installed. For `Windows` users, the easiest way is to install `Ubuntu` for `Windows 10` via [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux);
+* password-less `SSH` login must be configured in target `Linux` machine. [ssh-copy-id](https://www.ssh.com/ssh/copy-id){:target="_blank"} to the rescue;
+* [root login over SSH](https://stackoverflow.com/a/18395932/1400547){:target="_blank"} must be enabled in target `Linux` machine.
 
 Finally, it takes 4 seconds in order to deploy. See the execution result of the following commands:
 
@@ -96,4 +96,4 @@ Finally, it takes 4 seconds in order to deploy. See the execution result of the 
 
 ![Deployment over SSH](/img/deploy-over-ssh.png "Deployment over SSH" ){:style="max-width:1827px; width:100%;" class="block-center"}
 
-See source code here [Gaev.Blog.Examples.HelloSshDeploy](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.8.0/Gaev.Blog.Examples.HelloSshDeploy).
+See source code here [Gaev.Blog.Examples.HelloSshDeploy](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.8.0/Gaev.Blog.Examples.HelloSshDeploy){:target="_blank"}.

@@ -7,7 +7,7 @@ tags: [PlantUML, UML, StatePattern, NUnit, dotnet]
 comments: true
 ---
 
-A [state diagram](https://en.wikipedia.org/wiki/State_diagram) is a type of diagram used in order to describe the behavior of an entity. For instance, here is the example of an elevator made with the help of `PlantUML`.
+A [state diagram](https://en.wikipedia.org/wiki/State_diagram){:target="_blank"} is a type of diagram used in order to describe the behavior of an entity. For instance, here is the example of an elevator made with the help of `PlantUML`.
 
 ![State diagram example](/img/state-diagram-example.svg "State diagram example" ){:style="width:40%" class="block-center"}
 
@@ -19,13 +19,13 @@ Having great documentation for growing app is a hard task because it quickly bec
 
 ## Solution
 
-Let's look into `UserState` example [described here](/2019/02/12/state-pattern-using-entity-framework.html). It is a demonstration of the user login process, you may check [the source code](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.4.2/Gaev.Blog.Examples.StateViaEF/User.cs) to have a clue.
+Let's look into `UserState` example [described here](/2019/02/12/state-pattern-using-entity-framework.html). It is a demonstration of the user login process, you may check [the source code](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.4.2/Gaev.Blog.Examples.StateViaEF/User.cs){:target="_blank"} to have a clue.
 
 The approach is [the same as before](/2019/02/04/self-documented-app.html) - you don't have to add any dependency to your application source code. All you need is logger and tests, the rest `PlantUML` will do for you. I'm pretty sure you already have those two.
 
 The idea is using logger to write `PlantUML` code. The test runs, as a result, it produces logs, then the logs are captured and converted to state diagram via `PlantUML` automatically.
 
-In the example above, it has [unit tests](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.4.2/Gaev.Blog.Examples.StateViaEF/UserTests.cs) and I'm going to adapt them. 
+In the example above, it has [unit tests](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.4.2/Gaev.Blog.Examples.StateViaEF/UserTests.cs){:target="_blank"} and I'm going to adapt them. 
 
 ```c#
 [Test]
@@ -125,4 +125,4 @@ Finally, the result is awesome!
 
 ![State diagram built by unit tests](/img/self-documented-fsm.png "State diagram built by unit tests")
 
-See complete example here [Gaev.Blog.Examples.SelfDocumentedFSM](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.4.2/Gaev.Blog.Examples.SelfDocumentedFSM/).
+See complete example here [Gaev.Blog.Examples.SelfDocumentedFSM](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.4.2/Gaev.Blog.Examples.SelfDocumentedFSM/){:target="_blank"}.

@@ -7,7 +7,7 @@ tags: [csharp, dotnet, async, throttling]
 comments: true
 ---
 
-A while ago I wanted to upload al my home photo/video archive to Google Drive. I love bicycles as many developers do so why not to write my own uploader on C# :) [Boom!](https://github.com/gaevoy/Gaev.GoogleDriveUploader)
+A while ago I wanted to upload al my home photo/video archive to Google Drive. I love bicycles as many developers do so why not to write my own uploader on C# :) [Boom!](https://github.com/gaevoy/Gaev.GoogleDriveUploader){:target="_blank"}
 
 In the place, I’m currently living (Krakow, Poland) the internet connection is very bad, upload is ~7 Mbps. Once I upload something intensively I can no longer download so kids cannot watch cartoons any longer (╯°□°）╯︵ ┻━┻. That is a really big problem. Kids don’t have their cartoons = I cannot write my code :)
 
@@ -38,7 +38,7 @@ It means that if a folder has 100 files the uploader will create 100 concurrent 
 
 ## Solution
 
-Of course [StackOverflow to the rescue](https://stackoverflow.com/a/22493662/1400547). I was surprised how easy it can be done via `SemaphoreSlim`. Look at that!
+Of course [StackOverflow to the rescue](https://stackoverflow.com/a/22493662/1400547){:target="_blank"}. I was surprised how easy it can be done via `SemaphoreSlim`. Look at that!
 ```c#
 private readonly SemaphoreSlim _throttler = new SemaphoreSlim(/*degreeOfParallelism:*/ 2);
 

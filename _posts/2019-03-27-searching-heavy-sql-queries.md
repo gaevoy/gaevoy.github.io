@@ -9,7 +9,7 @@ comments: true
 
 At some point, you may start to see high CPU load on the SQL server, in my case, it happened after yet another release. So how quickly is it to find such SQL queries? Of course, I can review all changes that were released but I would say it is not as effective and fast as just asking SQL server directly what's going on. For that matter, I have the instruction with SQL queries that I usually use for searching and identifying heavy SQL queries.
 
-More advanced solution could be to [set up an automatic alert on long-running SQL queries via .NET code](/2019/01/29/alert-long-running-sql.html) or enable database monitoring feature, something like [Query Performance Insight for Azure SQL](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-query-performance).
+More advanced solution could be to [set up an automatic alert on long-running SQL queries via .NET code](/2019/01/29/alert-long-running-sql.html){:target="_blank"} or enable database monitoring feature, something like [Query Performance Insight for Azure SQL](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-query-performance){:target="_blank"}.
 
 ## 1. Find heavy SQL queries in real time
 
@@ -50,6 +50,6 @@ Having in hands heavy SQL query that leads to high CPU load we can try to find a
 
 In order to find the associated line of code I usually look to `WHERE` clause, get field name from the expression, search for it in source code via text search. The text search (for instance hitting `Ctrl` + `Shift` + `F`) is needed because SQL query can be represented as a string as well as LINQ expression.
 
-An alternative option is to optimize the SQL query itself by adding yet another index. `SQL Management Studio` can [suggest you on missing index](https://www.brentozar.com/archive/2013/07/dude-who-stole-my-missing-index-recommendation/) easily.
+An alternative option is to optimize the SQL query itself by adding yet another index. `SQL Management Studio` can [suggest you on missing index](https://www.brentozar.com/archive/2013/07/dude-who-stole-my-missing-index-recommendation/){:target="_blank"} easily.
 
 Please share in comments how you search for heavy SQL queries.

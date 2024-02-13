@@ -33,7 +33,7 @@ System.Transactions.TransactionAbortedException: The transaction has aborted. --
 
 The source code that throws the exception is using `TransactionScope` but the exception is thrown not always so it is not obvious on how to reproduce. In logs, I have found `SqlException: Transaction was deadlocked` which is close in time to the exception above. Meaning, they are somehow connected to each other.
 
-> `TransactionScope` is a simple way to handle transactions in .NET. It is a class which provides a simple way to make a set of operations as part of a transaction without worrying about the complexity behind the scene. If any of the operation fails in between, entire transaction would fail and rolled back which undo all the operation that got completed. All this would be taken care by the framework, ensuring the data consistency. — [Brij Bhushan Mishra](https://codewala.net/2018/02/06/transactionscope-a-simple-way-to-handle-transactions-in-net/)
+> `TransactionScope` is a simple way to handle transactions in .NET. It is a class which provides a simple way to make a set of operations as part of a transaction without worrying about the complexity behind the scene. If any of the operation fails in between, entire transaction would fail and rolled back which undo all the operation that got completed. All this would be taken care by the framework, ensuring the data consistency. — [Brij Bhushan Mishra](https://codewala.net/2018/02/06/transactionscope-a-simple-way-to-handle-transactions-in-net/){:target="_blank"}
 
 ## Problem
 
@@ -71,10 +71,10 @@ public void Reproduction()
 ```
 
 Where  
-* [Logs table](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L145) is `MS SQL` table having `Id` column as `int`.
-* [ExecuteSql](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L148-L157) is a shortcut to run the SQL query.
-* [RetryIfDeadlock](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L170-L187) is retry strategy if transaction deadlock happens.
-* [SimulateDeadlock](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L159-L168) is `MS SQL` bug which I exploit to simulate transaction deadlock.
+* [Logs table](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L145){:target="_blank"} is `MS SQL` table having `Id` column as `int`.
+* [ExecuteSql](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L148-L157){:target="_blank"} is a shortcut to run the SQL query.
+* [RetryIfDeadlock](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L170-L187){:target="_blank"} is retry strategy if transaction deadlock happens.
+* [SimulateDeadlock](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure/PartiallyCommittedTransactionTests.cs#L159-L168){:target="_blank"} is `MS SQL` bug which I exploit to simulate transaction deadlock.
 
 Of course, the test fails. Despite the exception above, it shows that the transaction is partially committed. See log #2 and #3 have inserted but #1 is not. What a surprise!
 
@@ -144,7 +144,7 @@ public void Reproduction()
 }
 ```
 
-The reason for such strange behavior I have found on [StackOverflow]( https://stackoverflow.com/a/5623877/1400547). The transaction rolls back automatically and implicitly if [some types of errors](https://stackoverflow.com/a/32202657/1400547) are thrown, like `SqlException: Transaction was deadlocked` or `SqlException: Conversion failed`. Because of error suppression, `TransactionScope` becomes out of sync with `MS SQL` transaction so obviously, its `Dispose` fails by saying that the transaction has already been finished.
+The reason for such strange behavior I have found on [StackOverflow](https://stackoverflow.com/a/5623877/1400547){:target="_blank"}. The transaction rolls back automatically and implicitly if [some types of errors](https://stackoverflow.com/a/32202657/1400547){:target="_blank"} are thrown, like `SqlException: Transaction was deadlocked` or `SqlException: Conversion failed`. Because of error suppression, `TransactionScope` becomes out of sync with `MS SQL` transaction so obviously, its `Dispose` fails by saying that the transaction has already been finished.
 
 ## Solution
 
@@ -211,10 +211,10 @@ public void Fix()
 }
 ```
 
-You can find the tests in [Gaev.Blog.Examples.TransactionScopeFailure](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure).
+You can find the tests in [Gaev.Blog.Examples.TransactionScopeFailure](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.7.0/Gaev.Blog.Examples.TransactionScopeFailure){:target="_blank"}.
 
 ## Sidenote
 
-At the very beginning of my investigation, it was hard to log the deadlock exceptions since we are using [EnterpriseLibrary.TransientFaultHandling](https://www.nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) for retry logic. It suppresses all exceptions during retries. So I used `MiniProfiler` to plug into ADO.NET and log all SQL exceptions.
+At the very beginning of my investigation, it was hard to log the deadlock exceptions since we are using [EnterpriseLibrary.TransientFaultHandling](https://www.nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/){:target="_blank"} for retry logic. It suppresses all exceptions during retries. So I used `MiniProfiler` to plug into ADO.NET and log all SQL exceptions.
 
-Read [this article on how to do it](https://gaevoy.com/2019/01/29/alert-long-running-sql.html) and take a look to specifically [this code block](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/LongRunningQueryProfiler.cs#L50-L60) which actually logs SQL exception + related SQL query.
+Read [this article on how to do it](https://gaevoy.com/2019/01/29/alert-long-running-sql.html){:target="_blank"} and take a look to specifically [this code block](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.0.0/Gaev.Blog.Examples.SqlQueryLogger/LongRunningQueryProfiler.cs#L50-L60){:target="_blank"} which actually logs SQL exception + related SQL query.

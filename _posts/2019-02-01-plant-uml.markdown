@@ -9,7 +9,7 @@ comments: true
 
 From time to time, I feel like a dog: understand everything but can't explain. So draw it! Or I need to understand how a feature supposed to work but it does not fit in my brain. So draw it, come on! Or it is a huge challenge how to explain my idea to my teammates. So draw it, hell!
 
-Then, I met with [PlantUML](https://en.wikipedia.org/wiki/PlantUML) and I fell in love at first sight. `PlantUML` is an open-source tool allowing you to create UML diagrams from plain text. Killer features for me:
+Then, I met with [PlantUML](https://en.wikipedia.org/wiki/PlantUML){:target="_blank"} and I fell in love at first sight. `PlantUML` is an open-source tool allowing you to create UML diagrams from plain text. Killer features for me:
 * text becomes diagram so you can store a history of changes in git
  ```text
 User -> GUI : To boundary
@@ -33,10 +33,10 @@ Widget -> Database : To database
      │User│          │GUI│          │Widget│          │Database│
      └────┘          └───┘          └──────┘          └────────┘
 ```
-* `PlantUML` has [plugins](https://plugins.jetbrains.com/plugin/7017-plantuml-integration) for `Rider`, `WebStorm`, `IntelliJ IDEA`, [Google Docs](https://www.youtube.com/watch?v=sXshJ4BPJt8), [Confluence](https://marketplace.atlassian.com/apps/41025/plantuml-for-confluence) and many more. You can even write a diagram right in source code, like below
+* `PlantUML` has [plugins](https://plugins.jetbrains.com/plugin/7017-plantuml-integration){:target="_blank"} for `Rider`, `WebStorm`, `IntelliJ IDEA`, [Google Docs](https://www.youtube.com/watch?v=sXshJ4BPJt8){:target="_blank"}, [Confluence](https://marketplace.atlassian.com/apps/41025/plantuml-for-confluence){:target="_blank"} and many more. You can even write a diagram right in source code, like below
 ![alt text](/img/rider-plantuml.png "PlantUML in Rider")
 
-Together with `PlantUML`, I can make sequence, class, state diagrams by typing a text the same like C#-code right in the same IDE. Fewer context switches, more productivity. If I need to share the diagram with someone there is an [online tool](https://www.planttext.com/) which converts the text and gives URL to the diagram, [like this](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuU8ABKujKj2rKt0FzLImKWZ9LqZAByrBIIogv0A902N2CrFIKqiWSidvUIL5-JbSK36Wh4jYIM9IOd4gH3u5okFYSaZDIm6Q3m00). `PlantUML` has really nice [documentation](http://plantuml.com/) with examples.
+Together with `PlantUML`, I can make sequence, class, state diagrams by typing a text the same like C#-code right in the same IDE. Fewer context switches, more productivity. If I need to share the diagram with someone there is an [online tool](https://www.planttext.com/){:target="_blank"} which converts the text and gives URL to the diagram, [like this](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuU8ABKujKj2rKt0FzLImKWZ9LqZAByrBIIogv0A902N2CrFIKqiWSidvUIL5-JbSK36Wh4jYIM9IOd4gH3u5okFYSaZDIm6Q3m00){:target="_blank"}. `PlantUML` has really nice [documentation](http://plantuml.com/){:target="_blank"} with examples.
 
 Highly recommend you guys to learn `PlantUML`. It's worth it! Please suggest what do you use for building UML diagram.
 

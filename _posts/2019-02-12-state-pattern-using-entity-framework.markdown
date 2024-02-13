@@ -189,7 +189,7 @@ public abstract class UserState
 
 ```
 
-Unit tests may use [HavingState](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.3.2/Gaev.Blog.Examples.StateViaEF/UserTests.cs#L185-L189) extension method to turn the state into a required type.
+Unit tests may use [HavingState](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.3.2/Gaev.Blog.Examples.StateViaEF/UserTests.cs#L185-L189){:target="_blank"} extension method to turn the state into a required type.
 
 ```c#
 [Test]
@@ -256,4 +256,4 @@ In general, it became more expressive and easier to navigate through the code, j
 
 I believe this solution is super small and simple so the change from `if-then` to state pattern should not be a problem.
  
-The complete example is in [Gaev.Blog.Examples.StateViaEF](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.3.2/Gaev.Blog.Examples.StateViaEF).
+The complete example is in [Gaev.Blog.Examples.StateViaEF](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.3.2/Gaev.Blog.Examples.StateViaEF){:target="_blank"}.

@@ -7,7 +7,7 @@ tags: [pgp, signature, keybase, security]
 comments: true
 ---
 
-Wandering through the Internet I have found an interesting question about [Single Sign-On via Keybase](https://github.com/keybase/keybase-issues/issues/1767). The idea behind this started to hold me tight so I decided to experiment to see how hard or easy it can be done. For the sake of simplicity, I have to skip `OAuth` ceremony so it would be just the sign-in form via `Keybase`.
+Wandering through the Internet I have found an interesting question about [Single Sign-On via Keybase](https://github.com/keybase/keybase-issues/issues/1767){:target="_blank"}. The idea behind this started to hold me tight so I decided to experiment to see how hard or easy it can be done. For the sake of simplicity, I have to skip `OAuth` ceremony so it would be just the sign-in form via `Keybase`.
 
 ## Theory
 
@@ -15,7 +15,7 @@ Any `Keybase` user has its `PGP` private and public key. Only the user has acces
 
 #### Sign-in workflow:
 1. The user opens a site. The site gives a random text, so-called a challenge.
-2. The user must sign the challenge. It can be done via `Keybase` console or [keybase.io](https://keybase.io/).
+2. The user must sign the challenge. It can be done via `Keybase` console or [keybase.io](https://keybase.io/){:target="_blank"}.
 3. The user sends the signed challenge to the site back.
 4. The signature is checked by the site against the corresponding public key. If the signature is confirmed the user is authorized.
 
@@ -23,7 +23,7 @@ Any `Keybase` user has its `PGP` private and public key. Only the user has acces
 
 #### 1. A challenge generation
 
-I will generate the challenge right in a browser using `JavaScript` like [this](https://stackoverflow.com/a/2117523).
+I will generate the challenge right in a browser using `JavaScript` like [this](https://stackoverflow.com/a/2117523){:target="_blank"}.
 
 ```javascript
 let challenge = uuidv4();
@@ -37,7 +37,7 @@ let challenge = uuidv4();
 keybase pgp sign -d -m e108e97bafa94cd8b9937f15611e8bea
 ```
 
-However, the console won't work for mobile users. In this case, `Keybase` [web page](https://keybase.io/sign) will be an alternative solution to sign. Yep, too many clicks :( Probably, `Keybase` chat bot capabilities can help here, but this is another story.
+However, the console won't work for mobile users. In this case, `Keybase` [web page](https://keybase.io/sign){:target="_blank"} will be an alternative solution to sign. Yep, too many clicks :( Probably, `Keybase` chat bot capabilities can help here, but this is another story.
 
 #### 3. Sending the signature
 
@@ -70,7 +70,7 @@ OAMomrNcZ8T9rv9v0Dxv5tMxoqWBG5mCi6wB1lS/YlQpeDk67a9N/8XXzy1qjUw=
 -----END PGP SIGNATURE-----
 ```
 
-In order to verify the signature, the corresponding public key is required. The signature contains a reference to the key that has been used, see the previous article to figure out [what is inside PGP signature](/2019/05/10/pgp-signature.html). `.NET` library [BouncyCastle](https://www.nuget.org/packages/BouncyCastle) is really good at crypto operations. 
+In order to verify the signature, the corresponding public key is required. The signature contains a reference to the key that has been used, see the previous article to figure out [what is inside PGP signature](/2019/05/10/pgp-signature.html){:target="_blank"}. `.NET` library [BouncyCastle](https://www.nuget.org/packages/BouncyCastle){:target="_blank"} is really good at crypto operations. 
 
 The first step is parsing received signature:
 
@@ -91,7 +91,7 @@ PgpSignature signature = ParsePgpSignature(body);
 long keyId = signature.KeyId;
 ```
 
-Downloading `PGP` public key from `Keybase` via [key/fetch](https://keybase.io/docs/api/1.0/call/key/fetch) API call. It also gives user name which is super useful for authorization procedure. Moreover, using [user/lookup](https://keybase.io/docs/api/1.0/call/user/lookup) far more user data can be retrieved, such as full name, profile image, social network links:
+Downloading `PGP` public key from `Keybase` via [key/fetch](https://keybase.io/docs/api/1.0/call/key/fetch){:target="_blank"} API call. It also gives user name which is super useful for authorization procedure. Moreover, using [user/lookup](https://keybase.io/docs/api/1.0/call/user/lookup){:target="_blank"} far more user data can be retrieved, such as full name, profile image, social network links:
 
 ```c#
 using (var cli = new HttpClient())
@@ -133,6 +133,6 @@ var identity = new GenericIdentity(userName, CookieAuthenticationDefaults.Authen
 await HttpContext.SignInAsync(new ClaimsPrincipal(identity));
 ```
 
-I deployed this experiment to [app.gaevoy.com/keybase-sign-in](https://app.gaevoy.com/keybase-sign-in/) in order, you can play with. Source code is available in here [Gaev.Blog.Examples.KeybaseSignIn](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.0.0/Gaev.Blog.Examples.KeybaseSignIn).
+I deployed this experiment to [app.gaevoy.com/keybase-sign-in](https://app.gaevoy.com/keybase-sign-in/){:target="_blank"} in order, you can play with. Source code is available in here [Gaev.Blog.Examples.KeybaseSignIn](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.0.0/Gaev.Blog.Examples.KeybaseSignIn){:target="_blank"}.
 
 ![Sign-in via Keybase demo](/img/keybase-sign-in/demo.png "Sign-in via Keybase demo" ){:style="max-width:914px; width:100%;" class="block-center"}

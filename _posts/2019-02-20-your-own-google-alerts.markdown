@@ -9,13 +9,13 @@ comments: true
 
 It is priceless to be up-to-date and at the same time, it's challenging due to the massive amount of information generated per second. Currently, <ins>you</ins> should look for information via search engines, for instance, `Google Search`. I would like the <ins>information</ins> is finding me!
 
-[Google Alerts](https://www.google.com/alerts) is awesome. The idea to be notified if something has changed for your query is brilliant. The same as [Kafka SQL](https://www.confluent.io/product/ksql/) does it - you write a query, it notifies on every new change.
+[Google Alerts](https://www.google.com/alerts){:target="_blank"} is awesome. The idea to be notified if something has changed for your query is brilliant. The same as [Kafka SQL](https://www.confluent.io/product/ksql/){:target="_blank"} does it - you write a query, it notifies on every new change.
 
-[Google Alerts](https://www.google.com/alerts) sucks. The method of notification is outdated. The emails, really!? They are so inconvenient comparing to the messenger apps. Huge delay between a real data change and alert itself due to crawler busyness that cannot index the internet more frequently. Not enough search parameters if it comes to a specific area, for instance, housing, renting, cars.
+[Google Alerts](https://www.google.com/alerts){:target="_blank"} sucks. The method of notification is outdated. The emails, really!? They are so inconvenient comparing to the messenger apps. Huge delay between a real data change and alert itself due to crawler busyness that cannot index the internet more frequently. Not enough search parameters if it comes to a specific area, for instance, housing, renting, cars.
 
 ## Problem
 
-Let's imagine, you are looking for a flat to buy in Poland. There is [otodom](https://www.otodom.pl/) site for that matter, so it is not a big deal to search for offers you are interested in. However, found results are static and you have to repeat the search again and again wasting time. I would like that new offers are finding me and not other way around. `Google Alert` will you do that? Of course, if a week delay is not a problem.
+Let's imagine, you are looking for a flat to buy in Poland. There is [otodom](https://www.otodom.pl/){:target="_blank"} site for that matter, so it is not a big deal to search for offers you are interested in. However, found results are static and you have to repeat the search again and again wasting time. I would like that new offers are finding me and not other way around. `Google Alert` will you do that? Of course, if a week delay is not a problem.
 
 (╯°□°）╯︵ ┻━┻
 
@@ -23,7 +23,7 @@ Let's imagine, you are looking for a flat to buy in Poland. There is [otodom](ht
 
 Consider what bare minimum implementation will look like. So that can be a starting point to improve in the future if needed.
 
-I will get notifications via [Telegram Messenger](https://telegram.org/) moreover it will store notification history. Luckily, it is supported by popular `.NET` loggers. I checked `NLog`, `log4net`, `Serilog` meaning I don't have to learn yet another API for `Telegram`. If you use another messenger I'm pretty sure it is supported by loggers as well as `Telegram`, for instance, take `Slack` and `Serilog` [Serilog.Sinks.Slack](https://github.com/mgibas/serilog-sinks-slack).
+I will get notifications via [Telegram Messenger](https://telegram.org/){:target="_blank"} moreover it will store notification history. Luckily, it is supported by popular `.NET` loggers. I checked `NLog`, `log4net`, `Serilog` meaning I don't have to learn yet another API for `Telegram`. If you use another messenger I'm pretty sure it is supported by loggers as well as `Telegram`, for instance, take `Slack` and `Serilog` [Serilog.Sinks.Slack](https://github.com/mgibas/serilog-sinks-slack){:target="_blank"}.
 
 Here how sending a message to `Telegram` via `Serilog` logger looks like.
 
@@ -34,7 +34,7 @@ var logger = new LoggerConfiguration()
 logger.Information("Offer #1 - https://the.internet/offer-1.html");
 ```
 
-Since `otodom` does not have any API, HTML page will be my API. [HtmlAgilityPack](https://www.nuget.org/packages/HtmlAgilityPack/) will help me to parse it.
+Since `otodom` does not have any API, HTML page will be my API. [HtmlAgilityPack](https://www.nuget.org/packages/HtmlAgilityPack/){:target="_blank"} will help me to parse it.
 
 ```c#
 public static class OtoDomCrawler
@@ -106,7 +106,7 @@ ssh root@__.___.___.___
 chmod 777 /apps/MyAlerts/Gaev.Blog.Examples.GoogleAlert
 ```
 
-Because `Linux` is used why not to schedule the app via `cron`, and for `Windows`, you can use built-in `Task Scheduler`. I will use [\*/30 6-23 \* \* \*](https://crontab.guru/#*/30_6-23_*_*_*) cron schedule expression which means `At every 30th minute past every hour from 6 through 23`.
+Because `Linux` is used why not to schedule the app via `cron`, and for `Windows`, you can use built-in `Task Scheduler`. I will use [\*/30 6-23 \* \* \*](https://crontab.guru/#*/30_6-23_*_*_*){:target="_blank"} cron schedule expression which means `At every 30th minute past every hour from 6 through 23`.
 
 ```shell
 crontab -e
@@ -155,14 +155,14 @@ If you are searching for a flat, car, ticket, job, look how easy to be the first
 
 ![My alerts delivered by Telegram](/img/telegram-alerts-example.png "My alerts delivered by Telegram" ){:style="width:60%" class="block-center"}
 
-Do you want this but not a technical guy? No problem contact me ([LinkedIn](https://ua.linkedin.com/in/vladimirgayevoy), [Twitter](https://twitter.com/vgman)) and I will help.
+Do you want this but not a technical guy? No problem contact me ([LinkedIn](https://www.linkedin.com/in/vladimirgayevoy){:target="_blank"}, [Twitter](https://twitter.com/vgman){:target="_blank"}) and I will help.
 
-Here you can find complete example [Gaev.Blog.Examples.GoogleAlert](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.5.1/Gaev.Blog.Examples.GoogleAlert).
+Here you can find complete example [Gaev.Blog.Examples.GoogleAlert](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.5.1/Gaev.Blog.Examples.GoogleAlert){:target="_blank"}.
 
 ## Pitfalls
 
 Along the way I came across a few problems and considerations:
 
-* It is a bit tricky how to [setup Telegram bot](https://github.com/oxozle/serilog-sinks-telegram/issues/1).
-* If you want to show the alerts to several people (wife, your agency, friends) it is possible to [write to Telegram channels](https://stackoverflow.com/a/42109561/1400547).
+* It is a bit tricky how to [setup Telegram bot](https://github.com/oxozle/serilog-sinks-telegram/issues/1){:target="_blank"}.
+* If you want to show the alerts to several people (wife, your agency, friends) it is possible to [write to Telegram channels](https://stackoverflow.com/a/42109561/1400547){:target="_blank"}.
 * Search result should be small enough. Capabilities of one console app are limited.

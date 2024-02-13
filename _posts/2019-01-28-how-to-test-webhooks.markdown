@@ -7,7 +7,7 @@ tags: [csharp, dotnet, webhook, NUnit, sendgrid, ngrok, api]
 comments: true
 ---
 
-During integrating with [SendGrid's webhook](https://sendgrid.com/docs/API_Reference/Event_Webhook/getting_started_event_webhook.html) in order to get status of email delivery I came across obstacles on how to test it. Because I'm a lazy developer I wanted to have an automated test for my integration. But it is not obvious how to do that from the first sight.
+During integrating with [SendGrid's webhook](https://sendgrid.com/docs/API_Reference/Event_Webhook/getting_started_event_webhook.html){:target="_blank"} in order to get status of email delivery I came across obstacles on how to test it. Because I'm a lazy developer I wanted to have an automated test for my integration. But it is not obvious how to do that from the first sight.
 
 The webhook works this way that external system calls my application's API. It means I have to run/host API right in the test so it will be available for external consumers such as `SendGrid`.
 
@@ -15,11 +15,11 @@ The webhook works this way that external system calls my application's API. It m
 
 I don't have a public IP address on my computer where I'm going to run the test. The computer is under NAT. How to expose a local port from my computer to the internet? Even more, `SendGrid` requires to have HTTPS enabled. (╯°□°）╯︵ ┻━┻ I have to overcome this problem as well. 
 
-`SendGrid` suggested to looking into [ngrok](https://sendgrid.com/blog/test-webhooks-ngrok/).
+`SendGrid` suggested to looking into [ngrok](https://sendgrid.com/blog/test-webhooks-ngrok/){:target="_blank"}.
 
 ## Solution
 
-[ngrok](https://ngrok.com/product) can expose local port to the internet via HTTPS. Moreover, I can control `ngrok` via its API in order to get the public address for the port. Here is a small wrapper around `ngrok`:
+[ngrok](https://ngrok.com/product){:target="_blank"} can expose local port to the internet via HTTPS. Moreover, I can control `ngrok` via its API in order to get the public address for the port. Here is a small wrapper around `ngrok`:
 
 ```c#
 public class NgrokTunnel : IDisposable
@@ -128,4 +128,4 @@ After ~15 sec it becomes green!
              '.'                         ) ;) ;
                                         (_/(_/
 ```
-Since I'm using external systems (`SendGrid`, `ngrok`) the test can be unstable. Full version of the test is [here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.0.0/Gaev.Blog.Examples.WebhookTests).
+Since I'm using external systems (`SendGrid`, `ngrok`) the test can be unstable. Full version of the test is [here](https://github.com/gaevoy/Gaev.Blog.Examples/tree/1.0.0/Gaev.Blog.Examples.WebhookTests){:target="_blank"}.

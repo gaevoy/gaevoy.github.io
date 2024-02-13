@@ -161,8 +161,8 @@ Queue -> DocumentHandler
 note right: DocumentDelivered
 ```
 
-Look at that beautiful ASCII output in a test output window. Although, it is up to you to get SVG or PNG as well as ASCII. [RenderAsciiDiagram](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.1.0/Gaev.Blog.Examples.SelfDocumentedApp/AcceptanceTests.cs#L89-L96) uses [PlantUml.Net](https://github.com/KevReed/PlantUml.Net) to render remotely, so you don't have to install `PlantUML` locally.
+Look at that beautiful ASCII output in a test output window. Although, it is up to you to get SVG or PNG as well as ASCII. [RenderAsciiDiagram](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.1.0/Gaev.Blog.Examples.SelfDocumentedApp/AcceptanceTests.cs#L89-L96){:target="_blank"} uses [PlantUml.Net](https://github.com/KevReed/PlantUml.Net){:target="_blank"} to render remotely, so you don't have to install `PlantUML` locally.
 
 ![alt text](/img/self-documented-app.png "Self documented app example")
 
-Building the self-documented system is something you can try right now with minimal effort. This way tests can give us even more value apart from their primary goal. I will be happy to hear what do you think. See complete example here [Gaev.Blog.Examples.SelfDocumentedApp](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.1.0/Gaev.Blog.Examples.SelfDocumentedApp/).
+Building the self-documented system is something you can try right now with minimal effort. This way tests can give us even more value apart from their primary goal. I will be happy to hear what do you think. See complete example here [Gaev.Blog.Examples.SelfDocumentedApp](https://github.com/gaevoy/Gaev.Blog.Examples/blob/1.1.0/Gaev.Blog.Examples.SelfDocumentedApp/){:target="_blank"}.

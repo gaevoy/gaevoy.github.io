@@ -7,7 +7,7 @@ tags: [FSM, StateMachine, StatePattern, AkkaNet]
 comments: true
 ---
 
-[Akka.NET](https://getakka.net/) actor has really brilliant feature - [switching behavior](https://petabridge.com/blog/akka-actors-finite-state-machines-switchable-behavior/) using `Become()` method. Look, how expressive it is (borrowed [from here](http://dontcodetired.com/blog/post/Switchable-Actor-Behaviour-in-AkkaNET)). How easy to navigate through the code, just `Go to Declaration`, because a state is a method. Love it!
+[Akka.NET](https://getakka.net/){:target="_blank"} actor has really brilliant feature - [switching behavior](https://petabridge.com/blog/akka-actors-finite-state-machines-switchable-behavior/){:target="_blank"} using `Become()` method. Look, how expressive it is (borrowed [from here](http://dontcodetired.com/blog/post/Switchable-Actor-Behaviour-in-AkkaNET){:target="_blank"}). How easy to navigate through the code, just `Go to Declaration`, because a state is a method. Love it!
 
 ```c#
 class LightSwitchBehaviourActor : ReceiveActor
@@ -47,7 +47,7 @@ If you need just a state machine, `Akka.Net` has few not obvious difficulties wh
 
 `Akka.NET` is a solid product which is used by software giants like Amazon, Intel, PayPal. It was born to serve incredible load and stay alive.
 
-It is stateful by nature, once an instance of an actor is created it will live in memory until node shutdown. In this case, `Akka` has [Akka.Cluster](https://getakka.net/articles/clustering/cluster-overview.html) that makes sure to run the instance somewhere in order to keep working.
+It is stateful by nature, once an instance of an actor is created it will live in memory until node shutdown. In this case, `Akka` has [Akka.Cluster](https://getakka.net/articles/clustering/cluster-overview.html){:target="_blank"} that makes sure to run the instance somewhere in order to keep working.
 
 In a stateless app, most probably, you will have the same app runs on multiple nodes under network balancer. So for ASP.NET MVC app, you should not do anything, just keep being stateless.
 
@@ -57,7 +57,7 @@ In a stateless app, most probably, you will have the same app runs on multiple n
 
 ## Solution
 
-I have played a bit and made a simplistic implementation. My experiment is [Gaev.StateMachine](https://github.com/gaevoy/Gaev.StateMachine). The result is so similar to what we have seen above.
+I have played a bit and made a simplistic implementation. My experiment is [Gaev.StateMachine](https://github.com/gaevoy/Gaev.StateMachine){:target="_blank"}. The result is so similar to what we have seen above.
 
 ```c#
 class Delivery
@@ -140,4 +140,4 @@ void ItCanNotCancel()
 }
 ```
 
-Mission accomplished :) The experiment has unit tests, [go and play](https://github.com/gaevoy/Gaev.StateMachine/tree/master/Gaev.StateMachine.Tests). Don't forget to give me your feedback ;)
+Mission accomplished :) The experiment has unit tests, [go and play](https://github.com/gaevoy/Gaev.StateMachine/tree/master/Gaev.StateMachine.Tests){:target="_blank"}. Don't forget to give me your feedback ;)

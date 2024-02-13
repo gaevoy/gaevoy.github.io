@@ -7,9 +7,9 @@ tags: [csharp, aspnet]
 comments: true
 ---
 
-I'm pretty sure you have seen application slow down just after deploying yet another release into production. Yeah, that's a side effect of using one of the [just-in-time compilation](<https://en.wikipedia.org/wiki/Just-in-time_compilation>)-based languages such as `C#` or `Java`. But not only `JIT` is guilty in a slow cold start. But also an initialization logic which usually is run on the first call.
+I'm pretty sure you have seen application slow down just after deploying yet another release into production. Yeah, that's a side effect of using one of the [just-in-time compilation](<https://en.wikipedia.org/wiki/Just-in-time_compilation>){:target="_blank"}-based languages such as `C#` or `Java`. But not only `JIT` is guilty in a slow cold start. But also an initialization logic which usually is run on the first call.
 
-To get rid of slow cold start, the application is warmed-up after deploying a new release but before routing production traffic into it. The simplest possible way to warm-up is to open URLs belong to the app. Go ahead, if it works for you. But what if that URLs cannot be accessible without a sign-in? For example, [multi-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) is enabled for every user so it is not possible to sign-in via one of headless browser or just `HttpClient`.
+To get rid of slow cold start, the application is warmed-up after deploying a new release but before routing production traffic into it. The simplest possible way to warm-up is to open URLs belong to the app. Go ahead, if it works for you. But what if that URLs cannot be accessible without a sign-in? For example, [multi-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication){:target="_blank"} is enabled for every user so it is not possible to sign-in via one of headless browser or just `HttpClient`.
 
 Let's see how I managed to warm-up `ASP.NET MVC` using built-in `@Html.RenderAction("Action", "Controller")`. For sure `RenderAction` can help us but before that, we have to fake a sign-in so a page would think the current user is legitimate. 
 
@@ -118,4 +118,4 @@ public class WarmUpController : Controller
 
 Be careful, this approach is applicable for `.NET Framework` only and I have not tested on `.NET Core`!
 
-Source code of simple `ASP.NET MVC` app with the warm-up controller is in here [Gaev.Blog.Examples.WarmUpAspNetMvc](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.3.0/Gaev.Blog.Examples.WarmUpAspNetMvc). Don't forget to let me know how do you warm-up :)
+Source code of simple `ASP.NET MVC` app with the warm-up controller is in here [Gaev.Blog.Examples.WarmUpAspNetMvc](https://github.com/gaevoy/Gaev.Blog.Examples/tree/2.3.0/Gaev.Blog.Examples.WarmUpAspNetMvc){:target="_blank"}. Don't forget to let me know how do you warm-up :)
