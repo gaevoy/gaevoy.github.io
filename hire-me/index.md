@@ -6,16 +6,16 @@ layout: default
 ---
 
 <style>
-.job-title, .dbbs {
-    display: none !important;
+.site-header .logo {
+    visibility: hidden;
 }
 .hire-me-header {
-    margin-top: -30px;
     margin-bottom: 30px;
     text-align: center;
 }
 .hire-me-logo {
-    background: url("/img/logo.jpg");
+    background: url("/img/logo2.jpg");
+    background-size: contain;
     height: 174px;
     width: 174px;
     display: block;
