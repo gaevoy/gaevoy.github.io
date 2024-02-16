@@ -469,3 +469,7 @@ a.job-title {
 .dbbs a {
   color: #477dca;
 }
+
+.home .post-tags {
+  margin-top: 6px;
+}

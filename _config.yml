@@ -1,5 +1,5 @@
 plugins: [jekyll-paginate, jekyll-sitemap]
-excerpt_separator: ""
+excerpt_separator: <!--more-->
 highlighter: rouge
 markdown: kramdown
 kramdown:
@@ -11,5 +11,5 @@ title: Volodymyr Gaevoy's blog | Expert Web Development Services
 email: 
 author: Volodymyr Gaevoy
 description: Get simple and helpful tips on .NET, c#, web programming and professional software development on Volodymyr Gaevoy's blog
-paginate: 16
+paginate: 20
 paginate_path: "page:num"

@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Leaving CodeWorldwide
 description: My story about 5 years in CodeWorldwide
 layout: post
