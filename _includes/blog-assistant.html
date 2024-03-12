@@ -1,0 +1,29 @@
+<div class="ba-container">
+    <div class="ba-bubble">
+        <div class="ba-label">Chat with blog <span class="ba-beta">beta</span></div>
+        <div class="ba-close-icon">✕</div>
+    </div>
+    <ul class="ba-chat">
+        <li>Assistant: Hello, I'm a blog assistant baked by GPT-3.5 Turbo. How can I help?</li>
+    </ul>
+    <form class="ba-form">
+        <input name="message" type="text" placeholder="Ask and press ENTER..." maxlength="200"/>
+    </form>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        let blogAssistantEl = document.querySelector(".ba-container .ba-bubble");
+        blogAssistantEl.addEventListener("click", openBlogAssistant);
+
+        function openBlogAssistant() {
+            (async function () {
+                const {render, BlogAssistant} = await import('/blog-assistant/blog-assistant.js?v=0.1');
+                let model = new BlogAssistant();
+                render(model);
+                model.toggle();
+                blogAssistantEl.removeEventListener("click", openBlogAssistant);
+            })();
+        }
+    });
+</script>
