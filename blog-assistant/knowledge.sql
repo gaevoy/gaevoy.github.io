@@ -17,9 +17,21 @@ create table main.posts
 create virtual table posts_fts using fts5(url, tags, title, description, content);
 
 {% for post in site.posts %}
--- {{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}
+
+{% assign title = post.title %}
+{% assign title = title | replace: "'", "''" %}
+
+{% assign description = post.description %}
+{% assign description = description | replace: "'", "''" %}
+
+{% assign content = post.content %}
+{% assign content = content | replace: '<a ', '__a__' | replace: '</a>', '__/a__' %}
+{% assign content = content | strip_html %}
+{% assign content = content | replace: '__a__', '<a ' | replace: '__/a__', '</a>' %}
+{% assign content = content | replace: "'", "''" %}
+
 insert into posts (url, tags, title, description, content)
-values ('https://gaevoy.com{{ post.url }}', '{{ post.tags | join: " " }}', '{{ post.title | replace: "'", "''" }}', '{{ post.description | replace: "'", "''" }}', '{{ post.content | strip_html | replace: "'", "''" }}');
+values ('https://gaevoy.com{{ post.url }}', '{{ post.tags | join: " " }}', '{{ title }}', '{{ description }}', '{{ content }}');
 {% endfor %}
 
 insert into posts_fts (url, tags, title, description, content) select url, tags, title, description, content from posts;
