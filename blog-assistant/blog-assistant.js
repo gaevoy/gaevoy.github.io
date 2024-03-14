@@ -49,7 +49,7 @@ export function render(chat) {
 }
 
 export class BlogAssistant {
-    constructor() {
+    constructor(apiBaseUrl) {
         this.opening = false;
         this.openingChanged = new OnChangedEvent();
         this.opened = false;
@@ -61,7 +61,7 @@ export class BlogAssistant {
         this.messageAdded = new OnChangedEvent();
         this.recentMessageUpdated = new OnChangedEvent();
         this.threadId = null;
-        this.api = new ServiceAgent("https://app.gaevoy.com/blog-assistant/");
+        this.api = new ServiceAgent(apiBaseUrl);
     }
 
     toggle() {

@@ -4,7 +4,7 @@
         <div class="ba-close-icon">✕</div>
     </div>
     <ul class="ba-chat">
-        <li>Assistant: Hello, I'm a blog assistant powered by GPT-3.5 Turbo. How can I help?</li>
+        <li>Assistant: Hello, I'm a blog assistant powered by GPT-3.5 Turbo. Ask me about the article.</li>
     </ul>
     <form class="ba-form">
         <input name="message" type="text" placeholder="Ask and press ENTER..." maxlength="200"/>
@@ -19,7 +19,7 @@
         function openBlogAssistant() {
             (async function () {
                 const {render, BlogAssistant} = await import('/blog-assistant/blog-assistant.js?v=0.2');
-                let model = new BlogAssistant();
+                let model = new BlogAssistant("https://app.gaevoy.com/blog-assistant/");
                 render(model);
                 model.toggle();
                 blogAssistantEl.removeEventListener("click", openBlogAssistant);
