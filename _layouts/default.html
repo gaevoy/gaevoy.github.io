@@ -11,8 +11,8 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/basscss.css" | prepend: site.baseurl }}" type="text/css">
-    <link rel="stylesheet" href="{{ "/css/pixyll.css?v=7" | prepend: site.baseurl }}" type="text/css">
+    <link rel="stylesheet" href="{{ "/css/basscss.css?v=8" | prepend: site.baseurl }}" type="text/css">
+    <link rel="stylesheet" href="{{ "/css/pixyll.css?v=8" | prepend: site.baseurl }}" type="text/css">
     <link rel="stylesheet" href="{{ "/css/solarized-light.css" | prepend: site.baseurl }}" type="text/css">
     <link rel="stylesheet" href="{{ "/css/cookieconsent.css?v=3.0.0-rc.17" | prepend: site.baseurl }}" type="text/css">
     <link rel="stylesheet" href="{{ "/blog-assistant/blog-assistant.css?v=0.1" | prepend: site.baseurl }}" type="text/css">
@@ -52,6 +52,7 @@
 
   {% include footer.html %}
   {% include cookieconsent.html %}
+  {% include blog-assistant.html %}
  
 </body>
 </html>

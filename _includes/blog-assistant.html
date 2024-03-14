@@ -4,7 +4,7 @@
         <div class="ba-close-icon">✕</div>
     </div>
     <ul class="ba-chat">
-        <li>Assistant: Hello, I'm a blog assistant baked by GPT-3.5 Turbo. How can I help?</li>
+        <li>Assistant: Hello, I'm a blog assistant powered by GPT-3.5 Turbo. How can I help?</li>
     </ul>
     <form class="ba-form">
         <input name="message" type="text" placeholder="Ask and press ENTER..." maxlength="200"/>
@@ -18,7 +18,7 @@
 
         function openBlogAssistant() {
             (async function () {
-                const {render, BlogAssistant} = await import('/blog-assistant/blog-assistant.js?v=0.1');
+                const {render, BlogAssistant} = await import('/blog-assistant/blog-assistant.js?v=0.2');
                 let model = new BlogAssistant();
                 render(model);
                 model.toggle();

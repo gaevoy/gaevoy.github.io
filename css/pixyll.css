@@ -152,7 +152,6 @@ body {
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
-  padding: .25rem 0;
   color: #7a7a7a;
   font-style: italic;
 }
@@ -398,8 +397,15 @@ pre.highlight {
 
 .post-tags {
   float: right;
-  line-height: 1.5rem;
   font-size: 1.25rem;
+  padding-top: 1px;
+}
+
+@media screen and (max-width: 48em) {
+  .post-tags {
+    font-size: 1rem;
+    padding-top: 3px;
+  }
 }
 
 .block-center {
@@ -468,4 +474,8 @@ a.job-title {
 
 .dbbs a {
   color: #477dca;
+}
+
+body {
+  word-break: break-word;
 }
