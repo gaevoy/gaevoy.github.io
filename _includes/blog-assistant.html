@@ -18,7 +18,7 @@
 
         function openBlogAssistant() {
             (async function () {
-                const {render, BlogAssistant} = await import('/blog-assistant/blog-assistant.js?v=0.2');
+                const {render, BlogAssistant} = await import('/blog-assistant/blog-assistant.js?v=0.3');
                 let model = new BlogAssistant("https://app.gaevoy.com/blog-assistant/");
                 render(model);
                 model.toggle();
