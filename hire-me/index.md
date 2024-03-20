@@ -1,5 +1,5 @@
 ---
-title: Hire Me | Expert Web Development and Consulting Services
+title: About Me | Expert Web Development and Consulting Services
 description: Hire Volodymyr Gaevoy for expert web development and consulting services. With 15+ years in tech, I deliver solutions that drive success. Learn more.
 tags: [web development, consulting services, professional developer, technology solutions, hire tech expert, dotnet, csharp, javascript, cybersecurity, security, business, architecture, design]
 layout: default
