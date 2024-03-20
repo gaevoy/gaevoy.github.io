@@ -119,5 +119,5 @@ My professional mantra revolves around making the implicit explicit, dividing an
 Away from the keyboard, I am a proud father, an avid traveler, a bicyclist, and a progressive metal enthusiast.
 
 <div class="hire-me-button-container">
-<a href="https://www.linkedin.com/in/vladimirgayevoy" target="_blank" class="button-85">Hire Me!</a>
+<a href="https://www.linkedin.com/in/vladimirgayevoy" target="_blank" class="button-85">Let's talk</a>
 </div>
