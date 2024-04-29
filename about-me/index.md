@@ -9,11 +9,11 @@ layout: default
 .site-header .logo {
     visibility: hidden;
 }
-.hire-me-header {
+.about-me-header {
     margin-bottom: 30px;
     text-align: center;
 }
-.hire-me-logo {
+.about-me-logo {
     background: url("/img/logo2.jpg");
     background-size: contain;
     height: 174px;
@@ -22,7 +22,7 @@ layout: default
     margin: 0 auto;
     border-radius: 50%;
 }
-.hire-me-button-container {
+.about-me-button-container {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 200px;
@@ -102,22 +102,31 @@ layout: default
 }
 </style>
 
-<h1 class="hire-me-header">About Me</h1>
+<h1 class="about-me-header">About Me</h1>
 
-<div class="hire-me-logo" alt="Volodymyr Gaevoy Logo"></div>
+<div class="about-me-logo" alt="Volodymyr Gaevoy Logo"></div>
 
-> “People seem to hire me for my genuine passion and quality work. My love for what I do typically inspires people to work with me.”
+> “My love for what I do typically inspires people to work with me.”
 
 Hello and welcome! I'm really glad you're here.
 
-Over the years, I've gradually developed a range of skills, including 15+ years in C# development, over a decade in front-end technologies like JavaScript, HTML, CSS, and 10+ years in MS SQL. My experience spans several areas such as e-invoicing, electronic data interchange (EDI), e-commerce, and cyber security.
+Over the years, I've gradually developed a range of skills, including 18+ years in C# development, over a decade in front-end technologies like JavaScript, HTML, CSS, and 10+ years in MS SQL. I am a certified Microsoft Azure Cloud (AZ-104, AZ-900) engineer. My experience spans several areas such as e-invoicing, electronic data interchange (EDI), and cyber security.
 
-I've found a niche in remote working, adapting well to such environments for more than 7 years now. My skills also cover messaging systems and cloud services, with a focus on Azure for the past 5 years. I'm familiar with modern architectural patterns like CQRS and Event Sourcing, having worked with them for 3 years, and I've recently been exploring Blazor/WebAssembly, contributing to various projects. Outside of work, I love to blog here, where I discuss a range of technical topics.
+<p style="text-align: center">
+<a href="https://learn.microsoft.com/en-gb/users/volodymyrhaievyi-8218/credentials/f18e279fbbc0e54" target="_blank" title="Microsoft Certified: Azure Fundamentals">
+<img style="width:150px" src="/img/about-me/microsoft-certified-fundamentals-badge.svg" alt="Microsoft Certified: Azure Fundamentals" />
+</a>
+<a href="https://learn.microsoft.com/en-gb/users/volodymyrhaievyi-8218/credentials/f23d3c7ee8b82225" target="_blank" title="Microsoft Certified: Azure Administrator Associate">
+<img style="width:150px" src="/img/about-me/microsoft-certified-associate-badge.svg" alt="Microsoft Certified: Azure Administrator Associate" />
+</a>
+</p>
+
+I've found a niche in remote working, adapting well to such environments for more than 8 years now. My skills also cover messaging systems and cloud services, with a focus on Azure for the past 5 years. I'm familiar with modern architectural patterns like CQRS and Event Sourcing, having worked with them for 3 years, and I've recently been exploring Blazor/WebAssembly, contributing to various projects. Outside of work, I love to blog here, where I discuss a range of technical topics.
 
 My professional mantra revolves around making the implicit explicit, dividing and conquering tasks, advocating for effective component use, optimizing for deletability, and always focusing on maintainability.
 
-Away from the keyboard, I am a proud father, an avid traveler, a bicyclist, and a progressive metal enthusiast.
+Away from the keyboard, I am a proud father, an avid traveler, a bicyclist, a progressive metal enthusiast, and a boat skipper.
 
-<div class="hire-me-button-container">
+<div class="about-me-button-container">
 <a href="https://www.linkedin.com/in/vladimirgayevoy" target="_blank" class="button-85">Let's talk</a>
 </div>
