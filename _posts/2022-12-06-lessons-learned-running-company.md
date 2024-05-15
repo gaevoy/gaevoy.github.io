@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Lessons learned from running the company for a year
 description: This is a story about software programmer without any experience in business managed to open a company and survived for 1 year in Poland. There are highlights in the article which I hope should help you.
 layout: post
