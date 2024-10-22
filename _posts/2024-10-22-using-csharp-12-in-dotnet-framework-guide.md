@@ -133,9 +133,9 @@ Not all C# 12 features are purely syntactic sugar - some require runtime support
 
 ## Useful Links
 
-- [Source code](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.8.0/Gaev.Blog.CSharp12AndNetFramework) - complete working example
-- [PolySharp](https://github.com/Sergio0694/PolySharp) - the library that makes the magic happen
-- [What's new in C# 12](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12) - official documentation about C# 12 features
+- [Source code](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.8.0/Gaev.Blog.CSharp12AndNetFramework){:target="_blank"} - complete working example
+- [PolySharp](https://github.com/Sergio0694/PolySharp){:target="_blank"} - the library that makes the magic happen
+- [What's new in C# 12](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12){:target="_blank"} - official documentation about C# 12 features
 
 ## Conclusion
 
@@ -143,6 +143,6 @@ Even though .NET Framework is considered legacy, we can still enjoy modern C# fe
 
 This approach helps teams that need to maintain .NET Framework applications to write more modern, expressive code without the immediate need to migrate to .NET Core/.NET.
 
-You can find the complete working example in [Gaev.Blog.CSharp12AndNetFramework](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.8.0/Gaev.Blog.CSharp12AndNetFramework).
+You can find the complete working example in [Gaev.Blog.CSharp12AndNetFramework](https://github.com/gaevoy/Gaev.Blog.Examples/tree/3.8.0/Gaev.Blog.CSharp12AndNetFramework){:target="_blank"}.
 
 Have you tried using modern C# features in your .NET Framework projects? What's your experience with `PolySharp`? Feel free to share your thoughts and experiences in the comments below. Your feedback and suggestions are always welcome!
