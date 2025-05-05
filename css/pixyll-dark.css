@@ -1,0 +1,43 @@
+body.dark {
+    color: #fff;
+    background-color: #1E1E1E;
+}
+
+body.dark footer, body.dark footer .wrap {
+    color: #fff;
+    background-color: #1E1E1E;
+}
+
+body.dark footer {
+    border-top-color: #454545;
+}
+
+body.dark .social > a {
+    color: #dedede !important;
+}
+
+body.dark .site-header nav a {
+    color: #dedede;
+}
+
+body.dark .site-header nav a:hover {
+    color: #eaeaea;
+    border-bottom-color: #eaeaea;
+}
+
+body.dark .post-link .post-title, body.dark p, body.dark .site-header a {
+    color: #fff;
+}
+
+body.dark .posts .post {
+    border-bottom-color: #454545;
+}
+
+body.dark code {
+    color: #f1f1f1;
+}
+
+body.dark .button-85 {
+    color: #1e2428 !important;
+    background: #fff !important;
+}

@@ -479,3 +479,7 @@ a.job-title {
 body {
   word-break: break-word;
 }
+
+.theme-switcher {
+  margin: 15px;
+}
