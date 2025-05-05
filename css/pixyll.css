@@ -365,9 +365,9 @@ footer:after {
   display: inline-block;
 }
 
-.social > a {
+.social > a, .social > a + a {
   color: #333333 !important;
-  margin: 0 15px;
+  margin: 0 6px;
 }
 
 .image-center {
@@ -481,5 +481,5 @@ body {
 }
 
 .theme-switcher {
-  margin: 15px;
+  margin: 0 6px;
 }
