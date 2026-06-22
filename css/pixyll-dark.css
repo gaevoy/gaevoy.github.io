@@ -41,3 +41,15 @@ body.dark .button-85 {
     color: #1e2428 !important;
     background: #fff !important;
 }
+
+body.dark #disqus_thread,
+body.dark #disqus_recommendations {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+body.dark #disqus_thread iframe,
+body.dark #disqus_recommendations iframe {
+    color-scheme: light;
+}

@@ -1,0 +1,12 @@
+{
+	"name": "Jekyll",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"actboy168.tasks",
+				"sissel.shopify-liquid"
+			]
+		}
+	}
+}
