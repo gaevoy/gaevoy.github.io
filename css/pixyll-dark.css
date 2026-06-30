@@ -53,3 +53,12 @@ body.dark #disqus_thread iframe,
 body.dark #disqus_recommendations iframe {
     color-scheme: light;
 }
+
+body.dark .post-content th,
+body.dark .post-content td {
+    border-color: #454545;
+}
+
+body.dark .post-content thead th {
+    background-color: #2a2a2a;
+}
