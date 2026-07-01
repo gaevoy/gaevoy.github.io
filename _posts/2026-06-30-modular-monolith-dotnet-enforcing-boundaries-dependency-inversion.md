@@ -272,6 +272,7 @@ The important bit: **these compose, they do not compete.** Clean and Hexagonal a
 ## Useful Links
 
 - [Source code](https://github.com/gaevoy/gaev-modular-arch){:target="_blank"} — the full .NET demo
+- [Podcast episode on YouTube](https://youtu.be/mteB8S4Kwis?si=inxZ0i8CNbGa1gWt){:target="_blank"} — walkthrough of the same modular monolith boundary approach
 - [Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle){:target="_blank"} — the "D" in SOLID
 - [SOLID](https://en.wikipedia.org/wiki/SOLID){:target="_blank"} — the five principles
 - [Hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)){:target="_blank"} — also covers Clean and Onion as variants
