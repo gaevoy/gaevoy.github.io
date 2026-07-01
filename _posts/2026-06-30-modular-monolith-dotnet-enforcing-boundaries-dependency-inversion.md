@@ -52,7 +52,7 @@ In plain English: depend on abstractions, not concretions. Applied to our proble
 
 **Split by business feature, not by technical layer.** One folder per feature, one boundary, one owner. Everything a feature needs lives together, and the only thing it exposes to the outside world is a thin set of interfaces.
 
-Let me make this concrete with a small demo — three features: **User**, **Currency**, and **Dashboard** (the source is [on GitHub](https://github.com/gaevoy/gaev-modular-arch){:target="_blank"}). Each feature is split into two projects:
+Let me make this concrete with a small demo — three features: **User**, **Currency**, and **Dashboard** (the source is [on GitHub](https://github.com/gaevoy/gaev-modular-arch/tree/main/dotnet){:target="_blank"}). Each feature is split into two projects:
 
 | Type | Allowed dependencies | Contains |
 |---|---|---|
@@ -271,7 +271,7 @@ The important bit: **these compose, they do not compete.** Clean and Hexagonal a
 
 ## Useful Links
 
-- [Source code](https://github.com/gaevoy/gaev-modular-arch){:target="_blank"} — the full .NET demo
+- [Source code](https://github.com/gaevoy/gaev-modular-arch/tree/main/dotnet){:target="_blank"} — the full .NET demo
 - [Podcast episode on YouTube](https://youtu.be/mteB8S4Kwis?si=inxZ0i8CNbGa1gWt){:target="_blank"} — walkthrough of the same modular monolith boundary approach
 - [Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle){:target="_blank"} — the "D" in SOLID
 - [SOLID](https://en.wikipedia.org/wiki/SOLID){:target="_blank"} — the five principles
