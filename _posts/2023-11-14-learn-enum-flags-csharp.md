@@ -5,6 +5,7 @@ description: Unlock the potential of Enum Flags in C# with our comprehensive gui
 layout: post
 tags: [dotnet, dotnet-core, csharp, enum]
 comments: true
+ai_assisted: true
 ---
 
 Ever tried naming your favorite things using enums in C#/.NET, like choosing between `Dog`, `Cat`, or `Bird` for your favorite pet, or picking your top language from `English`, `German`, `Ukrainian`? Enums are fantastic for this - like a personal pick-n-mix of named values. But here's the twist: what if you're a multi-pet enthusiast or a polyglot? Do you resort to an array of enums? Nope, there's a cooler way - [enum flags](https://learn.microsoft.com/en-us/dotnet/api/system.flagsattribute){:target="_blank"}.

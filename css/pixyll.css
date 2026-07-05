@@ -505,3 +505,13 @@ body {
 .theme-switcher {
   margin: 0 6px;
 }
+
+.post-ai-disclaimer {
+  font-size: 0.6em;
+  font-style: italic;
+  opacity: 0.6;
+  line-height: 1.3em;
+  text-align: right;
+  width: 60%;
+  margin-left: auto;
+}

@@ -5,6 +5,7 @@ description: How to stop your Core/Shared/Common library from becoming a dumping
 layout: post
 tags: [dotnet, dotnet-core, csharp, architecture, modular-monolith, solid]
 comments: true
+ai_assisted: true
 ---
 
 I have been writing .NET for the better part of two decades now, across dozens of projects. Different domains, different teams, different decades — and yet there is one thing I can almost always count on finding when I open a solution: a project called `Core`. Or `Kernel`. Or `Shared`, `Common`, `Utils` — pick your favourite. It is the most reliable constant in our industry, more dependable than a `NullReferenceException` with a callstack that points everywhere except at the actual bug.

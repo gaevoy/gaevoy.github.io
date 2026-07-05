@@ -5,6 +5,7 @@ description: Explore the nuances of exception rethrowing in .NET Framework with 
 layout: post
 tags: [dotnet, dotnet-core, csharp, exception]
 comments: true
+ai_assisted: true
 ---
 
 In my investigation of a production issue in a `.NET Framework` application, I faced a challenge while trying to match the stack trace from error logs to the source code.  Despite `.NET` documentation stating [to keep the original stack trace information with the exception, use the throw statement without specifying the exception](https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2200){:target="_blank"}, my logs only showed a line with `throw;`. This led me to question: why can't I see the original line of code where the exception occurred?
@@ -65,40 +66,6 @@ System.Exception : Exception of type 'System.Exception' was thrown.
    at ExceptionRethrowTests.Stacktrace_should_point_to_exception_line_with_net_framework_fix() in ExceptionRethrowTests.cs:line 74
 
 ```
-
-## Frequently Asked Questions
-
-### What is exception rethrowing in the .NET Framework?
-
-Exception rethrowing in the .NET Framework refers to the practice of catching an exception and then throwing it again, usually to preserve the original error information while allowing for additional handling or logging.
-
-### Why is preserving the stack trace important in exception rethrowing?
-
-Preserving the stack trace is crucial because it provides the sequence of method calls that led to the exception. This information is invaluable for debugging and understanding the context of an error.
-
-### What issue does this article address about exception rethrowing in .NET?
-
-The article discusses a common problem in the .NET Framework where rethrowing an exception does not always maintain the original stack trace, complicating error diagnosis.
-
-### How does the .NET Framework typically handle exception rethrowing?
-
-In the .NET Framework, using the `throw` statement without specifying the exception is supposed to keep the original stack trace. However, this article reveals scenarios where this does not hold true.
-
-### Does this stack trace issue occur in newer versions of .NET?
-
-No, this stack trace issue is specific to the .NET Framework. Newer versions of .NET, such as .NET 6, 7, and 8, handle exception rethrowing as expected.
-
-### Are there performance implications when using the suggested workaround?
-
-The workaround may have some performance implications, but they are typically minimal compared to the benefit of accurately tracking down errors.
-
-### Where can I find the unit tests related to this investigation?
-
-The unit tests are available [on Gaev.Blog.ExceptionRethrow](https://github.com/gaevoy/Gaev.Blog.Examples/blob/3.7.0/Gaev.Blog.ExceptionRethrow/ExceptionRethrowTests.cs){:target="_blank"}.
-
-### Why is it important for developers to understand this issue?
-
-Understanding this issue is vital for developers to ensure accurate error logging and effective debugging, especially in legacy applications using the .NET Framework.
 
 ## Conclusion
 

@@ -5,6 +5,7 @@ description: Learn how to use C# 12 features in .NET Framework projects using Po
 layout: post
 tags: [dotnet, dotnet-core, csharp, polysharp]
 comments: true
+ai_assisted: true
 ---
 
 Ah, .NET Framework - our trusty old friend that refuses to retire! While it might be considered legacy, there are still tons of .NET Framework projects out there in the wild. And let's be honest, moving to the latest .NET isn't always a walk in the park, especially when your project is deeply married to Web Forms, WCF, or .NET Remoting.
