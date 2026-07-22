@@ -2,7 +2,7 @@
 
 ## Context
 
-The repo [tmp/react/](/workspaces/gaevoy.github.io/tmp/react/) (from `gaevoy/gaev-modular-arch`) is a complete, working demo of a modular React architecture: npm workspaces + Vite + inversify, three features, 11 ESLint architectural rules, contract/impl package split, lazy-loaded feature chunks resolved through an IoC container. It has never been written up. This post does that.
+The repo [tmp/react/](/workspaces/gaevoy.github.io/tmp/react/) (from `gaevoy/gaev-modular-arch`, source: <https://github.com/gaevoy/gaev-modular-arch/tree/main/react>) is a complete, working demo of a modular React architecture: npm workspaces + Vite + inversify, three features, 11 ESLint architectural rules, contract/impl package split, lazy-loaded feature chunks resolved through an IoC container. It has never been written up. This post does that.
 
 **Hard constraint, from the user:** the article is **fully independent** and written for React frontend developers who have never touched .NET and don't care that it exists. No comparisons to .NET, no C# snippets, no "the equivalent of `internal sealed`", no `Program.cs`/`AddUserFeature()` analogues, no "unlike the compiler-enforced version", and **no link** to the earlier .NET post. Every idea must stand on React/TypeScript terms alone. If a beat only makes sense as a contrast with another ecosystem, it doesn't belong in this post.
 
@@ -133,7 +133,9 @@ Then name it: **Contract-First Modular Frontend**. Be straight about the guarant
 
 ### Alternatives
 
-Prose intro, then the table. Close with "these compose, they don't compete": FSD answers *how do I organize files inside the app*; this answers *how do I stop features reaching into each other and make that boundary a bundle boundary*. Run FSD inside a feature's impl if you like — the contract at the edge doesn't care what happens behind it.
+Prose intro, then the table. In the intro, place micro-frontends on the far side of a line: everything else in the table organizes *one* build, micro-frontends splits into *many* — separate builds composed at runtime, which is a different and usually larger bill (version drift, a shared React singleton to keep aligned across teams, integration contracts on top). The current mainstream guidance is a modular monolith by default and micro-frontends only when independent deployment is a genuine requirement — which is the same conclusion this post argues from the inside. One sentence, positioning not polemic; it also keeps "the container isn't free" honest by showing what a heavier boundary actually costs.
+
+Close with "these compose, they don't compete": FSD answers *how do I organize files inside the app*; this answers *how do I stop features reaching into each other and make that boundary a bundle boundary*. Run FSD inside a feature's impl if you like — the contract at the edge doesn't care what happens behind it.
 
 | Approach | Organizing idea | Pros | Cons |
 |---|---|---|---|
