@@ -12,6 +12,8 @@ The `shared/` folder and I have a complicated relationship: I keep adding to it,
 
 The whole post fits in one sentence: **split the app by business feature, let features depend only on each other's *contracts* (never their implementations), and wire everything up in one place.** The bonus — and on the frontend this is the good part — is that the same boundary keeps your code splitting from quietly falling apart.
 
+![Contract-First Modular React Frontend](/img/modular-arch/modular-react-frontend.png "Contract-First Modular React Frontend" ){:style="max-width:500px; width:100%;" class="block-center"}
+
 <!--more-->
 
 ## Problem: the `shared/` black hole
