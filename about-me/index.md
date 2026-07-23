@@ -106,11 +106,11 @@ layout: default
 
 <div class="about-me-logo" alt="Volodymyr Gaevoy Logo"></div>
 
-> “My love for what I do typically inspires people to work with me.”
+> “Give me a hard problem and a whiteboard, and I'm the happiest person in the room.”
 
 Hello and welcome! I'm really glad you're here.
 
-Over the years, I've gradually developed a range of skills, including 18+ years in C# development, over a decade in front-end technologies like JavaScript, HTML, CSS, and 10+ years in MS SQL. I am a certified Microsoft Azure Cloud (AZ-104, AZ-900) engineer. My experience spans several areas such as e-invoicing, electronic data interchange (EDI), and cyber security.
+Over the years, I've gradually developed a range of skills, including 20+ years in C# development, over a decade in front-end technologies like JavaScript, HTML, CSS, and 10+ years in MS SQL. I am a certified Microsoft Azure Cloud (AZ-104, AZ-900) engineer. My experience spans several areas such as e-invoicing, electronic data interchange (EDI), and cyber security.
 
 <p style="text-align: center">
 <a href="https://learn.microsoft.com/en-gb/users/volodymyrhaievyi-8218/credentials/f18e279fbbc0e54" target="_blank" title="Microsoft Certified: Azure Fundamentals">
