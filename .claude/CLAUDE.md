@@ -22,6 +22,7 @@ There is no test or lint step — this is a static content site.
   - `layout: post`, `title`, `description`, `tags: [csharp, dotnet, ...]`
   - `published: true` / `false` to control visibility
   - `comments: true` enables the Disqus thread (see `_layouts/post.html`)
+  - `giscus_comments: true` enables Giscus comments powered by GitHub Discussions (see `_includes/giscus.html`). Configure the `giscus:` block in `_config.yml` with `repo_id` and `category_id` from <https://giscus.app/>.
 - `<!--more-->` marks the excerpt cut-off (`excerpt_separator` in `_config.yml`).
 - Markdown is kramdown with GFM input and Rouge syntax highlighting.
 
