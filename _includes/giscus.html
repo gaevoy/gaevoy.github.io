@@ -11,11 +11,13 @@
       s.setAttribute('data-category', '{{ site.giscus.category }}');
       s.setAttribute('data-category-id', '{{ site.giscus.category_id }}');
       s.setAttribute('data-mapping', '{{ site.giscus.mapping }}');
+      s.setAttribute('data-strict', '{{ site.giscus.strict }}');
       s.setAttribute('data-reactions-enabled', '{{ site.giscus.reactions_enabled }}');
       s.setAttribute('data-emit-metadata', '{{ site.giscus.emit_metadata }}');
       s.setAttribute('data-input-position', '{{ site.giscus.input_position }}');
       s.setAttribute('data-theme', theme);
       s.setAttribute('data-lang', '{{ site.giscus.lang }}');
+      s.setAttribute('data-loading', '{{ site.giscus.loading }}');
       s.setAttribute('crossorigin', 'anonymous');
       s.async = true;
       document.currentScript.parentElement.appendChild(s);
