@@ -5,6 +5,7 @@ description: Discovering when .NET TransactionScope can be out of sync with MS S
 layout: post
 tags: [TransactionScope, mssql, deadlock, dotnet, MiniProfiler]
 comments: true
+giscus_comments: true
 ---
 
 At some point, on the project where I'm working on we were starting to observe strange exception. 

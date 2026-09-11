@@ -5,6 +5,7 @@ description: How I was trying to upgrade Ubuntu so that it all ended up saving d
 layout: post
 tags: [csharp, dotnet, ngrok, linux, curl]
 comments: true
+giscus_comments: true
 ---
 
 One evening after a couple of hours of battle in `Age of Empires` when I felt like a winner, I came up to the conclusion that I must upgrade `Ubuntu` on a `DigitalOcean` droplet. I had the droplet with `Ubuntu 16.04` to run [app.gaevoy.com](https://app.gaevoy.com/){:target="_blank"}. It was 23:00 and I thought I could do it quickly so I run `do-release-upgrade` immediately. `Windows Update` spoiled me and I didn't make any backup beforehand. After a while it asked me to merge a configuration conflict I pressed either `Esc` or even `Ctrl + C` by mistake but the upgrade continued. Then the upgrade just stuck without moving. A restart 3 times didn't help. I got a kernel error while booting droplet. Good job :(

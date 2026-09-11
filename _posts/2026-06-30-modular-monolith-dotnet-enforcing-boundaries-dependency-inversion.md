@@ -5,6 +5,7 @@ description: How to stop your Core/Shared/Common library from becoming a dumping
 layout: post
 tags: [dotnet, dotnet-core, csharp, architecture, modular-monolith, solid]
 comments: true
+giscus_comments: true
 ai_assisted: true
 ---
 

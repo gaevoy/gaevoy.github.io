@@ -5,6 +5,7 @@ description: Making NUnit test cases more readable and funny
 layout: post
 tags: [NUnit, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 > A test case is a specification of the inputs, execution conditions, testing procedure, and expected results that define a single test to be executed to achieve a particular software testing objective, such as to exercise a particular program path or to verify compliance with a specific requirement. — [Wikipedia](https://en.wikipedia.org/wiki/Test_case){:target="_blank"}

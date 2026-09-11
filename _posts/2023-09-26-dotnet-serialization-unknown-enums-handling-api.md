@@ -5,6 +5,7 @@ description: Explore solutions to handle unknown enum values in .NET during JSON
 layout: post
 tags: [dotnet, dotnet-core, csharp, enum, api, json, xml]
 comments: true
+giscus_comments: true
 ---
 
 Enumerations, or `Enums`, serve as a [comprehensive method for representing named values](https://en.wikipedia.org/wiki/Enumerated_type){:target="_blank"}, such as currencies (e.g., EUR, USD, NOK) and languages (e.g., English, German, Spanish). They are integral to the vast majority of programming languages. Additionally, [OpenAPI (Swagger) accommodates Enums](https://swagger.io/docs/specification/data-models/enums/){:target="_blank"} through its utilization of JSON, a subset of JavaScript. However, given that JavaScript was [developed in a mere 10 days](https://en.wikipedia.org/wiki/Brendan_Eich){:target="_blank"}, the implementation of enums was not incorporated :) Thus, in JSON and JavaScript, an enum is represented as either a `string` or a `numeric` type.

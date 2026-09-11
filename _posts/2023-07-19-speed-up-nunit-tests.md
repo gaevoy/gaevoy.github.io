@@ -5,6 +5,7 @@ description: NUnit defaults are not always optimal. Here is a one-line code chan
 layout: post
 tags: [dotnet, dotnet-core, csharp, NUnit]
 comments: true
+giscus_comments: true
 ---
 
 Nowadays, software developers use laptops with lots of CPU cores. The same on server frames - the number of CPUs grows. As a developer, I expect that the libraries I use are optimized to distribute workload across multiple CPU cores by default. But it is not the case for `NUnit` since, by default, it is terrible at running tests in parallel.

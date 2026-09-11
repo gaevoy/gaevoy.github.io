@@ -5,6 +5,7 @@ description: The built-in way to add related data to an exception while logging 
 layout: post
 tags: [Serilog, NLog, NUnit, dotnet, exception]
 comments: true
+giscus_comments: true
 ---
 
 Looking at an error log, it is not obvious how to reproduce an exception just by inspecting stack trace or error message. Of course, if you are super smart or lucky you can guess or try to catch the bug, however, it is not always possible. Usually, I need more data related to the exception to take into consideration a state of a system. Context, please!

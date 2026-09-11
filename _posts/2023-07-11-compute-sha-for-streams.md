@@ -5,6 +5,7 @@ description: A true story of how you should not compute SHA-256 hash for streams
 layout: post
 tags: [csharp]
 comments: true
+giscus_comments: true
 ---
 
 We have a generic logic to log all requests towards API. Due to security reasons, we cannot log the request body because it can contain sensitive data or personal identifiable information (PII) such as customer emails, names, passwords, etc. To distinguish requests, we have decided to hash a request body with SHA-256 and save the hash in logs. But in some cases, I started to see the same hash `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` for different requests.

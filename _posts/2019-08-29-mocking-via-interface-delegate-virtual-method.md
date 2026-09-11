@@ -5,6 +5,7 @@ description: "Let's consider 3 options on how to mock a single method: interface
 layout: post
 tags: [csharp, NUnit, NSubstitute, mocking, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 Quite often, I face a dilemma on how to mock a single method. It looks like overengineering for nothing, when the method is being moved outside of the class, just to mock it afterward. But what alternatives do we have? 

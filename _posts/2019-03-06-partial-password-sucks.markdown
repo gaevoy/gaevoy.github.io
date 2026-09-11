@@ -5,6 +5,7 @@ description: Why partial password usability sucks especially while using a passw
 layout: post
 tags: [security, password, partial-password, KeePass]
 comments: true
+giscus_comments: true
 ---
 
 Nowadays, in order to use a service, you must provide a login and password. In Poland, I got acquainted with a partial password instead of a regular password. 

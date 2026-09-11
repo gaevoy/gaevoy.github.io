@@ -5,6 +5,7 @@ description: Who's on duty today? Let's implement a Slack bot with the help of G
 layout: post
 tags: [javascript, serverless, bot, GoogleSheets]
 comments: true
+giscus_comments: true
 ---
 
 Who's on duty today? Yeah, it always takes me to school time. However, this keeps sounding over and over again during software development. Because, our team has a support duty to quickly respond to technical questions by the support team, follow logs, and system health. Usually, it is a boring task with a high chance of numerous context switches, so no one is a fan of doing that all the time. A nice trade-off is the support duty.

@@ -5,6 +5,7 @@ description: Audit log implementation for a data-centric applications via transa
 layout: post
 tags: [csharp, dotnet, event-sourcing, NEventStore, EntityFramework]
 comments: true
+giscus_comments: true
 ---
 
 I'm working on a project with a data-centric approach mostly. Well, as it happens historically ;) Frequently, I'm keep asked to figure out `when` and `who` changed entity state. In most cases, I have no clue because the application was not designed to record such things. Ideally, the application is going to be refactored to keep an audit log. But there is an issue. How to be sure the audit log is complete? Of course, good testing will filter out the most mistakes. What else? Event sourcing & CQRS is the perfect solution! Right?

@@ -5,6 +5,7 @@ description: Investigating how and why simple console application that's written
 layout: post
 tags: [dotnet-core, Serilog, Telegram, cron, linux, web-crawler]
 comments: true
+giscus_comments: true
 ---
 
 It is priceless to be up-to-date and at the same time, it's challenging due to the massive amount of information generated per second. Currently, <ins>you</ins> should look for information via search engines, for instance, `Google Search`. I would like the <ins>information</ins> is finding me!

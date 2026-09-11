@@ -5,6 +5,7 @@ description: An example on how to test SendGrid Webhooks by NUnit using ngrok in
 layout: post
 tags: [csharp, dotnet, webhook, NUnit, sendgrid, ngrok, api]
 comments: true
+giscus_comments: true
 ---
 
 During integrating with [SendGrid's webhook](https://sendgrid.com/docs/API_Reference/Event_Webhook/getting_started_event_webhook.html){:target="_blank"} in order to get status of email delivery I came across obstacles on how to test it. Because I'm a lazy developer I wanted to have an automated test for my integration. But it is not obvious how to do that from the first sight.

@@ -12,5 +12,6 @@ window.addEventListener('DOMContentLoaded', () => {
             isDarkTheme = !isDarkTheme;
             localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
             document.body.classList.toggle("dark");
+            document.dispatchEvent(new CustomEvent("themechange", { detail: { isDarkTheme } }));
         });
 });

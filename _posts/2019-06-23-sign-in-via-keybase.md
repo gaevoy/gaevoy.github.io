@@ -5,6 +5,7 @@ description: Exploring how easy it is to sign-in with the help of PGP key hosted
 layout: post
 tags: [pgp, signature, keybase, security]
 comments: true
+giscus_comments: true
 ---
 
 Wandering through the Internet I have found an interesting question about [Single Sign-On via Keybase](https://github.com/keybase/keybase-issues/issues/1767){:target="_blank"}. The idea behind this started to hold me tight so I decided to experiment to see how hard or easy it can be done. For the sake of simplicity, I have to skip `OAuth` ceremony so it would be just the sign-in form via `Keybase`.

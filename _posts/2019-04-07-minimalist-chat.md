@@ -5,6 +5,7 @@ description: Minimalist implementation of a chat using server-sent events on bar
 layout: post
 tags: [server-sent-events, dotnet-core, javascript, api]
 comments: true
+giscus_comments: true
 ---
 
 For a long time, I want to play with [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events){:target="_blank"}. It seems simple and powerful technology to send out updates from a server to a client with minimum latency. 

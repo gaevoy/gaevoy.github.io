@@ -5,6 +5,7 @@ description: Quick instruction I usually follow in order to find a SQL query whi
 layout: post
 tags: [sql, mssql]
 comments: true
+giscus_comments: true
 ---
 
 At some point, you may start to see high CPU load on the SQL server, in my case, it happened after yet another release. So how quickly is it to find such SQL queries? Of course, I can review all changes that were released but I would say it is not as effective and fast as just asking SQL server directly what's going on. For that matter, I have the instruction with SQL queries that I usually use for searching and identifying heavy SQL queries.

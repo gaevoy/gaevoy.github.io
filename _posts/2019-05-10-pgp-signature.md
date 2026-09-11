@@ -5,6 +5,7 @@ description: Let's analyze PGP signature and see what is hidden inside those str
 layout: post
 tags: [pgp, signature, keybase, security]
 comments: true
+giscus_comments: true
 ---
 
 Before a deep dive into PGP signature, I will give you a promise so you can trust all my word afterward :)

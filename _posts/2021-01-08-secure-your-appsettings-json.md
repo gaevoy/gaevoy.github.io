@@ -5,6 +5,7 @@ description: A source code can contain sensitive data such as database connectio
 layout: post
 tags: [csharp, dotnet-core, security]
 comments: true
+giscus_comments: true
 ---
 
 Nowadays, it is almost impossible to implement a self-containing application. Even a small web application requires at least a database and email provider. Or maybe even more such as URL to SFTP partner, SSL certificate for server-to-server communication, API keys for integration with 3rd parties. All those data is a secret and should be kept safe. A repository is not a safe place. You most probably heard about data breaches, human error, and misconfiguration. Your local drive is not the safest place because of viruses, malware, worms, trojans, ransomware, spyware, and the rest scary words. What can we do to mitigate the risks?

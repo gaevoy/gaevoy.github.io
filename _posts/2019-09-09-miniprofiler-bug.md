@@ -5,6 +5,7 @@ description: The story on how I spent a couple of days debugging apps to find ou
 layout: post
 tags: [MiniProfiler, TransactionScope, AsyncPump, csharp, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 Usually, while investigating some strange behavior I feel like I'm the detective Columbo and the murderer at the same time :)

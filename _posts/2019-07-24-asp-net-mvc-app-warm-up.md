@@ -5,6 +5,7 @@ description: How to warm-up ASP.NET MVC app if it is impossible to call controll
 layout: post
 tags: [csharp, aspnet]
 comments: true
+giscus_comments: true
 ---
 
 I'm pretty sure you have seen application slow down just after deploying yet another release into production. Yeah, that's a side effect of using one of the [just-in-time compilation](<https://en.wikipedia.org/wiki/Just-in-time_compilation>){:target="_blank"}-based languages such as `C#` or `Java`. But not only `JIT` is guilty in a slow cold start. But also an initialization logic which usually is run on the first call.

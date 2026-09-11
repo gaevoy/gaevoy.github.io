@@ -5,6 +5,7 @@ description: A solution for detecting and alerting on long-running SQL queries g
 layout: post
 tags: [csharp, dotnet, MiniProfiler, AdoNet, EntityFramework]
 comments: true
+giscus_comments: true
 ---
 
 In any application, it is natural that developers change its source code quite frequently to release a new feature or to fix a bug. Along with source code changes the developers introduce new bugs :) It is also okay, we are not robots yet. 

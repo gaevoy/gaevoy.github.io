@@ -5,6 +5,7 @@ description: Exploring interesting use case when the order of .NET Enum values r
 layout: post
 tags: [csharp, dotnet, enum]
 comments: true
+giscus_comments: true
 ---
 
 Have you tried to rename `Enum` values if their string representation stored in database or messages? For instance, `Colors` enumeration is

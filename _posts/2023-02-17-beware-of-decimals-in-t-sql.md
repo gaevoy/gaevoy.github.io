@@ -5,6 +5,7 @@ description: This article shows how decimal type in Microsoft SQL Server can lea
 layout: post
 tags: [mssql, postgresql, sql]
 comments: true
+giscus_comments: true
 ---
 
 Every year, we adjust prices for services according to the inflation rate and some business requirements. This year we have got new requirements to increase and round the prices according to specific business rules. We use Microsoft SQL Server and the prices are stored there. To update prices we should implement SQL script. Nothing fancy, except after executing the SQL script update customers started to complain about strange price changes. It turned out that SQL Server `decimal` type behaves totally unobvious. I would like to share our unexpected findings. 

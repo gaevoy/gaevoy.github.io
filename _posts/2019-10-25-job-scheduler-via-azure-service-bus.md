@@ -5,6 +5,7 @@ description: Exploring cloud solution for doing job schedule with the help of Az
 layout: post
 tags: [csharp, cron, messaging, Azure, ServiceBus]
 comments: true
+giscus_comments: true
 ---
 
 There are many kinds of jobs that applications can run regularly. For instance:

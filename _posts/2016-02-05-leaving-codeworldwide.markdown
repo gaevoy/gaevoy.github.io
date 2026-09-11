@@ -5,6 +5,7 @@ description: My story about 5 years in CodeWorldwide
 layout: post
 tags: [CodeWorldwide]
 comments: true
+giscus_comments: true
 ---
 5 years at CodeWorldwide. 
 Is it a short or a long period...?

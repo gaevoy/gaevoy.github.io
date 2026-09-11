@@ -5,6 +5,7 @@ description: A simple C# implementation of Akka-like switching behavior via Beco
 layout: post
 tags: [FSM, StateMachine, StatePattern, AkkaNet]
 comments: true
+giscus_comments: true
 ---
 
 [Akka.NET](https://getakka.net/){:target="_blank"} actor has really brilliant feature - [switching behavior](https://petabridge.com/blog/akka-actors-finite-state-machines-switchable-behavior/){:target="_blank"} using `Become()` method. Look, how expressive it is (borrowed [from here](http://dontcodetired.com/blog/post/Switchable-Actor-Behaviour-in-AkkaNET){:target="_blank"}). How easy to navigate through the code, just `Go to Declaration`, because a state is a method. Love it!

@@ -5,6 +5,7 @@ description: How to stop your shared/utils folder from becoming a dumping ground
 layout: post
 tags: [react, typescript, frontend, architecture, modular-monolith, solid, vite]
 comments: true
+giscus_comments: true
 ai_assisted: true
 ---
 

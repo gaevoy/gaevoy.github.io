@@ -5,6 +5,7 @@ description: How to evolve a frontend-persisted state schema on the fly with upc
 layout: post
 tags: [typescript, frontend, schema, upcasting, event-sourcing, zustand]
 comments: true
+giscus_comments: true
 ai_assisted: true
 ---
 

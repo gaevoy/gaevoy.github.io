@@ -5,6 +5,7 @@ description: Explore how to build a UML diagram from plain text via PlantUML
 layout: post
 tags: [PlantUML, UML, ASCII]
 comments: true
+giscus_comments: true
 ---
 
 From time to time, I feel like a dog: understand everything but can't explain. So draw it! Or I need to understand how a feature supposed to work but it does not fit in my brain. So draw it, come on! Or it is a huge challenge how to explain my idea to my teammates. So draw it, hell!

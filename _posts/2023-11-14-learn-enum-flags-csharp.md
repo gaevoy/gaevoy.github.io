@@ -5,6 +5,7 @@ description: Unlock the potential of Enum Flags in C# with our comprehensive gui
 layout: post
 tags: [dotnet, dotnet-core, csharp, enum]
 comments: true
+giscus_comments: true
 ai_assisted: true
 ---
 

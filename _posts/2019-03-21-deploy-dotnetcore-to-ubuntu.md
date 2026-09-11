@@ -5,6 +5,7 @@ description: Applying KISS principle in order to deploy .NET Core app over SSH a
 layout: post
 tags: [dotnet-core, ssh, linux]
 comments: true
+giscus_comments: true
 ---
 
 Once in a while, I want to try some idea to implement. Having background by developing mostly in `.NET` stack my choice is obviously `.NET Core`. I always have at hand couple of `Linux` servers: one is in `DigitalOcean`, another one is [MSI Cubi N](https://www.msi.com/Desktop/Cubi-N.html){:target="_blank"} under my TV set. Hence, my `Linux` horses will run `.NET Core` app.

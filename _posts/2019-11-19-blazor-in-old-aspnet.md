@@ -5,6 +5,7 @@ description: One of example how to add Blazor WebAssembly app in existing old AS
 layout: post
 tags: [csharp, blazor, webassembly, aspnet]
 comments: true
+giscus_comments: true
 ---
 
 The building of a rich user interface is not always easy for `.NET` developers, especially if you dive deep to use `React`, `Angular`, `webpack` and friends. `Blazor` gives a nice trade-off bringing `Razor`-like templates and `C#` to a browser utilizing [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly).

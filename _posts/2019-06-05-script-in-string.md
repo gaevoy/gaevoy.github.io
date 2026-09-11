@@ -5,6 +5,7 @@ description: Fixing cross-site scripting (XSS)vulnerability in @Html.Raw(json) d
 layout: post
 tags: [razor, javascript, xss, security, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 Often, in `ASP.NET` & `JavaScript` apps it is required to pass the server-side model to client-side without `AJAX` requests. For that, the server-side model is converted to `JSON` and puts somewhere in `JavaScript`. You know that. Let's have a quiz. 

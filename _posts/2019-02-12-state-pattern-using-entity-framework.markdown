@@ -5,6 +5,7 @@ description: Implementing the state pattern using Entity Framework as simple as 
 layout: post
 tags: [StatePattern, EntityFramework, NUnit, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 Have you heard about `if-then` driven logic? Or maybe something about `switch` driven logic? Aha, you have even seen it. Me too. Moreover, I keep seeing such logic quite often. Despite the fact that state pattern is known for decades from the Gang of Four, developers simply ignore it.

@@ -5,6 +5,7 @@ description:
 layout: post
 tags: []
 comments: true
+giscus_comments: true
 ---
 
 [Firefox](https://www.mozilla.org/en-US/firefox/) [source code](https://hg.mozilla.org/mozilla-central/file)

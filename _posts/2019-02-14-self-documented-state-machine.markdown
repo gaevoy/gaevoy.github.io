@@ -5,6 +5,7 @@ description: Generating state diagrams for existing state machine with the help 
 layout: post
 tags: [PlantUML, UML, StatePattern, NUnit, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 A [state diagram](https://en.wikipedia.org/wiki/State_diagram){:target="_blank"} is a type of diagram used in order to describe the behavior of an entity. For instance, here is the example of an elevator made with the help of `PlantUML`.

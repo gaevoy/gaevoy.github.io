@@ -5,6 +5,7 @@ description: This is a story about software programmer without any experience in
 layout: post
 tags: [business, GoogleSheets]
 comments: true
+giscus_comments: true
 ---
 
 This is a story about a software programmer without any experience in business, who managed to open a company and survived for 1 year in Poland. There are highlights below I have encountered. But before diving into details let's revile how this idea has popped up.

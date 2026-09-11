@@ -1,8 +1,14 @@
-<div class="giscus-comments">
+<div class="giscus-comments mb2">
   <script>
     (function () {
-      var isDark = document.body.classList.contains('dark');
-      var theme = isDark ? '{{ site.giscus.dark_theme }}' : '{{ site.giscus.theme }}';
+      function isDarkTheme() {
+        var theme = localStorage.getItem('theme');
+        if (!theme) {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        return theme === 'dark';
+      }
+      var theme = isDarkTheme() ? '{{ site.giscus.dark_theme }}' : '{{ site.giscus.theme }}';
 
       var s = document.createElement('script');
       s.src = 'https://giscus.app/client.js';
@@ -25,15 +31,13 @@
   </script>
 </div>
 <script>
-  document.querySelector('.theme-switcher')
-    .addEventListener('click', function () {
-      var iframe = document.querySelector('iframe.giscus-frame');
-      if (!iframe) return;
-      var isDark = document.body.classList.contains('dark');
-      var theme = isDark ? '{{ site.giscus.dark_theme }}' : '{{ site.giscus.theme }}';
-      iframe.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: theme } } },
-        'https://giscus.app'
-      );
-    });
+  document.addEventListener('themechange', function (e) {
+    var iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    var theme = e.detail.isDarkTheme ? '{{ site.giscus.dark_theme }}' : '{{ site.giscus.theme }}';
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme } } },
+      'https://giscus.app'
+    );
+  });
 </script>

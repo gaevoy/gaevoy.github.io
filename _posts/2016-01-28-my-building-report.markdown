@@ -4,6 +4,7 @@ title: My building report
 layout: post
 tags: [building, event-sourcing, ]
 comments: true
+giscus_comments: true
 ---
 EventSourcing approach in life. Following events: 
 

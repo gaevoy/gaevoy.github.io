@@ -5,6 +5,7 @@ description: Do we need to test serialization/deserialization? Why? How?
 layout: post
 tags: [csharp, NUnit, AutoFixture, FluentAssertions]
 comments: true
+giscus_comments: true
 ---
 
 `Newtonsoft.Json` is [the most popular package](https://www.nuget.org/stats/packages){:target="_blank"} in 2019 yet. Because of a need to send data across different applications: browser client app or mobile app, `.NET` app or `Node.JS` server-side app, etc. They all must communicate with each other so there is only one way to go is serialization/deserialization. Since serialization is a mission-critical part of the app it must be proper unit tested. But why do we need to test a well-tested library such as `Newtonsoft.Json`?

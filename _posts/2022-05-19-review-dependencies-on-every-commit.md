@@ -5,6 +5,7 @@ description: Why you should cover .NET project architecture rules by tests as so
 layout: post
 tags: [dotnet, dotnet-core, csharp, NUnit, PlantUML]
 comments: true
+giscus_comments: true
 ---
 
 I want to share with you a sad story that would not have happened if I had known earlier how to review .NET dependencies automatically. I work with .NET app that has a lot of .NET Framework projects. However, they are slowly being migrated to .NET Standard to be able to move to .NET Core eventually. At some point, I made yet another migration of project and its dependencies to .NET Standard. Then after a while, know what?! I found out that the project has .NET Framework dependencies again. `(╯°□°)╯︵ ┻━┻` Of course, it passed a review we do manually and landed to `main` branch. With such success we will never move to .NET Core. How come?

@@ -5,6 +5,7 @@ description: Explore how to generate PlantUML diagrams for a system automaticall
 layout: post
 tags: [PlantUML, UML, ASCII, NUnit, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 How does it work? What's going on here? I usually have such impression while looking into an unfamiliar piece of source code. It can be even worse, for instance, in event-driven systems due to a low level of coupling, or in the microservice world when you are having a huge amount of standalone apps, or in serverless architecture with tones of independent functions.

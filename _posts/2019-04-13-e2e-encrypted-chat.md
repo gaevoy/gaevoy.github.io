@@ -5,6 +5,7 @@ description: Refactoring chat implementation to enable end-to-end encryption via
 layout: post
 tags: [e2e-encryption, javascript, pgp, security, keybase]
 comments: true
+giscus_comments: true
 ---
 
 As a starting point for adding end-to-end encryption, I'm going to choose [minimalist chat](/2019/04/07/minimalist-chat.html){:target="_blank"} written on bare .NET Core and JavaScript without any third party dependency. Let's move from theory to implementation, but before that, I would like to give a bit of introduction in end-to-end encryption. What is it? What for? How?

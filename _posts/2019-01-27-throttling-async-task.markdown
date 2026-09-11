@@ -5,6 +5,7 @@ description: The simplest way to throttle async function by SemaphoreSlim in .NE
 layout: post
 tags: [csharp, dotnet, async, throttling]
 comments: true
+giscus_comments: true
 ---
 
 A while ago I wanted to upload al my home photo/video archive to Google Drive. I love bicycles as many developers do so why not to write my own uploader on C# :) [Boom!](https://github.com/gaevoy/Gaev.GoogleDriveUploader){:target="_blank"}

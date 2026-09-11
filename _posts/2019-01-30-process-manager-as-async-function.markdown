@@ -5,6 +5,7 @@ description: Experiment how to express process manager as an async function in C
 layout: post
 tags: [ProcessManager, saga, async, csharp, dotnet, NEventStore, AkkaNet]
 comments: true
+giscus_comments: true
 ---
 
 Once I'm thinking about CQRS, event sourcing and messaging my heart starts beating very fast. I will share my love and pain in this regard. I'm a huge fan of messaging and how great it is to communicate between applications via messages. Simple from the first sight but hard when you got there. Really hard! One of mind-blowing thing is [process manager](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/jj591569(v%3dpandp.10)){:target="_blank"}. The process manager is like a long-running transaction or long-running function. By the word "long-running" I mean 1 month, 1 year or forever, it does not matter. How hard it is to express process manager in source code? Let's elaborate a bit.

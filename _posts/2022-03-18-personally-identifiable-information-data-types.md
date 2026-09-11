@@ -5,6 +5,7 @@ description: Working with personally identifiable information (PII) with the hel
 layout: post
 tags: [security, pii, gdpr, dotnet]
 comments: true
+giscus_comments: true
 ---
 
 At some point, I started to feel discomfort working with personally identifiable information data in our project. Mostly, because it is a relatively new field and not always straightforward. In this article, I'm going to try to tackle the main issues and make the implicit explicit.

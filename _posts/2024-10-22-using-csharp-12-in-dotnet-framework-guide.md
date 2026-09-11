@@ -5,6 +5,7 @@ description: Learn how to use C# 12 features in .NET Framework projects using Po
 layout: post
 tags: [dotnet, dotnet-core, csharp, polysharp]
 comments: true
+giscus_comments: true
 ai_assisted: true
 ---
 

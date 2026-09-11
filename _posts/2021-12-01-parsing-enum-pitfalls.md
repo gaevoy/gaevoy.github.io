@@ -5,6 +5,7 @@ description: Let's reveal the not obvious behavior of Enum.Parse, then show how 
 layout: post
 tags: [csharp, dotnet, enum]
 comments: true
+giscus_comments: true
 ---
 
 Nope, `Enum.Parse` [is not broken](https://github.com/dotnet/runtime/issues/20576){:target="_blank"}, it is a feature, not a bug :) However, you have to know its pitfalls. Before deep dive let's warm up a bit. What is enumeration?

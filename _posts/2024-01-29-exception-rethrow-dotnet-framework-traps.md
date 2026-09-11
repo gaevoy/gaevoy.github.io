@@ -5,6 +5,7 @@ description: Explore the nuances of exception rethrowing in .NET Framework with 
 layout: post
 tags: [dotnet, dotnet-core, csharp, exception]
 comments: true
+giscus_comments: true
 ai_assisted: true
 ---
 
